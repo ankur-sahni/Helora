@@ -1,0 +1,320 @@
+{
+  "name": "Agency OS — Master Scheduler",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "id": "heartbeat-trigger",
+      "name": "Heartbeat (Every 15 Min)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300],
+      "notes": "The heartbeat. Runs every 15 minutes 24/7. Dispatches all scheduled jobs."
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = new Date();\nconst hour = now.getHours();\nconst minute = now.getMinutes();\nconst day = now.getDay();\n\n// IST offset = UTC+5:30\nconst istHour = (hour + 5) % 24;\nconst istMinute = (minute + 30) % 60;\n\nreturn {\n  json: {\n    timestamp: now.toISOString(),\n    istHour,\n    istMinute,\n    dayOfWeek: day,\n    isMorningDigest: istHour === 9 && istMinute < 15,\n    isEveningDigest: istHour === 18 && istMinute < 15,\n    isWeeklyReport: day === 0 && istHour === 8 && istMinute < 15,\n    isHourlyCheck: istMinute < 15,\n    runQueueCheck: true,\n    runHealthCheck: true\n  }\n};"
+      },
+      "id": "time-router",
+      "name": "Time Router",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300],
+      "notes": "Determines what jobs to run based on current IST time."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.isMorningDigest }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-morning",
+      "name": "Is Morning Digest?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 180]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.isEveningDigest }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-evening",
+      "name": "Is Evening Digest?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 320]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.isWeeklyReport }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-weekly",
+      "name": "Is Weekly Report?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 460]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Task Queue",
+          "mode": "name"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Status",
+              "lookupValue": "Pending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-pending-tasks",
+      "name": "Get Pending Tasks",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [900, 300],
+      "notes": "Reads pending tasks from the Task Queue sheet. Replace YOUR_GOOGLE_SHEET_ID with your actual sheet ID."
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Error Log",
+          "mode": "name"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Status",
+              "lookupValue": "Open"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-open-errors",
+      "name": "Get Open Errors",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [900, 440],
+      "notes": "Checks for unresolved errors. Any open errors trigger an alert."
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Approval Queue",
+          "mode": "name"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Decision",
+              "lookupValue": "Pending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-approvals",
+      "name": "Get Pending Approvals",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [900, 580],
+      "notes": "Checks approval queue. Items waiting > 2 hours trigger a reminder."
+    },
+    {
+      "parameters": {
+        "jsCode": "const tasks = $('Get Pending Tasks').all();\nconst errors = $('Get Open Errors').all();\nconst approvals = $('Get Pending Approvals').all();\nconst timeData = $('Time Router').first().json;\n\n// Build digest message\nlet message = `🤖 *Agency OS — Morning Brief*\\n`;\nmessage += `📅 ${new Date().toLocaleDateString('en-IN', {weekday: 'long', day: 'numeric', month: 'long'})}\\n\\n`;\n\nmessage += `📋 *Task Queue*\\n`;\nmessage += `• ${tasks.length} pending tasks\\n\\n`;\n\nmessage += `⚠️ *System Health*\\n`;\nmessage += `• ${errors.length} open errors\\n`;\nmessage += `• ${approvals.length} items awaiting your approval\\n\\n`;\n\nif (approvals.length > 0) {\n  message += `✅ *Needs Your Decision*\\n`;\n  approvals.slice(0, 3).forEach(a => {\n    message += `• ${a.json['Type']}: ${a.json['Item']}\\n`;\n  });\n  message += `\\n`;\n}\n\nif (errors.length > 0) {\n  message += `🔴 *Open Errors*\\n`;\n  errors.slice(0, 3).forEach(e => {\n    message += `• ${e.json['Workflow']}: ${e.json['Error Message']?.substring(0, 50)}...\\n`;\n  });\n  message += `\\n`;\n}\n\nmessage += `_Reply to this message for any action needed._`;\n\nreturn { json: { message, taskCount: tasks.length, errorCount: errors.length, approvalCount: approvals.length } };"
+      },
+      "id": "build-digest",
+      "name": "Build Morning Digest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "notes": "Assembles the morning WhatsApp digest from all data sources."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Log execution to Error Log sheet\nconst timestamp = new Date().toISOString();\nconst errorCount = $('Get Open Errors').all().length;\n\nif (errorCount === 0) {\n  return { json: { status: 'healthy', timestamp, message: 'All systems operational' } };\n}\n\n// Return error details for alerting\nconst errors = $('Get Open Errors').all();\nconst critical = errors.filter(e => e.json['Severity'] === 'Critical');\n\nreturn { \n  json: { \n    status: critical.length > 0 ? 'critical' : 'degraded',\n    criticalCount: critical.length,\n    totalErrors: errorCount,\n    timestamp,\n    alertNeeded: critical.length > 0\n  } \n};"
+      },
+      "id": "health-check",
+      "name": "System Health Check",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 440],
+      "notes": "Evaluates system health. Flags critical errors for immediate alerting."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Weekly report builder\nconst tasks = $('Get Pending Tasks').all();\nconst errors = $('Get Open Errors').all();\nconst approvals = $('Get Pending Approvals').all();\n\nlet report = `📊 *Agency OS — Weekly Report*\\n`;\nreport += `Week ending ${new Date().toLocaleDateString('en-IN')}\\n\\n`;\nreport += `*Summary*\\n`;\nreport += `• Pending tasks: ${tasks.length}\\n`;\nreport += `• Open errors: ${errors.length}\\n`;\nreport += `• Pending approvals: ${approvals.length}\\n\\n`;\nreport += `*Actions Needed This Week*\\n`;\nreport += `• Review and close all open errors\\n`;\nreport += `• Approve pending content\\n`;\nreport += `• Check lead CRM for follow-ups\\n\\n`;\nreport += `_Full details in Agency OS Google Sheet._`;\n\nreturn { json: { report } };"
+      },
+      "id": "build-weekly-report",
+      "name": "Build Weekly Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 580],
+      "notes": "Assembles the Sunday weekly report."
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "phoneNumberId": "={{ $env.WHATSAPP_PHONE_NUMBER_ID }}",
+        "to": "YOUR_PHONE_NUMBER_WITH_COUNTRY_CODE",
+        "textBody": "={{ $json.message || $json.report }}"
+      },
+      "id": "send-whatsapp",
+      "name": "Send WhatsApp to Ankur",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [1340, 400],
+      "notes": "Sends digest/report to Ankur's WhatsApp. Replace YOUR_PHONE_NUMBER_WITH_COUNTRY_CODE with +91XXXXXXXXXX"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Error Log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ new Date().toISOString() }}",
+            "Workflow": "Master Scheduler",
+            "Node": "Execution Log",
+            "Error Message": "Scheduler ran successfully",
+            "Severity": "Low",
+            "Status": "Fixed"
+          }
+        },
+        "options": {}
+      },
+      "id": "log-execution",
+      "name": "Log Execution",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [1340, 580],
+      "notes": "Logs every scheduler run to the Error Log for audit trail."
+    }
+  ],
+  "connections": {
+    "Heartbeat (Every 15 Min)": {
+      "main": [
+        [{ "node": "Time Router", "type": "main", "index": 0 }]
+      ]
+    },
+    "Time Router": {
+      "main": [
+        [
+          { "node": "Is Morning Digest?", "type": "main", "index": 0 },
+          { "node": "Is Evening Digest?", "type": "main", "index": 0 },
+          { "node": "Is Weekly Report?", "type": "main", "index": 0 },
+          { "node": "Get Pending Tasks", "type": "main", "index": 0 },
+          { "node": "Get Open Errors", "type": "main", "index": 0 },
+          { "node": "Get Pending Approvals", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Get Pending Tasks": {
+      "main": [
+        [{ "node": "Build Morning Digest", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get Open Errors": {
+      "main": [
+        [{ "node": "System Health Check", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get Pending Approvals": {
+      "main": [
+        [{ "node": "Build Weekly Report", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Morning Digest": {
+      "main": [
+        [{ "node": "Send WhatsApp to Ankur", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Weekly Report": {
+      "main": [
+        [{ "node": "Send WhatsApp to Ankur", "type": "main", "index": 0 }]
+      ]
+    },
+    "Send WhatsApp to Ankur": {
+      "main": [
+        [{ "node": "Log Execution", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "Agency OS — Error Catcher"
+  },
+  "staticData": null,
+  "tags": ["agency-os", "scheduler", "core"],
+  "triggerCount": 1,
+  "updatedAt": "2026-04-16T00:00:00.000Z",
+  "id": "master-scheduler"
+}

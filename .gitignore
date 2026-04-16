@@ -1,0 +1,26 @@
+# Environment variables — never commit
+.env
+.env.local
+.env.*.local
+
+# Private local config
+CLAUDE.local.md
+
+# Claude memory (personal data)
+.claude/memory/agents/
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

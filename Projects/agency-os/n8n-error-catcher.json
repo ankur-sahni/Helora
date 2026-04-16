@@ -1,0 +1,120 @@
+{
+  "name": "Agency OS — Error Catcher",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "error-trigger",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [240, 300],
+      "notes": "Catches ALL errors from ALL other workflows automatically. Set this as the error workflow in every workflow's settings."
+    },
+    {
+      "parameters": {
+        "jsCode": "const error = $input.first().json;\nconst workflowName = error.workflow?.name || 'Unknown Workflow';\nconst nodeName = error.execution?.lastNodeExecuted || 'Unknown Node';\nconst errorMessage = error.error?.message || 'Unknown error';\nconst errorId = `ERR-${Date.now()}`;\n\n// Determine severity\nlet severity = 'Medium';\nif (errorMessage.toLowerCase().includes('connection') || errorMessage.toLowerCase().includes('timeout')) {\n  severity = 'High';\n}\nif (workflowName.toLowerCase().includes('sahni') || workflowName.toLowerCase().includes('client')) {\n  severity = 'Critical'; // Client-facing workflows are always critical\n}\n\n// Build WhatsApp alert\nconst alert = `🔴 *WORKFLOW ERROR*\\n`\n  + `*Workflow:* ${workflowName}\\n`\n  + `*Node:* ${nodeName}\\n`\n  + `*Error:* ${errorMessage.substring(0, 100)}\\n`\n  + `*Severity:* ${severity}\\n`\n  + `*Time:* ${new Date().toLocaleTimeString('en-IN')}\\n`\n  + `*ID:* ${errorId}\\n\\n`\n  + `_Check Error Log in Agency OS sheet._`;\n\nreturn {\n  json: {\n    errorId,\n    workflowName,\n    nodeName,\n    errorMessage,\n    severity,\n    alert,\n    timestamp: new Date().toISOString()\n  }\n};"
+      },
+      "id": "parse-error",
+      "name": "Parse & Classify Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300],
+      "notes": "Extracts error details and assigns severity. Client-facing workflows = Critical."
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Error Log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Error ID": "={{ $json.errorId }}",
+            "Timestamp": "={{ $json.timestamp }}",
+            "Workflow": "={{ $json.workflowName }}",
+            "Node": "={{ $json.nodeName }}",
+            "Error Message": "={{ $json.errorMessage }}",
+            "Severity": "={{ $json.severity }}",
+            "Status": "Open"
+          }
+        },
+        "options": {}
+      },
+      "id": "log-to-sheets",
+      "name": "Log to Error Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [680, 200],
+      "notes": "Writes every error to the Error Log sheet in Agency OS."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.severity }}",
+              "operation": "notEqual",
+              "value2": "Low"
+            }
+          ]
+        }
+      },
+      "id": "check-severity",
+      "name": "Alert Needed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 380],
+      "notes": "Only send WhatsApp alert for Medium, High, and Critical errors. Low errors just log silently."
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "phoneNumberId": "={{ $env.WHATSAPP_PHONE_NUMBER_ID }}",
+        "to": "YOUR_PHONE_NUMBER_WITH_COUNTRY_CODE",
+        "textBody": "={{ $json.alert }}"
+      },
+      "id": "alert-whatsapp",
+      "name": "Alert via WhatsApp",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "notes": "Sends immediate WhatsApp alert for non-low severity errors."
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [{ "node": "Parse & Classify Error", "type": "main", "index": 0 }]
+      ]
+    },
+    "Parse & Classify Error": {
+      "main": [
+        [
+          { "node": "Log to Error Sheet", "type": "main", "index": 0 },
+          { "node": "Alert Needed?", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Alert Needed?": {
+      "main": [
+        [{ "node": "Alert via WhatsApp", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["agency-os", "error-handling", "core"],
+  "id": "error-catcher"
+}

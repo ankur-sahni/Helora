@@ -1,0 +1,192 @@
+{
+  "name": "Agency OS — Approval Queue Processor",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 2
+            }
+          ]
+        }
+      },
+      "id": "approval-check-trigger",
+      "name": "Check Approvals (Every 2 Hours)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300],
+      "notes": "Checks for pending approvals every 2 hours and reminds Ankur if items are waiting."
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Approval Queue",
+          "mode": "name"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Decision",
+              "lookupValue": "Pending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "get-pending",
+      "name": "Get Pending Approvals",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [460, 300],
+      "notes": "Reads all items with Decision = Pending from Approval Queue sheet."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $items().length }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "has-pending",
+      "name": "Any Pending?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\nlet message = `⏳ *Approval Queue — ${items.length} item(s) waiting*\\n\\n`;\n\nitems.forEach((item, i) => {\n  const data = item.json;\n  message += `*${i + 1}. ${data['Type']}*\\n`;\n  message += `Project: ${data['Project']}\\n`;\n  message += `Item: ${data['Item']}\\n`;\n  if (data['Preview / Summary']) {\n    message += `Preview: ${data['Preview / Summary'].substring(0, 100)}...\\n`;\n  }\n  message += `ID: ${data['Queue ID']}\\n\\n`;\n});\n\nmessage += `_To approve: Open Agency OS sheet → Approval Queue → Change Decision to \"YES — Approved\"_\\n`;\nmessage += `_Or reply to this message with the Queue ID and YES/NO_`;\n\nreturn { json: { message, count: items.length } };"
+      },
+      "id": "build-reminder",
+      "name": "Build Reminder Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 200],
+      "notes": "Builds a clear WhatsApp message listing all pending approvals."
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "phoneNumberId": "={{ $env.WHATSAPP_PHONE_NUMBER_ID }}",
+        "to": "YOUR_PHONE_NUMBER_WITH_COUNTRY_CODE",
+        "textBody": "={{ $json.message }}"
+      },
+      "id": "send-reminder",
+      "name": "Send Approval Reminder",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [1120, 200],
+      "notes": "Sends the pending approvals list to Ankur on WhatsApp."
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "approval-response",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-response",
+      "name": "Webhook — Receive Approval",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 560],
+      "notes": "Receives approval decisions. Can be triggered by a simple web link or WhatsApp bot reply handler."
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body;\nconst queueId = body.queue_id;\nconst decision = body.decision; // 'YES' or 'NO'\n\nreturn {\n  json: {\n    queueId,\n    decision,\n    decidedAt: new Date().toISOString(),\n    fullDecision: decision === 'YES' ? 'YES — Approved' : 'NO — Rejected'\n  }\n};"
+      },
+      "id": "parse-decision",
+      "name": "Parse Decision",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 560]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Approval Queue",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Queue ID": "={{ $json.queueId }}",
+            "Decision": "={{ $json.fullDecision }}",
+            "Decided At": "={{ $json.decidedAt }}"
+          }
+        },
+        "options": {}
+      },
+      "id": "update-decision",
+      "name": "Update Decision in Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [680, 560],
+      "notes": "Updates the Approval Queue sheet with the decision."
+    }
+  ],
+  "connections": {
+    "Check Approvals (Every 2 Hours)": {
+      "main": [
+        [{ "node": "Get Pending Approvals", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get Pending Approvals": {
+      "main": [
+        [{ "node": "Any Pending?", "type": "main", "index": 0 }]
+      ]
+    },
+    "Any Pending?": {
+      "main": [
+        [{ "node": "Build Reminder Message", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Reminder Message": {
+      "main": [
+        [{ "node": "Send Approval Reminder", "type": "main", "index": 0 }]
+      ]
+    },
+    "Webhook — Receive Approval": {
+      "main": [
+        [{ "node": "Parse Decision", "type": "main", "index": 0 }]
+      ]
+    },
+    "Parse Decision": {
+      "main": [
+        [{ "node": "Update Decision in Sheet", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "errorWorkflow": "Agency OS — Error Catcher"
+  },
+  "tags": ["agency-os", "approval", "core"],
+  "id": "approval-queue"
+}
