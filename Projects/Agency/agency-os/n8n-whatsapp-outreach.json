@@ -1,0 +1,236 @@
+{
+  "name": "outreach/whatsapp-pitcher",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 6 }]
+        }
+      },
+      "id": "trigger",
+      "name": "Every 6 Hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/leads?status=eq.new&select=id,name,city,phone,serviceInterest,mrrPotential,notes&limit=5",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "fetch-leads",
+      "name": "Fetch New Leads",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [{ "value1": "={{ $json.length }}", "value2": 0, "operation": "larger" }]
+        }
+      },
+      "id": "has-leads",
+      "name": "Has New Leads?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [620, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const leads = $input.item.json;\nif (!Array.isArray(leads) || leads.length === 0) return [];\nreturn leads.map(lead => ({ json: lead }));"
+      },
+      "id": "split-leads",
+      "name": "Split Leads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [820, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $input.item.json;\n\nconst serviceMap = {\n  'social-media': 'Instagram automation aur social media management',\n  'lead-gen': 'automated lead generation aur client follow-up',\n  'full-automation': 'complete business automation (booking, leads, social media)'\n};\nconst service = serviceMap[lead.serviceInterest] || 'AI automation';\n\nconst prompt = `You are Ankur from Helora AI Agency. Write a short, warm WhatsApp message in Hinglish (Hindi + English mix) to introduce yourself to a local business owner.\n\nBusiness: ${lead.name}\nLocation: ${lead.city}, Madhya Pradesh\nWhat they need: ${service}\nEstimated value: ₹${lead.mrrPotential}/month\nContext: ${lead.notes || 'Local business with low online presence'}\n\nRules:\n- 3-4 lines max, conversational\n- Mention their city/area to feel local\n- Mention one specific benefit (time saved OR more customers)\n- End with a soft question, NOT a hard sell\n- Sound like a real person, not a robot\n- No emojis overload, max 2\n\nRespond in JSON only: {\"message\": \"the whatsapp message\", \"followUp\": \"a 3-day follow-up message if no reply\"}`;\n\nreturn { json: {\n  ...lead,\n  groqBody: JSON.stringify({\n    model: 'llama-3.3-70b-versatile',\n    messages: [\n      { role: 'system', content: 'You are a helpful sales assistant. Always respond with valid JSON only.' },\n      { role: 'user', content: prompt }\n    ],\n    max_tokens: 300,\n    temperature: 0.75\n  })\n}};"
+      },
+      "id": "build-prompt",
+      "name": "Build Groq Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1020, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "={{ $json.groqBody }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "82bqEdz7Jzgz040V",
+          "name": "Groq API Key"
+        }
+      },
+      "id": "call-groq",
+      "name": "Call Groq API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1220, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.item.json;\nconst lead = $('Build Groq Prompt').item.json;\n\nlet message = '', followUp = '';\ntry {\n  const text = (raw.choices && raw.choices[0]?.message?.content) || '{}';\n  const cleaned = text.replace(/```json|```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  message = parsed.message || '';\n  followUp = parsed.followUp || '';\n} catch(e) {\n  message = 'Hi, I am Ankur from Helora AI Agency. Aapka business dekha, bahut potential hai. Kya hum baat kar sakte hain?';\n}\n\nconst supabaseBody = JSON.stringify({\n  hook: 'WhatsApp outreach - ' + lead.name,\n  caption: message,\n  hashtags: followUp,\n  platform: 'whatsapp',\n  contentType: 'message',\n  status: 'draft'\n});\n\nconst updateBody = JSON.stringify({ status: 'contacted' });\n\nreturn { json: {\n  leadId: lead.id,\n  leadName: lead.name,\n  phone: lead.phone,\n  message,\n  followUp,\n  supabaseBody,\n  updateUrl: `https://jzumhspttptpadarlmre.supabase.co/rest/v1/leads?id=eq.${lead.id}`,\n  updateBody\n}};"
+      },
+      "id": "parse-message",
+      "name": "Parse Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1420, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/content",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "={{ $json.supabaseBody }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "save-draft",
+      "name": "Save Draft Message",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1620, 200]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ $json.updateUrl }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "={{ $json.updateBody }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "mark-contacted",
+      "name": "Mark Lead Contacted",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1820, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/agents_log",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "={\"agentName\":\"Outreach\",\"taskType\":\"whatsapp-pitch\",\"description\":\"Generated WhatsApp pitch for \" + $json.leadName,\"status\":\"completed\"}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "log-run",
+      "name": "Log Agent Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2020, 200]
+    }
+  ],
+  "connections": {
+    "Every 6 Hours": {
+      "main": [[{ "node": "Fetch New Leads", "type": "main", "index": 0 }]]
+    },
+    "Fetch New Leads": {
+      "main": [[{ "node": "Has New Leads?", "type": "main", "index": 0 }]]
+    },
+    "Has New Leads?": {
+      "main": [
+        [{ "node": "Split Leads", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Split Leads": {
+      "main": [[{ "node": "Build Groq Prompt", "type": "main", "index": 0 }]]
+    },
+    "Build Groq Prompt": {
+      "main": [[{ "node": "Call Groq API", "type": "main", "index": 0 }]]
+    },
+    "Call Groq API": {
+      "main": [[{ "node": "Parse Message", "type": "main", "index": 0 }]]
+    },
+    "Parse Message": {
+      "main": [[{ "node": "Save Draft Message", "type": "main", "index": 0 }]]
+    },
+    "Save Draft Message": {
+      "main": [[{ "node": "Mark Lead Contacted", "type": "main", "index": 0 }]]
+    },
+    "Mark Lead Contacted": {
+      "main": [[{ "node": "Log Agent Run", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["helora", "outreach", "whatsapp"]
+}

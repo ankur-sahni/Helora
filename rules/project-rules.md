@@ -31,4 +31,4 @@ Rules for how projects are structured, managed, and delivered in this agency.
 ## Project Priorities (current)
 1. n8n local setup + scheduler (infrastructure foundation)
 2. Lead generation system (agency growth)
-3. Sahni Bridal Studio full digital build (first client)
+3. Ankit Sahni Makeover full digital build (first client)

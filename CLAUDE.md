@@ -1,133 +1,57 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-> Keep this SHORT. Deep context lives in `docs/` and `.claude/`. Bloated files reduce instruction quality.
+Guidance for Claude Code working on Helora. Deep context lives in `rules/`, `docs/`, and `.claude/`.
 
 ---
 
 ## What This Is
 
-A **production-grade AI agency** — a multi-agent system that operates like a real company.
-Every function (engineering, product, security, ops, growth) is staffed by specialized agents with defined roles, communication contracts, memory, and escalation paths.
+Helora — production-grade AI automation agency built as multi-agent system. Engineering, product, security, ops, and growth functions are staffed by specialized agents with defined roles, memory, and escalation paths.
+
+**North star:** $30k USD MRR. **First invoice:** Ankit Sahni Makeover @ ₹20k/month. Every action answers: *does this move us closer to the first invoice?*
 
 ---
 
-## Agent System
+## Hard Constraints
 
-Enable multi-agent orchestration:
-```bash
-export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
-```
+These have caused repeated corrections. Violating any is a failure mode.
 
-**Always start with the COO agent** for any non-trivial task. It routes, delegates, audits, and synthesizes.
-
-### Agent Roster (by tier)
-
-| Tier | Agent | Model | Role |
-|------|-------|-------|------|
-| Control | `coo` | Opus | Orchestrator, router, synthesizer |
-| Control | `dispatcher` | Haiku | Routing audit & validation |
-| Control | `product-owner` | Sonnet | User/business perspective |
-| Council | `council/evolution` | Sonnet | Forward-looking analysis |
-| Council | `council/improvement` | Sonnet | Flaw detection & correctness |
-| Council | `council/keenness` | Sonnet | Blind spots & second-order effects |
-| Engineering | `planner` | Sonnet | Implementation plans |
-| Engineering | `researcher` | Sonnet | Codebase exploration |
-| Engineering | `implementer` | Sonnet | Code writing |
-| Engineering | `reviewer` | Sonnet | Code review |
-| Engineering | `tester` | Haiku | Test execution |
-| Engineering | `security` | Sonnet | Security audit |
-| Engineering | `dependency-analyst` | Haiku | Impact mapping |
-| Engineering | `devops` | Sonnet | Infrastructure |
-| System | `memory-manager` | Sonnet | Canonical memory gatekeeper |
-| System | `context-manager` | Haiku | Context packet assembly |
-| System | `observability` | Haiku | Logging & metrics |
-| System | `budget-tracker` | Haiku | Token cost tracking |
-| System | `retrospective` | Opus | Periodic system self-improvement |
-| Support | `docs-writer` | Haiku | Documentation |
-
-Full agent definitions → `.claude/agents/`
+- **Free tier only** until first client invoice lands. No paid subscriptions.
+- **Check before install.** Verify package/tool exists and version before running any install.
+- **No fake or placeholder data** in anything that could ship. Real data or no data.
+- **Plan before build.** Confirm stack and get plan approval before writing non-trivial code.
+- **No new systems.** Extend what exists. Never propose parallel OS/dashboard when current can grow.
+- **API keys live in `.env` only.** Never in JSON, MD, memory files, agent configs, or chat.
+- **No delete without double-confirmation.** Files, configs, n8n workflows, memory entries — ask twice.
+- **Windows servers use PowerShell `Start-Process`.** Bash `&` does not work. Ports: 3000 (Next.js), 4000 (API), 5678 (n8n).
+- **MCP-first for external info.** Context7 for docs, Playwright for frontend, Drive for client files — before web search or guessing.
 
 ---
 
-## Mandatory Auto-Triggers
+## Quick Reference
 
-These fire automatically — not by human judgment:
+**Commands**  
+`/start` — session bootstrap · `/status` — agency snapshot · `/coo` — orchestration · `/tasks` — task triage
 
-| Condition | Auto-fires |
-|-----------|-----------|
-| Files touching `auth/`, `payments/`, or `security/` | `security` agent |
-| Plan affecting > 5 files | `dependency-analyst` first |
-| New external dependency added | `security` package audit |
-| Any agent confidence < 70% | COO convenes council |
-| 3+ consecutive test failures | `researcher` investigates before retry |
-| Task budget > 80% consumed | `budget-tracker` escalates to COO |
+**Agent System**  
+8 core agents in `.claude/agents/`: COO, Planner, Implementer, Reviewer, Security, Dependency-analyst, Budget-tracker, Memory-manager. Spawn only when task needs specialist perspective or is parallelizable.
 
----
+**Workflows**  
+`.claude/workflows/` — feature, bugfix, security-audit, release, new-client-onboarding, content-production, lead-outreach, weekly-client-report
 
-## Canonical Memory
+**Rules**  
+`rules/` — agent-rules, coding-rules, project-rules, communication-rules, n8n-rules, client-rules, ai-rules
 
-Durable, shared knowledge that survives sessions.
-**Only `memory-manager` can write here.** All agents can read.
+**Memory**  
+- **Canonical (durable):** `.claude/memory/canonical/` (architecture, decisions, patterns, anti-patterns)
+- **Auto-memory (user-level):** `C:\Users\devin\.claude\projects\d--Learning-Ai-Automation-Ankur-Sahni-Learning-Project\memory\MEMORY.md`
+- **Agent working (session-scoped):** `.claude/memory/agents/`
 
-```
-.claude/memory/canonical/
-├── architecture.md    # System design decisions
-├── decisions.md       # Key choices + rationale
-├── patterns.md        # Established patterns in use
-└── anti-patterns.md   # Things that failed + why
-```
+Read auto-memory at session start when context is thin.
 
-Agent working memory (session-scoped) → `.claude/memory/agents/`
+**Escalation Auto-Triggers**  
+Auth/payments/security files → `security` agent. Plan affects >5 files → `dependency-analyst` first. New dependency → `security` audit. Agent confidence <70% → `coo` convenes council. 3+ consecutive failures → stop, root-cause investigation. Budget >80% consumed → `budget-tracker` escalates. Client-facing copy/pricing → escalate to Ankur.
 
 ---
 
-## Workflow Definitions
-
-Named, repeatable workflows for common tasks:
-
-| Workflow | File | Use For |
-|----------|------|---------|
-| Feature development | `.claude/workflows/feature.md` | New features |
-| Bug fix | `.claude/workflows/bugfix.md` | Defect resolution |
-| Security audit | `.claude/workflows/security-audit.md` | Security reviews |
-| Release | `.claude/workflows/release.md` | Deployment |
-
----
-
-## Skills (Reusable Knowledge)
-
-| Skill | Path |
-|-------|------|
-| API conventions | `.claude/skills/api-conventions/SKILL.md` |
-| Frontend patterns | `.claude/skills/frontend-patterns/SKILL.md` |
-| Database migrations | `.claude/skills/database-migrations/SKILL.md` |
-| Security patterns | `.claude/skills/security-patterns/SKILL.md` |
-| Testing patterns | `.claude/skills/testing-patterns/SKILL.md` |
-| Release process | `.claude/skills/release-process/SKILL.md` |
-
----
-
-## Rules
-
-All agency-wide rules live in `rules/`:
-
-| File | Covers |
-|------|--------|
-| `rules/agent-rules.md` | Agent behavior, triggers, escalation |
-| `rules/coding-rules.md` | Code standards, security, git |
-| `rules/project-rules.md` | Project structure, delivery, priorities |
-| `rules/communication-rules.md` | Tone, decisions, what not to do |
-| `rules/n8n-rules.md` | n8n workflow naming, error handling, docs |
-| `rules/client-rules.md` | Client onboarding, handoff, case studies |
-| `rules/ai-rules.md` | Model selection, prompts, API usage, cost |
-
----
-
-## Deep Docs
-
-- Architecture blueprint → `docs/architecture.md`
-- Agent communication protocol → `docs/agent-communication.md`
-- Memory model → `docs/memory-model.md`
-- Observability design → `docs/observability.md`
+*For detailed behavioral rules, patterns, and decision frameworks, see files in `rules/` and `docs/`. Agent definitions and prompts live in `.claude/agents/`.*

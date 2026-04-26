@@ -29,6 +29,12 @@ Standards for all code written in this agency and its projects.
 - Prefer existing dependencies over adding new ones
 - Document why a dependency was chosen in the relevant project CLAUDE.md
 
+## Deletion — NEVER WITHOUT DOUBLE CONFIRMATION
+- NEVER delete any file, folder, database table, record, or code without asking first
+- Ask once → user confirms → ask again "Are you sure? This cannot be undone" → only then delete
+- Applies to: files, folders, git branches, DB tables, records, workflows, API keys
+- When in doubt — do not delete. Ask instead.
+
 ## Git
 - Never skip hooks (--no-verify)
 - Never force push to main/master

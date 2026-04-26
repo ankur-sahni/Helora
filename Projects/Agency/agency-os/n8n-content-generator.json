@@ -1,0 +1,173 @@
+{
+  "name": "content/daily-generator",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 24 }]
+        }
+      },
+      "id": "trigger",
+      "name": "Daily 9am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const contentTypes = [\n  { type: 'bridal_transformation', prompt: 'Write an Instagram Reel caption for Sahni Bridal Studio (@sahnibridalstudio) about a bridal transformation. Start with a powerful hook in Hindi or Hinglish that stops the scroll (e.g. \"Jab dulhan ready hoti hai toh...\"). Show emotion — the bride feeling beautiful, family reactions, the moment. 3-4 lines max. End with CTA: \"Apni booking ke liye WhatsApp karo: 9098909088\".' },\n  { type: 'services_showcase', prompt: 'Write an Instagram caption for Sahni Bridal Studio (@sahnibridalstudio) showcasing their services: Bridal Makeup, Bridal Jewellery, Bridal Outfit, Engagement Makeup, Party Makeup, Hair Styling, Facial, Nail Art, Hair Spa. Use Hinglish. Start with a hook. Make it feel aspirational. End with CTA to WhatsApp 9098909088.' },\n  { type: 'legacy_trust', prompt: 'Write an Instagram caption for Sahni Bridal Studio (@sahnibridalstudio). Highlight that they have been making brides beautiful since 1994 — 30+ years of trust in Lahar, Madhya Pradesh. Mention that thousands of brides have chosen them. Emotional, proud tone in Hinglish. End with CTA to WhatsApp 9098909088.' },\n  { type: 'bridal_tips', prompt: 'Write an Instagram carousel caption for Sahni Bridal Studio (@sahnibridalstudio) giving 5 bridal makeup tips for Indian brides. Practical, helpful. Hinglish. Position them as the expert. End with: \"Expert bridal makeup ke liye WhatsApp karo: 9098909088\".' },\n  { type: 'engagement_special', prompt: 'Write an Instagram Reel caption for Sahni Bridal Studio (@sahnibridalstudio) about engagement makeup. Hook should be about the \"roka/engagement\" moment. Romantic, emotional Hinglish. Services: Engagement Makeup, Jewellery, Outfit. CTA: WhatsApp 9098909088.' },\n  { type: 'party_season', prompt: 'Write an Instagram caption for Sahni Bridal Studio (@sahnibridalstudio) for party/function makeup. Festive energy — shaadi season, sangeet, mehndi, reception. Fun Hinglish tone. Services: Party Makeup, Party Outfit, Party Jewellery. CTA: WhatsApp 9098909088.' }\n];\nconst today = new Date();\nconst pick = contentTypes[today.getDay() % contentTypes.length];\nreturn [{ json: { contentType: pick.type, promptText: pick.prompt, business: 'Sahni Bridal Studio', platform: 'Instagram', instagram: '@sahnibridalstudio' } }];"
+      },
+      "id": "businesses",
+      "name": "Set Businesses",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const b = $input.item.json;\nconst fullPrompt = b.promptText + ' Respond ONLY in valid JSON: {\"hook\":\"first 1-2 lines that stop the scroll\",\"caption\":\"full post caption in Hinglish\",\"reelConcept\":\"what to show visually in the Reel (2 sentences)\",\"hashtags\":\"15 hashtags mix of Hindi bridal + local MP + niche\",\"platform\":\"Instagram\"}';\n\nreturn { json: {\n  ...b,\n  groqBody: JSON.stringify({\n    model: 'llama-3.3-70b-versatile',\n    messages: [\n      { role: 'system', content: 'You are a top Indian social media content creator specialising in bridal beauty salons. You write viral Hinglish captions that get saves and shares. Always respond with valid JSON only. No markdown, no explanation.' },\n      { role: 'user', content: fullPrompt }\n    ],\n    max_tokens: 500,\n    temperature: 0.85\n  })\n}};"
+      },
+      "id": "build-request",
+      "name": "Build Groq Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "={{ $json.groqBody }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "82bqEdz7Jzgz040V",
+          "name": "Groq API Key"
+        }
+      },
+      "id": "call-groq",
+      "name": "Call Groq API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [840, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.item.json;\nconst prev = $('Build Groq Request').item.json;\n\nlet text = (raw.choices && raw.choices[0]?.message?.content) || '';\nlet hook = '', caption = text, reelConcept = '', hashtags = '';\ntry {\n  const cleaned = text.replace(/```json|```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  hook = parsed.hook || '';\n  caption = parsed.caption || text;\n  reelConcept = parsed.reelConcept || '';\n  hashtags = parsed.hashtags || '';\n} catch(e) {}\n\nreturn { json: {\n  business: prev.business,\n  contentType: prev.contentType,\n  platform: 'Instagram',\n  hook,\n  caption,\n  reelConcept,\n  hashtags\n}};"
+      },
+      "id": "parse-response",
+      "name": "Parse Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1060, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/content",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "hook", "value": "={{ $json.hook }}" },
+            { "name": "body", "value": "={{ $json.caption }}" },
+            { "name": "platform", "value": "Instagram" },
+            { "name": "contentType", "value": "={{ $json.contentType }}" },
+            { "name": "status", "value": "draft" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "save-content",
+      "name": "Save to Content Table",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1280, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/agents_log",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "agentName", "value": "Content" },
+            { "name": "taskType", "value": "generate" },
+            { "name": "description", "value": "={{ 'Generated Instagram ' + $json.contentType + ' for Sahni Bridal Studio' }}" },
+            { "name": "status", "value": "completed" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "log-run",
+      "name": "Log Agent Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1500, 300]
+    }
+  ],
+  "connections": {
+    "Daily 9am": {
+      "main": [[{ "node": "Set Businesses", "type": "main", "index": 0 }]]
+    },
+    "Set Businesses": {
+      "main": [[{ "node": "Build Groq Request", "type": "main", "index": 0 }]]
+    },
+    "Build Groq Request": {
+      "main": [[{ "node": "Call Groq API", "type": "main", "index": 0 }]]
+    },
+    "Call Groq API": {
+      "main": [[{ "node": "Parse Response", "type": "main", "index": 0 }]]
+    },
+    "Parse Response": {
+      "main": [[{ "node": "Save to Content Table", "type": "main", "index": 0 }]]
+    },
+    "Save to Content Table": {
+      "main": [[{ "node": "Log Agent Run", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["helora", "content", "groq"]
+}

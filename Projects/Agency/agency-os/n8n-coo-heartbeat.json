@@ -1,0 +1,246 @@
+{
+  "name": "coo/heartbeat",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "id": "trigger",
+      "name": "Every 15 Minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = new Date();\nconst istHour = (now.getUTCHours() + 5) % 24;\nconst istMinute = (now.getUTCMinutes() + 30) % 60;\nreturn { json: { timestamp: now.toISOString(), istHour, istMinute,\n  isMorning: istHour === 9 && istMinute < 15,\n  runId: 'coo-' + Date.now() } };"
+      },
+      "id": "time-context",
+      "name": "Set Time Context",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/tasks?status=eq.pending&select=id,title,taskType,priority,assignedAgent&order=priority.desc&limit=10",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "get-pending-tasks",
+      "name": "Get Pending Tasks",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [640, 160]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/leads?status=eq.new&select=id,name,business,serviceInterest,mrrPotential&order=mrrPotential.desc&limit=10",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "get-new-leads",
+      "name": "Get New Leads",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [640, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/errors?status=eq.open&select=id,workflow,errorMessage,severity&limit=10",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "get-open-errors",
+      "name": "Get Open Errors",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [640, 440]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/approvals?decision=eq.pending&select=id,type,item,createdAt&limit=10",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "get-pending-approvals",
+      "name": "Get Pending Approvals",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [640, 580]
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst tasks = Array.isArray($('Get Pending Tasks').first().json) ? $('Get Pending Tasks').first().json : [];\nconst leads = Array.isArray($('Get New Leads').first().json) ? $('Get New Leads').first().json : [];\nconst errors = Array.isArray($('Get Open Errors').first().json) ? $('Get Open Errors').first().json : [];\nconst approvals = Array.isArray($('Get Pending Approvals').first().json) ? $('Get Pending Approvals').first().json : [];\nconst isIdle = tasks.length === 0 && leads.length === 0 && errors.length === 0 && approvals.length === 0;\nreturn { json: { isIdle, summary: { pendingTasks: tasks.length, newLeads: leads.length, openErrors: errors.length, pendingApprovals: approvals.length } } };"
+      },
+      "id": "coo-router",
+      "name": "COO — Route Work",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [880, 360]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.isIdle }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-idle",
+      "name": "Is System Idle?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1100, 360]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/notifications",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "{\"type\":\"idle\",\"title\":\"System Idle\",\"message\":\"COO ran - no work found. Add tasks or leads.\",\"severity\":\"low\"}"
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "notify-idle",
+      "name": "Notify — System Idle",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1320, 240]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/agents_log",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "string",
+        "body": "{\"agentName\":\"COO\",\"taskType\":\"heartbeat\",\"description\":\"Heartbeat completed\",\"status\":\"completed\"}"
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "log-coo-run",
+      "name": "Log COO Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1320, 480]
+    }
+  ],
+  "connections": {
+    "Every 15 Minutes": {
+      "main": [[{ "node": "Set Time Context", "type": "main", "index": 0 }]]
+    },
+    "Set Time Context": {
+      "main": [[{ "node": "Get Pending Tasks", "type": "main", "index": 0 }]]
+    },
+    "Get Pending Tasks": {
+      "main": [[{ "node": "Get New Leads", "type": "main", "index": 0 }]]
+    },
+    "Get New Leads": {
+      "main": [[{ "node": "Get Open Errors", "type": "main", "index": 0 }]]
+    },
+    "Get Open Errors": {
+      "main": [[{ "node": "Get Pending Approvals", "type": "main", "index": 0 }]]
+    },
+    "Get Pending Approvals": {
+      "main": [[{ "node": "COO — Route Work", "type": "main", "index": 0 }]]
+    },
+    "COO — Route Work": {
+      "main": [[{ "node": "Is System Idle?", "type": "main", "index": 0 }]]
+    },
+    "Is System Idle?": {
+      "main": [
+        [{ "node": "Notify — System Idle", "type": "main", "index": 0 }],
+        [{ "node": "Log COO Run", "type": "main", "index": 0 }]
+      ]
+    },
+    "Notify — System Idle": {
+      "main": [[{ "node": "Log COO Run", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["helora", "coo", "heartbeat"]
+}

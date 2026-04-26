@@ -1,0 +1,178 @@
+{
+  "name": "system/kpi-snapshot",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 2 * * *" }]
+        }
+      },
+      "id": "trigger",
+      "name": "Daily 2am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/clients?select=id,mrr&status=eq.active",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": { "id": "MlAKR8yOuYyphh6d", "name": "Supabase Service Key" }
+      },
+      "id": "fetch-clients",
+      "name": "Fetch Active Clients",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/leads?select=id,status",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": { "id": "MlAKR8yOuYyphh6d", "name": "Supabase Service Key" }
+      },
+      "id": "fetch-leads",
+      "name": "Fetch Leads",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 460]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://jzumhspttptpadarlmre.supabase.co/rest/v1/content?select=id,status&created_at=gte.{{ new Date(Date.now() - 7*24*60*60*1000).toISOString() }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": { "id": "MlAKR8yOuYyphh6d", "name": "Supabase Service Key" }
+      },
+      "id": "fetch-content",
+      "name": "Fetch Content (7d)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 620]
+    },
+    {
+      "parameters": {
+        "jsCode": "const clients = $('Fetch Active Clients').item.json;\nconst leads = $('Fetch Leads').item.json;\nconst content = $('Fetch Content (7d)').item.json;\n\nconst clientList = Array.isArray(clients) ? clients : [];\nconst leadList = Array.isArray(leads) ? leads : [];\nconst contentList = Array.isArray(content) ? content : [];\n\nconst totalMrr = clientList.reduce((sum, c) => sum + (c.mrr || 0), 0);\nconst activeClients = clientList.length;\nconst totalLeads = leadList.length;\nconst contentPosted = contentList.filter(c => c.status === 'published').length;\n\nreturn { json: { totalMrr, activeClients, totalLeads, contentPosted } };"
+      },
+      "id": "compute-kpis",
+      "name": "Compute KPIs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 460]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/kpi_snapshots",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "totalMrr", "value": "={{ $json.totalMrr }}" },
+            { "name": "activeClients", "value": "={{ $json.activeClients }}" },
+            { "name": "totalLeads", "value": "={{ $json.totalLeads }}" },
+            { "name": "contentPosted", "value": "={{ $json.contentPosted }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": { "id": "MlAKR8yOuYyphh6d", "name": "Supabase Service Key" }
+      },
+      "id": "save-snapshot",
+      "name": "Save KPI Snapshot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 460]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/agents_log",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "agentName", "value": "COO" },
+            { "name": "taskType", "value": "kpi-snapshot" },
+            { "name": "description", "value": "={{ 'Nightly snapshot: MRR=Rs' + $('Compute KPIs').item.json.totalMrr + ', Clients=' + $('Compute KPIs').item.json.activeClients + ', Leads=' + $('Compute KPIs').item.json.totalLeads }}" },
+            { "name": "status", "value": "completed" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": { "id": "MlAKR8yOuYyphh6d", "name": "Supabase Service Key" }
+      },
+      "id": "log-run",
+      "name": "Log Agent Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 460]
+    }
+  ],
+  "connections": {
+    "Daily 2am": {
+      "main": [[{ "node": "Fetch Active Clients", "type": "main", "index": 0 }]]
+    },
+    "Fetch Active Clients": {
+      "main": [[{ "node": "Fetch Leads", "type": "main", "index": 0 }]]
+    },
+    "Fetch Leads": {
+      "main": [[{ "node": "Fetch Content (7d)", "type": "main", "index": 0 }]]
+    },
+    "Fetch Content (7d)": {
+      "main": [[{ "node": "Compute KPIs", "type": "main", "index": 0 }]]
+    },
+    "Compute KPIs": {
+      "main": [[{ "node": "Save KPI Snapshot", "type": "main", "index": 0 }]]
+    },
+    "Save KPI Snapshot": {
+      "main": [[{ "node": "Log Agent Run", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["helora", "system", "kpi"]
+}

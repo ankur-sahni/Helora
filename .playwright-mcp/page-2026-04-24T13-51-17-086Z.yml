@@ -1,0 +1,688 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-IN
+      - link "Accessibility feedback" [ref=e4] [cursor=pointer]
+  - generic [ref=e9]:
+    - search [ref=e10]:
+      - generic [ref=e12]:
+        - link "Go to Google Home" [ref=e14] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjVlp730IaUAxXjORAIHRCrFfkQPAgJ
+          - img [ref=e15]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - combobox "Search" [ref=e26]: bridal makeup Bhind MP bridal makeup Bhind MP
+            - generic [ref=e27]:
+              - button "Clear" [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+              - generic [ref=e34]:
+                - button "Search by voice" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+                - button "Search by image" [ref=e38] [cursor=pointer]:
+                  - img [ref=e39]
+          - button "Search" [ref=e41] [cursor=pointer]:
+            - img [ref=e44]
+    - generic [ref=e46]:
+      - button "Settings" [ref=e48] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e54]:
+        - button "Google apps" [ref=e56] [cursor=pointer]:
+          - img [ref=e57]
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3Dbridal%2Bmakeup%2BBhind%2BMP%26hl%3Den%26gl%3Din&ec=futura_srp_og_si_72236_p
+  - generic [ref=e63]:
+    - navigation [ref=e69]:
+      - generic [ref=e75]:
+        - list [ref=e76]:
+          - listitem [ref=e77]:
+            - link "AI Mode" [ref=e80] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&aep=1&ntc=1&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ2J8OegQIDRAI
+              - generic [ref=e83]: AI Mode
+          - listitem [ref=e84]:
+            - link "All" [disabled] [ref=e85]:
+              - generic [ref=e87]: All
+          - listitem [ref=e88]:
+            - link "Images" [ref=e89] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&q=bridal+makeup+Bhind+MP&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQtKgLegQIEBAB
+              - generic [ref=e91]: Images
+          - listitem [ref=e92]:
+            - link "Shopping" [ref=e93] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&udm=28&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&q=bridal+makeup+Bhind+MP&ved=1t:220175&ictx=111
+              - generic [ref=e95]: Shopping
+          - listitem [ref=e96]:
+            - link "Videos" [ref=e97] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&q=bridal+makeup+Bhind+MP&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQtKgLegQIERAB
+              - generic [ref=e99]: Videos
+          - listitem [ref=e100]:
+            - link "Short videos" [ref=e101] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&udm=39&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&q=bridal+makeup+Bhind+MP&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQs6gLegQIExAB
+              - generic [ref=e103]: Short videos
+          - listitem [ref=e104]:
+            - link "News" [ref=e105] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=bridal+makeup+Bhind+MP&tbm=nws&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3o6iwGk6Iv1tRbZIBNIVs-5-bUj3iBl-UxHsANYwOkWWQqZAJJdwuRaSoLHfELMHARurXwtwWmcdG4V-LDFDd8ecoEtHpZSRelVfCRq2UKwcWKG3jZWtDKY1abjUi6atsGFRNpwlmGKAQF9AXbF8wg8fYd5JIFkWAi8Mz75HFguCKRmBxQ&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ0pQJegQIDxAB
+              - generic [ref=e107]: News
+          - listitem [ref=e108]:
+            - button "More filters" [ref=e109] [cursor=pointer]:
+              - generic "More filters" [ref=e110]:
+                - generic [ref=e111]:
+                  - generic [ref=e112]: More
+                  - img [ref=e114]
+        - button "Tools" [ref=e117] [cursor=pointer]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: Tools
+            - img [ref=e122]
+    - navigation [ref=e125]:
+      - navigation [ref=e128]:
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - link "Add Open now" [ref=e137] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=bridal+makeup+Bhind+MP+open+now&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-JaQUCHPjKSMgcjMla-aoi_nGtEodHk1Ir2c2p4X_VX7qPlAhsU-HBbnTxK3aVHBi-acIQRLOyTjif3ufpC7txfE5iuTgA6RKnk1AGmzKdfcUmvH63H-PPOeMD5NZa4pi-67Up7H2lsqnTZc-B2fWdS9Elv3iBPaJRrP6RHAsdCucNgE2XPpyUJWNSbsfRrB_223Lng&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQxKsJKAB6BAgVEAE&ictx=0
+              - generic [ref=e139]: Open now
+          - listitem [ref=e140]:
+            - link "Add Top rated" [ref=e141] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=top+rated+bridal+makeup+Bhind+MP&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-J3sv1lfnPvABCMwdVDYvw-4eHTqnWf0_4U9xcYKGbvBXnsNSNSKsa3HFGVY6amZZsUMSOqiDgxEWfK_b5LQwyRU-EBGmHEsy7MCoRsjGzoJAUe3TL4izp4fllbJXszJUPvMnCfU7g7KTGjKTDF0mtmgAnvtciFMeq233kaZC_V4rYtZqAQhdk6ilc92k3eJEb5BbQQ&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQxKsJKAF6BAgUEAE&ictx=0
+              - generic [ref=e143]: Top rated
+    - heading "Search Results" [level=1] [ref=e144]
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - generic [ref=e157]:
+          - heading "Results for Bhind, Madhya Pradesh" [level=2] [ref=e158]:
+            - generic [ref=e159]:
+              - text: Results for
+              - text: Bhind, Madhya Pradesh
+          - generic [ref=e161]:
+            - text: ∙
+            - button "Choose area" [ref=e162] [cursor=pointer]
+          - button "How location is used" [ref=e165] [cursor=pointer]:
+            - img [ref=e167]
+        - generic [ref=e176]:
+          - 'heading "Businesses: Location results for bridal makeup Bhind MP" [level=2] [ref=e181]':
+            - generic [ref=e182]: Businesses
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e188]:
+                - generic [ref=e191]:
+                  - button "Kajal Makeovers 👰 Lakmé Certified Professional Makeup Artist Bridal & Glam Makeup Specialist Rated 5.0 out of 5, 1 user review · Make-up artist Bhind, Madhya Pradesh Open · Closes 9 pm · 084330 42062" [ref=e193]:
+                    - generic [ref=e197] [cursor=pointer]:
+                      - heading "Kajal Makeovers 👰 Lakmé Certified Professional Makeup Artist Bridal & Glam Makeup Specialist" [level=3] [ref=e198]:
+                        - generic [ref=e199]: Kajal Makeovers 👰 Lakmé Certified Professional Makeup Artist Bridal & Glam Makeup Specialist
+                      - generic [ref=e200]:
+                        - img "Rated 5.0 out of 5, 1 user review" [ref=e202]:
+                          - text: "5.0"
+                          - img [ref=e203]
+                          - text: (1)
+                        - text: · Make-up artist
+                      - generic [ref=e206]: Bhind, Madhya Pradesh
+                      - generic [ref=e207]:
+                        - generic [ref=e208]: Open · Closes 9 pm
+                        - text: · 084330 42062
+                  - link "Directions" [ref=e209] [cursor=pointer]:
+                    - /url: /maps/dir//Kajal+Makeovers+%F0%9F%91%B0+Lakm%C3%A9+Certified+Professional+Makeup+Artist+Bridal+%26+Glam+Makeup+Specialist,+Etawah+-+Bhind+Rd,+Kushwah+Colony,+Bhind,+Madhya+Pradesh+477001+Pradesh+_+477001,+Bhind,+Madhya+Pradesh+477001/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39767b93506c82f9:0xe2a0dc220957250b?sa=X&ved=1t:57443&hl=en&gl=in&ictx=111
+                    - generic [ref=e211]:
+                      - img [ref=e214]
+                      - generic [ref=e219]: Directions
+                - generic [ref=e222]:
+                  - 'button "The Instant Look . makeup and nails studio Rated 4.9 out of 5, 11 user reviews · Beauty Parlour 3+ years in business · Bhind, Madhya Pradesh Open · Closes 9:30 pm Provides: Bridal services" [ref=e224]':
+                    - generic [ref=e228] [cursor=pointer]:
+                      - heading "The Instant Look . makeup and nails studio" [level=3] [ref=e229]:
+                        - generic [ref=e230]: The Instant Look . makeup and nails studio
+                      - generic [ref=e231]:
+                        - img "Rated 4.9 out of 5, 11 user reviews" [ref=e233]:
+                          - text: "4.9"
+                          - img [ref=e234]
+                          - text: (11)
+                        - text: · Beauty Parlour
+                      - generic [ref=e237]: 3+ years in business · Bhind, Madhya Pradesh
+                      - generic [ref=e239]: Open · Closes 9:30 pm
+                      - generic [ref=e243]:
+                        - img [ref=e246]
+                        - generic [ref=e250]: "Provides: Bridal services"
+                  - link "Directions" [ref=e251] [cursor=pointer]:
+                    - /url: /maps/dir//The+Instant+Look+.+makeup+and+nails+studio,+near+Uday+Convent+School,+A+Block,+Shastri+Nagar,+Bhind,+Madhya+Pradesh+477001/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39767b5ee725015f:0xfa01e5ad694e1e4d?sa=X&ved=1t:57443&hl=en&gl=in&ictx=111
+                    - generic [ref=e253]:
+                      - img [ref=e256]
+                      - generic [ref=e261]: Directions
+                - generic [ref=e264]:
+                  - button "Secret Beauty Rated 4.2 out of 5, 191 user reviews · Beauty Parlour 20+ years in business · Bhind, Madhya Pradesh Closes soon · 8 pm · 062684 74799 \"Very good service makeup and hair cut and all\"" [ref=e266]:
+                    - generic [ref=e270] [cursor=pointer]:
+                      - heading "Secret Beauty" [level=3] [ref=e271]:
+                        - generic [ref=e272]: Secret Beauty
+                      - generic [ref=e273]:
+                        - img "Rated 4.2 out of 5, 191 user reviews" [ref=e275]:
+                          - text: "4.2"
+                          - img [ref=e276]
+                          - text: (191)
+                        - text: · Beauty Parlour
+                      - generic [ref=e279]: 20+ years in business · Bhind, Madhya Pradesh
+                      - generic [ref=e280]:
+                        - generic [ref=e281]: Closes soon · 8 pm
+                        - text: · 062684 74799
+                      - generic [ref=e283]:
+                        - img [ref=e286]
+                        - generic [ref=e291]: "\"Very good service makeup and hair cut and all\""
+                  - link "Directions" [ref=e292] [cursor=pointer]:
+                    - /url: /maps/dir//Secret+Beauty,+secret+beauty+,+petch,+Street+Number+1,+Adarsh+colony,+Bhind,+Madhya+Pradesh+477001/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39767b15438e686b:0xfdc18baed9535d0b?sa=X&ved=1t:57443&hl=en&gl=in&ictx=111
+                    - generic [ref=e294]:
+                      - img [ref=e297]
+                      - generic [ref=e302]: Directions
+              - heading "More businesses" [level=3] [ref=e305]:
+                - link "More businesses" [ref=e307] [cursor=pointer]:
+                  - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&udm=1&lsack=UXXraZWqMePzwPAPkNbWyA8&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQjGp6BAgiEAA
+                  - separator [ref=e308]
+                  - generic [ref=e309]:
+                    - generic [ref=e310]: More businesses
+                    - img [ref=e312]
+            - heading "Map" [level=3] [ref=e315]
+      - main [ref=e317]:
+        - generic [ref=e321]:
+          - generic [ref=e324]:
+            - heading "Web results" [level=2] [ref=e325]
+            - generic [ref=e326]:
+              - generic [ref=e329]:
+                - link "List of Top Bridal Makeup Artists in Bhind Justdial https://www.justdial.com › ... › 27+ Listings" [ref=e331] [cursor=pointer]:
+                  - /url: https://www.justdial.com/Bhind/Bridal-Makeup-Artists/nct-11271913
+                  - heading "List of Top Bridal Makeup Artists in Bhind" [level=3] [ref=e332]
+                  - generic [ref=e337]:
+                    - generic [ref=e339]: Justdial
+                    - generic [ref=e341]: https://www.justdial.com › ... › 27+ Listings
+                - button "About this result" [ref=e342] [cursor=pointer]:
+                  - img [ref=e345]
+              - generic [ref=e348]:
+                - generic [ref=e349]:
+                  - text: Popular Bridal Makeup Artists in Bhind ·
+                  - emphasis [ref=e350]: Praval Makeover
+                  - text: · Praval Makeover Professionel Makeup Artist · Shahnaz Husain Signature Salon Beauty Academy · Secret ...
+                - link "Read more" [ref=e351] [cursor=pointer]:
+                  - /url: https://www.justdial.com/Bhind/Bridal-Makeup-Artists/nct-11271913#:~:text=Popular%20Bridal%20Makeup%20Artists%20in,Bhind&text=Praval%20Makeover&text=Praval%20Makeover%20Professionel%20Makeup%20Artist&text=Shahnaz%20Husain%20Signature%20Salon%20Beauty,Academy&text=Secret%20Beauty
+              - img "Rated 4.5 out of 5, (1,535) user reviews" [ref=e356]:
+                - text: "4.5"
+                - img [ref=e357]
+                - text: (1,535)
+          - generic [ref=e363]:
+            - generic [ref=e366]:
+              - link "Bhind (m.p)| (@neelusmakover) - Makeup Artist Instagram · neelusmakover 7.6K+ followers" [ref=e368] [cursor=pointer]:
+                - /url: https://www.instagram.com/neelusmakover/?hl=en
+                - heading "Bhind (m.p)| (@neelusmakover) - Makeup Artist" [level=3] [ref=e369]
+                - generic [ref=e374]:
+                  - generic [ref=e376]: Instagram · neelusmakover
+                  - generic [ref=e378]: 7.6K+ followers
+              - button "About this result" [ref=e379] [cursor=pointer]:
+                - img [ref=e382]
+            - generic [ref=e385]:
+              - generic [ref=e386]:
+                - emphasis [ref=e387]: Certified makeup artist (pro) medal awarded
+                - text: / delhi/mumbai based. Har har mahadev Bhind (m.p) Contact:— 7415297876 ...
+              - link "Read more" [ref=e388] [cursor=pointer]:
+                - /url: https://www.instagram.com/neelusmakover/?hl=en#:~:text=%F0%9F%8F%86%20Certified%20makeup%20%F0%9F%92%84%20artist,Contact%3A%E2%80%94%207415297876
+          - generic [ref=e392]:
+            - generic [ref=e395]:
+              - link "Top Makeup Artists in Bhind Justdial https://www.justdial.com › ... › 44+ Listings" [ref=e397] [cursor=pointer]:
+                - /url: https://www.justdial.com/Bhind/Makeup-Artists/nct-11300681
+                - heading "Top Makeup Artists in Bhind" [level=3] [ref=e398]
+                - generic [ref=e403]:
+                  - generic [ref=e405]: Justdial
+                  - generic [ref=e407]: https://www.justdial.com › ... › 44+ Listings
+              - button "About this result" [ref=e408] [cursor=pointer]:
+                - img [ref=e411]
+            - generic [ref=e415]:
+              - emphasis [ref=e416]: 44 Makeup Artists in Bhind
+              - text: . Find ✓Wedding Makeup Artists, ✓ Makeup Artists at Home, ✓Groom Makeup Artists, ✓Bride Makeup Artists, ✓Celebrity Makeup Artists ...
+            - img "Rated 4.5 out of 5, (1,668) user reviews" [ref=e421]:
+              - text: "4.5"
+              - img [ref=e422]
+              - text: (1,668)
+          - generic [ref=e428]:
+            - generic [ref=e431]:
+              - link "Alpana makeup artist Bhind (@alpana_makeup_artist_bhind) Instagram · alpana_makeup_artist_bhind 4K+ followers" [ref=e433] [cursor=pointer]:
+                - /url: https://www.instagram.com/alpana_makeup_artist_bhind/
+                - heading "Alpana makeup artist Bhind (@alpana_makeup_artist_bhind)" [level=3] [ref=e434]
+                - generic [ref=e439]:
+                  - generic [ref=e441]: Instagram · alpana_makeup_artist_bhind
+                  - generic [ref=e443]: 4K+ followers
+              - button "About this result" [ref=e444] [cursor=pointer]:
+                - img [ref=e447]
+            - generic [ref=e450]:
+              - generic [ref=e451]:
+                - emphasis [ref=e452]: Certified makeup artist & nail artist
+                - text: (pro) The instant look makeup & nails studios Contact us - 7987240627 Location -Shastri nager A block
+              - link "Read more" [ref=e453] [cursor=pointer]:
+                - /url: https://www.instagram.com/alpana_makeup_artist_bhind/#:~:text=Certified%20makeup%20artist%20%26%20nail,Location%20%2DShastri%20nager%20A%20block
+          - generic [ref=e457]:
+            - generic [ref=e460]:
+              - link "Best Beauty Parlours For Bridal Makeup near me - Bhind Justdial https://www.justdial.com › ... › 22+ Listings" [ref=e462] [cursor=pointer]:
+                - /url: https://www.justdial.com/Bhind/Beauty-Parlours-For-Bridal/nct-10042305
+                - heading "Best Beauty Parlours For Bridal Makeup near me - Bhind" [level=3] [ref=e463]
+                - generic [ref=e468]:
+                  - generic [ref=e470]: Justdial
+                  - generic [ref=e472]: https://www.justdial.com › ... › 22+ Listings
+              - button "About this result" [ref=e473] [cursor=pointer]:
+                - img [ref=e476]
+            - generic [ref=e480]:
+              - emphasis [ref=e481]: 22 Beauty Parlours For Bridal in Bhind
+              - text: . Find ✓Beauty Parlours, ✓Makeup Artists, ✓Women Beauty Parlours, ✓Salons, ✓Beauty Parlours For Makeup in Bhind.
+            - img "Rated 4.4 out of 5, (1,477) user reviews" [ref=e486]:
+              - text: "4.4"
+              - img [ref=e487]
+              - text: (1,477)
+          - generic [ref=e493]:
+            - heading "Short videos" [level=2] [ref=e495]
+            - generic [ref=e497]:
+              - list [ref=e499]:
+                - listitem [ref=e500]:
+                  - generic [ref=e503]:
+                    - generic [ref=e505]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:25" [ref=e507] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DSFTFCHk3px/
+                        - generic [ref=e512]:
+                          - img [ref=e513]
+                          - generic [ref=e515]: 0:25
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e517] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DSFTFCHk3px/
+                        - generic [ref=e518]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ..." [level=3] [ref=e520]:
+                            - generic [ref=e521]: neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ...
+                          - generic [ref=e526]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e530] [cursor=pointer]:
+                      - img [ref=e533]
+                - listitem [ref=e535]:
+                  - generic [ref=e538]:
+                    - generic [ref=e540]:
+                      - link "SecretBeautyOfficial © | Signature bridal makeup ... by SecretBeautyOfficial © on Instagram. Play on Instagram. 0:20" [ref=e542] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DJ51uyNpSP-/
+                        - generic [ref=e550]:
+                          - img [ref=e551]
+                          - generic [ref=e553]: 0:20
+                      - link "SecretBeautyOfficial © | Signature bridal makeup ... Instagram · SecretBeautyOfficial ©" [ref=e555] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DJ51uyNpSP-/
+                        - generic [ref=e556]:
+                          - heading "SecretBeautyOfficial © | Signature bridal makeup ..." [level=3] [ref=e558]:
+                            - generic [ref=e559]: SecretBeautyOfficial © | Signature bridal makeup ...
+                          - generic [ref=e564]: Instagram · SecretBeautyOfficial ©
+                    - button "About this result" [ref=e568] [cursor=pointer]:
+                      - img [ref=e571]
+                - listitem [ref=e573]:
+                  - generic [ref=e576]:
+                    - generic [ref=e578]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:19" [ref=e580] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/C6nvWOgxvvi/
+                        - generic [ref=e588]:
+                          - img [ref=e589]
+                          - generic [ref=e591]: 0:19
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e593] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/C6nvWOgxvvi/
+                        - generic [ref=e594]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ..." [level=3] [ref=e596]:
+                            - generic [ref=e597]: neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ...
+                          - generic [ref=e602]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e606] [cursor=pointer]:
+                      - img [ref=e609]
+                - listitem [ref=e611]:
+                  - generic [ref=e614]:
+                    - generic [ref=e616]:
+                      - link "SecretBeautyOfficial © | Secret Beauty 📍Behind Kusumbai ... by SecretBeautyOfficial © on Instagram. Play on Instagram. 0:45" [ref=e618] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DANRN3BJtJN/
+                        - generic [ref=e623]:
+                          - img [ref=e624]
+                          - generic [ref=e626]: 0:45
+                      - link "SecretBeautyOfficial © | Secret Beauty 📍Behind Kusumbai ... Instagram · SecretBeautyOfficial ©" [ref=e628] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DANRN3BJtJN/
+                        - generic [ref=e629]:
+                          - heading "SecretBeautyOfficial © | Secret Beauty 📍Behind Kusumbai ..." [level=3] [ref=e631]:
+                            - generic [ref=e632]: SecretBeautyOfficial © | Secret Beauty 📍Behind Kusumbai ...
+                          - generic [ref=e637]: Instagram · SecretBeautyOfficial ©
+                    - button "About this result" [ref=e641] [cursor=pointer]:
+                      - img [ref=e644]
+                - listitem [ref=e646]:
+                  - generic [ref=e649]:
+                    - generic [ref=e651]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:28" [ref=e653] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DBvyaKZynj8/
+                        - generic [ref=e658]:
+                          - img [ref=e659]
+                          - generic [ref=e661]: 0:28
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e663] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DBvyaKZynj8/
+                        - generic [ref=e664]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ..." [level=3] [ref=e666]:
+                            - generic [ref=e667]: neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ...
+                          - generic [ref=e672]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e676] [cursor=pointer]:
+                      - img [ref=e679]
+                - listitem [ref=e681]:
+                  - generic [ref=e684]:
+                    - generic [ref=e686]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My beautiful ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:14" [ref=e688] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DK891T9ReTJ/
+                        - generic [ref=e696]:
+                          - img [ref=e697]
+                          - generic [ref=e699]: 0:14
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My beautiful ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e701] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DK891T9ReTJ/
+                        - generic [ref=e702]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | My beautiful ..." [level=3] [ref=e704]:
+                            - generic [ref=e705]: neelusmakover |Makeup Artist| Bhind (m.p)| | My beautiful ...
+                          - generic [ref=e710]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e714] [cursor=pointer]:
+                      - img [ref=e717]
+                - listitem [ref=e719]:
+                  - generic [ref=e722]:
+                    - generic [ref=e724]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:23" [ref=e726] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DGp0o9ahcUb/?hl=en
+                        - generic [ref=e731]:
+                          - img [ref=e732]
+                          - generic [ref=e734]: 0:23
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e736] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DGp0o9ahcUb/?hl=en
+                        - generic [ref=e737]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p ..." [level=3] [ref=e739]:
+                            - generic [ref=e740]: neelusmakover |Makeup Artist| Bhind (m.p ...
+                          - generic [ref=e745]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e749] [cursor=pointer]:
+                      - img [ref=e752]
+                - listitem [ref=e754]:
+                  - generic [ref=e757]:
+                    - generic [ref=e759]:
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:22" [ref=e761] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DAtdhPQC5HR/
+                        - generic [ref=e766]:
+                          - img [ref=e767]
+                          - generic [ref=e769]: 0:22
+                      - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ... Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|" [ref=e771] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DAtdhPQC5HR/
+                        - generic [ref=e772]:
+                          - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ..." [level=3] [ref=e774]:
+                            - generic [ref=e775]: neelusmakover |Makeup Artist| Bhind (m.p)| | Beautiful ...
+                          - generic [ref=e780]: Instagram · neelusmakover |Makeup Artist| Bhind (m.p)|
+                    - button "About this result" [ref=e784] [cursor=pointer]:
+                      - img [ref=e787]
+                - listitem [ref=e789]:
+                  - generic [ref=e792]:
+                    - generic [ref=e794]:
+                      - link "@bablimakup @makeover_by_bablikashyap_mua ❤️ ... by bollu makeup artist❤️ on Instagram. Play on Instagram. 0:25" [ref=e796] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DXZv1NvCvZ3/
+                        - generic [ref=e801]:
+                          - img [ref=e802]
+                          - generic [ref=e804]: 0:25
+                      - link "@bablimakup @makeover_by_bablikashyap_mua ❤️ ... Instagram · bollu makeup artist❤️" [ref=e806] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DXZv1NvCvZ3/
+                        - generic [ref=e807]:
+                          - heading "@bablimakup @makeover_by_bablikashyap_mua ❤️ ..." [level=3] [ref=e809]:
+                            - generic [ref=e810]: "@bablimakup @makeover_by_bablikashyap_mua ❤️ ..."
+                          - generic [ref=e815]: Instagram · bollu makeup artist❤️
+                    - button "About this result" [ref=e819] [cursor=pointer]:
+                      - img [ref=e822]
+                - listitem [ref=e824]:
+                  - generic [ref=e827]:
+                    - generic [ref=e829]:
+                      - link "Bridal makeup ‍♀️ Done by @anjalimakeover1213 Date - 13 ... by Anjali Makeover on Instagram. Play on Instagram. 0:32" [ref=e831] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DXOCUxbkvEW/
+                        - generic [ref=e836]:
+                          - img [ref=e837]
+                          - generic [ref=e839]: 0:32
+                      - link "Bridal makeup ‍♀️ Done by @anjalimakeover1213 Date - 13 ... Instagram · Anjali Makeover" [ref=e841] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DXOCUxbkvEW/
+                        - generic [ref=e842]:
+                          - heading "Bridal makeup ‍♀️ Done by @anjalimakeover1213 Date - 13 ..." [level=3] [ref=e844]:
+                            - generic [ref=e845]: Bridal makeup ‍♀️ Done by @anjalimakeover1213 Date - 13 ...
+                          - generic [ref=e850]: Instagram · Anjali Makeover
+                    - button "About this result" [ref=e854] [cursor=pointer]:
+                      - img [ref=e857]
+              - button [ref=e859] [cursor=pointer]:
+                - img [ref=e862]
+            - link "More short videos" [ref=e865] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&udm=39&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ3egMegQIOhAS
+              - separator [ref=e866]
+              - generic [ref=e867]:
+                - generic [ref=e868]: More short videos
+                - img [ref=e870]
+          - generic [ref=e875]:
+            - generic [ref=e877]:
+              - heading "Videos" [level=2] [ref=e878]
+              - button "About this result" [ref=e879] [cursor=pointer]:
+                - img [ref=e882]
+            - generic [ref=e885]:
+              - generic [ref=e890]:
+                - generic [ref=e891]:
+                  - link "neelusmakover |Makeup Artist| Bhind (m.p ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 20 Dec 2025" [ref=e893] [cursor=pointer]:
+                    - /url: https://www.instagram.com/reel/DSfsj-9k9iC/
+                    - heading "neelusmakover |Makeup Artist| Bhind (m.p ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 20 Dec 2025" [level=3] [ref=e894]:
+                      - generic [ref=e897]: neelusmakover |Makeup Artist| Bhind (m.p ...
+                      - generic [ref=e899]:
+                        - generic [ref=e900]:
+                          - text: Instagram
+                          - generic [ref=e901]: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                        - generic [ref=e902]: 20 Dec 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: Instagram
+                            - generic: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                      - button "About this result" [ref=e903] [cursor=pointer]:
+                        - img [ref=e906]
+                - link "neelusmakover |Makeup Artist| Bhind (m.p ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:29" [ref=e908] [cursor=pointer]:
+                  - /url: https://www.instagram.com/reel/DSfsj-9k9iC/
+                  - generic [ref=e909]:
+                    - img [ref=e912]
+                    - generic [ref=e917]: 0:29
+              - generic [ref=e922]:
+                - generic [ref=e923]:
+                  - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 10 Dec 2025" [ref=e925] [cursor=pointer]:
+                    - /url: https://www.instagram.com/reel/DSFTFCHk3px/
+                    - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 10 Dec 2025" [level=3] [ref=e926]:
+                      - generic [ref=e929]: neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ...
+                      - generic [ref=e931]:
+                        - generic [ref=e932]:
+                          - text: Instagram
+                          - generic [ref=e933]: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                        - generic [ref=e934]: 10 Dec 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: Instagram
+                            - generic: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                      - button "About this result" [ref=e935] [cursor=pointer]:
+                        - img [ref=e938]
+                - link "neelusmakover |Makeup Artist| Bhind (m.p)| | Stunning 👰 bride ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:25" [ref=e940] [cursor=pointer]:
+                  - /url: https://www.instagram.com/reel/DSFTFCHk3px/
+                  - generic [ref=e941]:
+                    - img [ref=e944]
+                    - generic [ref=e949]: 0:25
+              - generic [ref=e955]:
+                - generic [ref=e956]:
+                  - link "SecretBeautyOfficial © | Signature bridal makeup ... Instagram SecretBeautyOfficial © 20 May 2025" [ref=e958] [cursor=pointer]:
+                    - /url: https://www.instagram.com/reel/DJ51uyNpSP-/
+                    - heading "SecretBeautyOfficial © | Signature bridal makeup ... Instagram SecretBeautyOfficial © 20 May 2025" [level=3] [ref=e959]:
+                      - generic [ref=e962]: SecretBeautyOfficial © | Signature bridal makeup ...
+                      - generic [ref=e964]:
+                        - generic [ref=e965]:
+                          - text: Instagram
+                          - generic [ref=e966]: · SecretBeautyOfficial ©
+                        - generic [ref=e967]: 20 May 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: Instagram
+                            - generic: · SecretBeautyOfficial ©
+                      - button "About this result" [ref=e968] [cursor=pointer]:
+                        - img [ref=e971]
+                - link "SecretBeautyOfficial © | Signature bridal makeup ... by SecretBeautyOfficial © on Instagram. Play on Instagram. 0:20" [ref=e973] [cursor=pointer]:
+                  - /url: https://www.instagram.com/reel/DJ51uyNpSP-/
+                  - generic [ref=e974]:
+                    - img [ref=e980]
+                    - generic [ref=e985]: 0:20
+              - generic [ref=e991]:
+                - generic [ref=e992]:
+                  - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 6 May 2024" [ref=e994] [cursor=pointer]:
+                    - /url: https://www.instagram.com/reel/C6nvWOgxvvi/
+                    - heading "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ... Instagram neelusmakover |Makeup Artist| Bhind (m.p)| 6 May 2024" [level=3] [ref=e995]:
+                      - generic [ref=e998]: neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ...
+                      - generic [ref=e1000]:
+                        - generic [ref=e1001]:
+                          - text: Instagram
+                          - generic [ref=e1002]: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                        - generic [ref=e1003]: 6 May 2024
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: Instagram
+                            - generic: · neelusmakover |Makeup Artist| Bhind (m.p)|
+                      - button "About this result" [ref=e1004] [cursor=pointer]:
+                        - img [ref=e1007]
+                - link "neelusmakover |Makeup Artist| Bhind (m.p)| | My all time ... by neelusmakover |Makeup Artist| Bhind (m.p)| on Instagram. Play on Instagram. 0:19" [ref=e1009] [cursor=pointer]:
+                  - /url: https://www.instagram.com/reel/C6nvWOgxvvi/
+                  - generic [ref=e1010]:
+                    - img [ref=e1016]
+                    - generic [ref=e1021]: 0:19
+            - link "View all videos" [ref=e1024] [cursor=pointer]:
+              - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&udm=7&q=bridal+makeup+Bhind+MP&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8ccDKAJ6BAhNEAQ
+              - separator [ref=e1025]
+              - generic [ref=e1026]:
+                - generic [ref=e1027]: View all
+                - img [ref=e1029]
+          - generic [ref=e1033]:
+            - heading "Web results" [level=2] [ref=e1034]
+            - generic [ref=e1035]:
+              - generic [ref=e1038]:
+                - link "Secret Beauty in Bhind | Latest Price DreamWeddingHub https://dreamweddinghub.com › secret-beauty-a136441" [ref=e1040] [cursor=pointer]:
+                  - /url: https://dreamweddinghub.com/all/bridal-makeup-artists/madhya-pradesh/bhind/secret-beauty-a136441
+                  - heading "Secret Beauty in Bhind | Latest Price" [level=3] [ref=e1041]
+                  - generic [ref=e1046]:
+                    - generic [ref=e1048]: DreamWeddingHub
+                    - generic [ref=e1050]: https://dreamweddinghub.com › secret-beauty-a136441
+                - button "About this result" [ref=e1051] [cursor=pointer]:
+                  - img [ref=e1054]
+              - generic [ref=e1058]:
+                - text: Book
+                - emphasis [ref=e1059]: Secret Beauty Bridal Makeup Artists in Bhind
+                - text: . Get photos, reviews & best price.
+          - generic [ref=e1063]:
+            - generic [ref=e1066]:
+              - link "SecretBeautyOfficial © (@secretbeauty.in) Instagram · secretbeauty.in 3.8K+ followers" [ref=e1068] [cursor=pointer]:
+                - /url: https://www.instagram.com/secretbeauty.in/
+                - heading "SecretBeautyOfficial © (@secretbeauty.in)" [level=3] [ref=e1069]
+                - generic [ref=e1074]:
+                  - generic [ref=e1076]: Instagram · secretbeauty.in
+                  - generic [ref=e1078]: 3.8K+ followers
+              - button "About this result" [ref=e1079] [cursor=pointer]:
+                - img [ref=e1082]
+            - generic [ref=e1085]:
+              - generic [ref=e1086]:
+                - text: YOUR ONE-STOP BEAUTY SALON HAIR । MAKE-UP । NAIL । SKIN EXPERT & Experience +91 6268474799 ... Air brush
+                - emphasis [ref=e1087]: Makeup
+                - text: "#makeupbysecretbeautybhind #bhindmakeupartist # ..."
+              - link "Read more" [ref=e1088] [cursor=pointer]:
+                - /url: https://www.instagram.com/secretbeauty.in/#:~:text=YOUR%20ONE%2DSTOP%20BEAUTY%20SALON,%2B91%206268474799
+        - generic [ref=e1090]:
+          - generic [ref=e1095]:
+            - heading "People also search for" [level=2] [ref=e1097]
+            - generic [ref=e1099]:
+              - generic [ref=e1100]:
+                - link "Bridal makeup bhind mp contact number" [ref=e1104] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Bridal+makeup+bhind+mp+contact+number&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhZEAE
+                  - generic [ref=e1105]:
+                    - generic [ref=e1110]: Bridal makeup bhind mp contact number
+                    - img [ref=e1114]
+                - link "Best bridal makeup bhind mp" [ref=e1119] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Best+bridal+makeup+bhind+mp&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhfEAE
+                  - generic [ref=e1120]:
+                    - generic [ref=e1125]: Best bridal makeup bhind mp
+                    - img [ref=e1129]
+                - link "Bridal makeup bhind mp photos" [ref=e1134] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Bridal+makeup+bhind+mp+photos&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAheEAE
+                  - generic [ref=e1135]:
+                    - generic [ref=e1140]: Bridal makeup bhind mp photos
+                    - img [ref=e1144]
+                - link "Bridal makeup bhind mp price" [ref=e1149] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Bridal+makeup+bhind+mp+price&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhdEAE
+                  - generic [ref=e1150]:
+                    - generic [ref=e1155]: Bridal makeup bhind mp price
+                    - img [ref=e1159]
+              - generic [ref=e1161]:
+                - link "Bridal makeup bhind mp phone number" [ref=e1165] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Bridal+makeup+bhind+mp+phone+number&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhcEAE
+                  - generic [ref=e1166]:
+                    - generic [ref=e1171]: Bridal makeup bhind mp phone number
+                    - img [ref=e1175]
+                - link "Bridal makeup bhind mp address" [ref=e1180] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Bridal+makeup+bhind+mp+address&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhbEAE
+                  - generic [ref=e1181]:
+                    - generic [ref=e1186]: Bridal makeup bhind mp address
+                    - img [ref=e1190]
+                - link "Beauty parlour in Bhind" [ref=e1195] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Beauty+parlour+in+Bhind&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhYEAE
+                  - generic [ref=e1196]:
+                    - generic [ref=e1201]: Beauty parlour in Bhind
+                    - img [ref=e1205]
+                - link "Neelu beauty parlour Bhind" [ref=e1210] [cursor=pointer]:
+                  - /url: /search?sca_esv=678aa669decbf740&hl=en&gl=in&q=Neelu+beauty+parlour+Bhind&sa=X&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ1QJ6BAhaEAE
+                  - generic [ref=e1211]:
+                    - generic [ref=e1216]: Neelu beauty parlour Bhind
+                    - img [ref=e1220]
+          - navigation [ref=e1222]:
+            - heading "Page navigation" [level=1] [ref=e1223]
+            - text: "1"
+            - link "Page 2" [ref=e1226] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=10&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAE
+              - text: "2"
+            - link "Page 3" [ref=e1228] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=20&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAG
+              - text: "3"
+            - link "Page 4" [ref=e1230] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=30&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAI
+              - text: "4"
+            - link "Page 5" [ref=e1232] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=40&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAK
+              - text: "5"
+            - link "Page 6" [ref=e1234] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=50&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAM
+              - text: "6"
+            - link "Page 7" [ref=e1236] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=60&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAO
+              - text: "7"
+            - link "Page 8" [ref=e1238] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=70&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAQ
+              - text: "8"
+            - link "Page 9" [ref=e1240] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=80&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAS
+              - text: "9"
+            - link "Page 10" [ref=e1242] [cursor=pointer]:
+              - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=90&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8tMDegQITxAU
+              - text: "10"
+            - heading "Next" [level=2] [ref=e1244]:
+              - link "Next" [ref=e1245] [cursor=pointer]:
+                - /url: /search?q=bridal+makeup+Bhind+MP&sca_esv=678aa669decbf740&hl=en&gl=in&ei=UXXraZWqMePzwPAPkNbWyA8&start=10&sa=N&sstk=Af77f_cF9Cd29r6Th9y7sFebJANIi6sUtMu8xoGF6IHCrVyHvTJs5UmVm52pi1dg0odDVpjU9LiAQDZv73QeBESw8Xrc3W8AA2MTPw&ved=2ahUKEwjVlp730IaUAxXjORAIHRCrFfkQ8NMDegQITxAW
+                - generic [ref=e1247]: Next
+        - navigation
+    - contentinfo [ref=e1248]:
+      - heading "Footer links" [level=1] [ref=e1249]
+      - generic [ref=e1253]:
+        - generic [ref=e1255]:
+          - text: India
+          - generic [ref=e1257]:
+            - button "474002, Gwalior, Madhya Pradesh - From your IP address" [ref=e1259] [cursor=pointer]:
+              - generic [ref=e1260]: 474002, Gwalior, Madhya Pradesh
+              - generic [ref=e1262]:
+                - text: "-"
+                - generic [ref=e1263]: From your IP address
+            - text: "-"
+            - button "Update location" [ref=e1265] [cursor=pointer]: Update location
+        - generic [ref=e1268]:
+          - link "Help" [ref=e1269] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en-IN&fg=1
+          - link "Send feedback" [ref=e1270] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e1271] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-IN&fg=1
+          - link "Terms" [ref=e1272] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-IN&fg=1

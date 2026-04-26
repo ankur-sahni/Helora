@@ -15,7 +15,7 @@ Rules governing how agents behave, communicate, and make decisions.
 | Plan affecting > 5 files | `dependency-analyst` first |
 | New external dependency added | `security` package audit |
 | Any agent confidence < 70% | COO convenes council |
-| 3+ consecutive test failures | `researcher` investigates before retry |
+| 3+ consecutive test failures | Stop, investigate root cause manually before retry |
 | Task budget > 80% consumed | `budget-tracker` escalates to COO |
 
 ## Agent Communication

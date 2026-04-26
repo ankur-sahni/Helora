@@ -1,0 +1,195 @@
+{
+  "name": "leads/discovery",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "days", "daysInterval": 3 }]
+        }
+      },
+      "id": "trigger",
+      "name": "Every 3 Days",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Cities within 100km of Lahar, Madhya Pradesh\nconst cities = ['Lahar', 'Jalaun', 'Konch', 'Daboh', 'Seondha', 'Mau', 'Mihona', 'Raun', 'Bhind', 'Gwalior'];\nconst categories = [\n  { type: 'beauty salons', serviceInterest: 'social-media', mrrPotential: 8000 },\n  { type: 'wedding photographers', serviceInterest: 'lead-gen', mrrPotential: 12000 },\n  { type: 'boutique shops', serviceInterest: 'social-media', mrrPotential: 10000 },\n  { type: 'caterers', serviceInterest: 'full-automation', mrrPotential: 15000 }\n];\n\nconst searches = [];\nfor (const city of cities.slice(0, 2)) {\n  for (const cat of categories.slice(0, 2)) {\n    searches.push({ q: `${cat.type} ${city} Madhya Pradesh`, city, serviceInterest: cat.serviceInterest, mrrPotential: cat.mrrPotential });\n  }\n}\nreturn searches.map(s => ({ json: s }));"
+      },
+      "id": "search-targets",
+      "name": "Set Search Targets",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const s = $input.item.json;\nreturn { json: { ...s, searchQuery: encodeURIComponent(s.q) } };"
+      },
+      "id": "build-url",
+      "name": "Build Search URL",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://serpapi.com/search.json",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "engine", "value": "google_maps" },
+            { "name": "q", "value": "={{ $json.searchQuery }}" },
+            { "name": "type", "value": "search" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Dy6B1Gmtc6MySj8z",
+          "name": "SerpAPI Key"
+        }
+      },
+      "id": "search-maps",
+      "name": "Search Google Maps",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [820, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const results = $input.item.json;\nconst meta = $('Build Search URL').item.json;\nconst places = results.local_results || [];\n\nconst prospects = places\n  .filter(p => p.reviews < 100 || !p.website)\n  .slice(0, 3)\n  .map(p => {\n    const reviewCount = p.reviews || 0;\n    const hasWebsite = !!p.website;\n    const notes = 'Rating: ' + (p.rating || 'N/A') + ', Reviews: ' + reviewCount + '. ' + (hasWebsite ? 'Has website.' : 'No website.');\n    return { json: {\n      business: p.title,\n      name: p.title,\n      city: meta.city,\n      phone: p.phone || null,\n      source: 'google-maps',\n      serviceInterest: meta.serviceInterest,\n      status: 'new',\n      priority: reviewCount < 20 ? 'high' : 'medium',\n      mrrPotential: meta.mrrPotential,\n      notes: notes\n    }};\n  });\n\nif (prospects.length === 0) return [{ json: { skip: true } }];\nreturn prospects;"
+      },
+      "id": "filter-prospects",
+      "name": "Filter Weak Presence",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1020, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [{ "value1": "={{ $json.skip }}", "value2": false }]
+        }
+      },
+      "id": "skip-check",
+      "name": "Has Prospects?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1180, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/leads",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "name", "value": "={{ $json.name }}" },
+            { "name": "business", "value": "={{ $json.business }}" },
+            { "name": "city", "value": "={{ $json.city }}" },
+            { "name": "phone", "value": "={{ $json.phone }}" },
+            { "name": "source", "value": "={{ $json.source }}" },
+            { "name": "serviceInterest", "value": "={{ $json.serviceInterest }}" },
+            { "name": "status", "value": "={{ $json.status }}" },
+            { "name": "priority", "value": "={{ $json.priority }}" },
+            { "name": "mrrPotential", "value": "={{ $json.mrrPotential }}" },
+            { "name": "notes", "value": "={{ $json.notes }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "save-lead",
+      "name": "Save Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1380, 460]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://jzumhspttptpadarlmre.supabase.co/rest/v1/agents_log",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "keypair",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "agentName", "value": "Researcher" },
+            { "name": "taskType", "value": "lead-discovery" },
+            { "name": "description", "value": "={{ 'Found new lead: ' + $('Filter Weak Presence').item.json.business + ' in Madhya Pradesh' }}" },
+            { "name": "status", "value": "completed" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MlAKR8yOuYyphh6d",
+          "name": "Supabase Service Key"
+        }
+      },
+      "id": "log-run",
+      "name": "Log Agent Run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1580, 460]
+    }
+  ],
+  "connections": {
+    "Every 3 Days": {
+      "main": [[{ "node": "Set Search Targets", "type": "main", "index": 0 }]]
+    },
+    "Set Search Targets": {
+      "main": [[{ "node": "Build Search URL", "type": "main", "index": 0 }]]
+    },
+    "Build Search URL": {
+      "main": [[{ "node": "Search Google Maps", "type": "main", "index": 0 }]]
+    },
+    "Search Google Maps": {
+      "main": [[{ "node": "Filter Weak Presence", "type": "main", "index": 0 }]]
+    },
+    "Filter Weak Presence": {
+      "main": [[{ "node": "Has Prospects?", "type": "main", "index": 0 }]]
+    },
+    "Has Prospects?": {
+      "main": [
+        [{ "node": "Save Lead", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Save Lead": {
+      "main": [[{ "node": "Log Agent Run", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "tags": ["helora", "leads", "discovery"]
+}

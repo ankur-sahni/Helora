@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ankit Sahni Makeover — Bridal Beauty Since 1994</title>
+<meta name="description" content="Premium bridal makeup, hair styling, and lehenga rentals in Lahar, MP. 30+ years of excellence. HD airbrush makeup, editorial styling, designer lehenga collection. Book your bridal look now."/>
+<meta name="keywords" content="bridal makeup, bridal beauty, lehenga rental, wedding makeup, bridal hair, Lahar, Madhya Pradesh"/>
+<meta property="og:title" content="Ankit Sahni Makeover — Bridal Beauty Since 1994"/>
+<meta property="og:description" content="Lahar's most trusted bridal studio. HD makeup, editorial styling, designer lehenga rentals. 163 5-star reviews. Est. 1994."/>
+<meta property="og:image" content="https://ankitsahnimakeover.com/images/bride-hero-main.webp"/>
+<meta property="og:url" content="https://ankitsahnimakeover.com/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Ankit Sahni Makeover — Bridal Beauty Since 1994"/>
+<meta name="twitter:description" content="Premium bridal makeup & lehenga rentals. Est. 1994, Lahar MP. 30 years of excellence."/>
+<meta name="twitter:image" content="https://ankitsahnimakeover.com/images/bride-hero-main.webp"/>
+<link rel="canonical" href="https://ankitsahnimakeover.com/"/>
+<link rel="icon" href="/favicon.ico"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ankit Sahni Makeover","image":"https://ankitsahnimakeover.com/images/bride-hero-main.webp","description":"Premium bridal makeup, hair styling, and designer lehenga rentals","address":{"@type":"PostalAddress","streetAddress":"Main Bazaar Road","addressLocality":"Lahar","addressRegion":"Madhya Pradesh","postalCode":"477445","addressCountry":"IN"},"telephone":"+91-9098888134","url":"https://ankitsahnimakeover.com/","priceRange":"₹15,000 - ₹58,000","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"163"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"sameAs":["https://www.instagram.com/ankitsahnimakeover"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=1777220487"/>
+<link rel="stylesheet" href="refine.css?v=1777220487"/>
+</head>
+<body>
+<div class="loader">
+  <div class="loader-logo">Ankit Sahni</div>
+  <div class="loader-sub">Bridal Beauty · Est. 1994</div>
+</div>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="parts.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-hero.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-craft.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-packages.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-makeups.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-about.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-awards.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-gallery.jsx?v=1777220487"></script>
+<script type="text/babel" src="sec-contact.jsx?v=1777220487"></script>
+<script type="text/babel" src="app.jsx?v=1777220487"></script>
+<script src="enhance.js"></script>
+<script>
+// Add hamburger menu - use MutationObserver for robustness
+document.addEventListener('DOMContentLoaded', function() {
+  const addMenuButton = () => {
+    const navRight = document.querySelector('.nav-right');
+    const navCenter = document.querySelector('.nav-center');
+    if (!navRight || !navCenter || document.querySelector('.nav-menu-btn')) return;
+
+    const menuBtn = document.createElement('button');
+    menuBtn.className = 'nav-menu-btn';
+    menuBtn.setAttribute('aria-label', 'Toggle menu');
+    menuBtn.innerHTML = '<span></span><span></span><span></span>';
+    menuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navCenter.classList.toggle('open');
+    });
+
+    navCenter.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navCenter.classList.remove('open');
+      });
+    });
+
+    navRight.insertBefore(menuBtn, navRight.firstChild);
+  };
+
+  // Immediate attempt
+  addMenuButton();
+
+  // If React hasn't rendered yet, wait for it
+  if (!document.querySelector('.nav-menu-btn')) {
+    setTimeout(addMenuButton, 100);
+    setTimeout(addMenuButton, 500);
+    setTimeout(addMenuButton, 1500);
+  }
+});
+</script>
+</body>
+</html>

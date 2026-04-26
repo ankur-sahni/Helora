@@ -1,0 +1,654 @@
+- generic [ref=e5]:
+  - navigation [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - text: Ankit Sahni
+        - generic [ref=e9]: Makeover · Est. 1994
+      - link "Book Now" [ref=e11] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e12]:
+    - generic:
+      - generic:
+        - img
+      - generic:
+        - img
+      - generic:
+        - img
+      - generic:
+        - img
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Vol. XXX · № 26 · Lahar, MP
+        - heading "Ankit Sahni Makeover" [level=1] [ref=e16]:
+          - generic [ref=e18]: Ankit
+          - generic [ref=e20]: Sahni
+          - generic [ref=e22]: Makeover
+        - paragraph [ref=e23]: Bridal beauty, editorial polish. Three decades of crafting the most talked-about looks in Lahar — now with a hand-curated lehenga rental atelier for your wedding day.
+        - generic [ref=e24]:
+          - link "Book Your Bridal Look →" [ref=e25] [cursor=pointer]:
+            - /url: "#packages"
+          - link "View Portfolio" [ref=e26] [cursor=pointer]:
+            - /url: "#gallery"
+      - generic [ref=e27]:
+        - img "Bridal Portrait · Hero" [ref=e30]
+        - img "Mehendi · Detail" [ref=e33]
+        - img "Reception" [ref=e36]
+        - img [ref=e38]
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - text: Bridal Makeup
+      - img [ref=e45]
+    - generic [ref=e48]:
+      - text: Hair Artistry
+      - img [ref=e50]
+    - generic [ref=e53]:
+      - text: Pre-Bridal Skin
+      - img [ref=e55]
+    - generic [ref=e58]:
+      - text: Lehenga Rentals
+      - img [ref=e60]
+    - generic [ref=e63]:
+      - text: Editorial Styling
+      - img [ref=e65]
+    - generic [ref=e68]:
+      - text: Since 1994
+      - img [ref=e70]
+    - generic [ref=e73]:
+      - text: Bridal Makeup
+      - img [ref=e75]
+    - generic [ref=e78]:
+      - text: Hair Artistry
+      - img [ref=e80]
+    - generic [ref=e83]:
+      - text: Pre-Bridal Skin
+      - img [ref=e85]
+    - generic [ref=e88]:
+      - text: Lehenga Rentals
+      - img [ref=e90]
+    - generic [ref=e93]:
+      - text: Editorial Styling
+      - img [ref=e95]
+    - generic [ref=e98]:
+      - text: Since 1994
+      - img [ref=e100]
+  - generic [ref=e104]:
+    - generic [ref=e105]:
+      - generic [ref=e106]: "0"
+      - generic [ref=e107]: Years in Craft
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - text: "0"
+        - generic [ref=e110]: ✦
+      - generic [ref=e111]: 116 Reviews
+    - generic [ref=e112]:
+      - generic [ref=e113]: "0"
+      - generic [ref=e114]: Instagram
+    - generic [ref=e115]:
+      - generic [ref=e116]: "0"
+      - generic [ref=e117]: Brides Styled
+  - generic [ref=e118]:
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]: Chapter One · The Disciplines
+        - heading "Four disciplines, one signature." [level=2] [ref=e122]:
+          - text: Four disciplines,
+          - text: one signature.
+      - paragraph [ref=e123]: Every bride briefed, every look pre-rehearsed, every brush hand-picked. Nothing on the chair that hasn't earned its place.
+    - generic [ref=e124]:
+      - link "Bridal Makeup № I Bridal Makeup HDLV airbrush, bespoke contouring. Engineered for 12-hour wear under mandap lights." [ref=e125]:
+        - /url: "#contact"
+        - img "Bridal Makeup" [ref=e128]
+        - generic [ref=e129]: № I
+        - heading "Bridal Makeup" [level=3] [ref=e130]
+        - paragraph [ref=e131]: HDLV airbrush, bespoke contouring. Engineered for 12-hour wear under mandap lights.
+      - link "Hair Artistry № II Hair Artistry Editorial up-dos, textured braids, extensions. Styled for photographs that age well." [ref=e132]:
+        - /url: "#contact"
+        - img "Hair Artistry" [ref=e135]
+        - generic [ref=e136]: № II
+        - heading "Hair Artistry" [level=3] [ref=e137]
+        - paragraph [ref=e138]: Editorial up-dos, textured braids, extensions. Styled for photographs that age well.
+      - link "Skin & Glow № III Skin & Glow Pre-bridal 30-day glow rituals, facial threading, brow architecture." [ref=e139]:
+        - /url: "#contact"
+        - img "Skin & Glow" [ref=e142]
+        - generic [ref=e143]: № III
+        - heading "Skin & Glow" [level=3] [ref=e144]
+        - paragraph [ref=e145]: Pre-bridal 30-day glow rituals, facial threading, brow architecture.
+      - link "Nail Couture № IV Nail Couture Bridal gel, chrome, embellished artistry — matched to your palette." [ref=e146]:
+        - /url: "#contact"
+        - img "Nail Couture" [ref=e149]
+        - generic [ref=e150]: № IV
+        - heading "Nail Couture" [level=3] [ref=e151]
+        - paragraph [ref=e152]: Bridal gel, chrome, embellished artistry — matched to your palette.
+  - generic [ref=e153]:
+    - generic [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e156]: Chapter Three · Makeup Services
+        - heading "Every occasion, a masterpiece." [level=2] [ref=e157]:
+          - text: Every occasion,
+          - text: a masterpiece.
+      - paragraph [ref=e158]: Whether it is your wedding day, your ring ceremony, or an evening celebration — every look is personalised, rehearsed, and built to last.
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - img "Bridal · Makeup" [ref=e163]
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]: № I
+            - generic [ref=e167]: The Signature Look
+          - heading "Bridal Makeup" [level=3] [ref=e168]
+          - separator [ref=e169]
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - img [ref=e173]
+              - generic [ref=e175]: — Inclusions to be confirmed by Ankit —
+          - generic [ref=e176]:
+            - generic [ref=e177]: Starting Price
+            - generic [ref=e178]: On Request
+            - generic [ref=e179]: Pricing shared on consultation
+          - link "Enquire on WhatsApp" [ref=e180] [cursor=pointer]:
+            - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20enquire%20about%20Bridal%20Makeup%20%E2%80%94%20what%20is%20included%20and%20the%20pricing.
+      - generic [ref=e181]:
+        - img "Engagement · Makeup" [ref=e184]
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: № II
+            - generic [ref=e188]: The First Look
+          - heading "Engagement Makeup" [level=3] [ref=e189]
+          - separator [ref=e190]
+          - list [ref=e191]:
+            - listitem [ref=e192]:
+              - img [ref=e194]
+              - generic [ref=e196]: — Inclusions to be confirmed by Ankit —
+          - generic [ref=e197]:
+            - generic [ref=e198]: Starting Price
+            - generic [ref=e199]: On Request
+            - generic [ref=e200]: Pricing shared on consultation
+          - link "Enquire on WhatsApp" [ref=e201] [cursor=pointer]:
+            - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20enquire%20about%20Engagement%20Makeup%20%E2%80%94%20what%20is%20included%20and%20the%20pricing.
+      - generic [ref=e202]:
+        - img "Party · Makeup" [ref=e205]
+        - generic [ref=e206]:
+          - generic [ref=e207]:
+            - generic [ref=e208]: № III
+            - generic [ref=e209]: The Night Look
+          - heading "Party Makeup" [level=3] [ref=e210]
+          - separator [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - img [ref=e215]
+              - generic [ref=e217]: — Inclusions to be confirmed by Ankit —
+          - generic [ref=e218]:
+            - generic [ref=e219]: Starting Price
+            - generic [ref=e220]: On Request
+            - generic [ref=e221]: Pricing shared on consultation
+          - link "Enquire on WhatsApp" [ref=e222] [cursor=pointer]:
+            - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20enquire%20about%20Party%20Makeup%20%E2%80%94%20what%20is%20included%20and%20the%20pricing.
+  - generic [ref=e225]:
+    - generic [ref=e226]:
+      - img "Lehenga · Maroon Couture" [ref=e229]
+      - img "Lehenga · Ivory" [ref=e232]
+      - img [ref=e234]
+      - img [ref=e238]
+    - generic [ref=e240]:
+      - generic [ref=e241]: ✦ Exclusively in Lahar
+      - generic [ref=e242]: Most Sought After · The Atelier
+      - heading "Lehenga Rentals" [level=2] [ref=e243]:
+        - text: Lehenga
+        - text: Rentals
+      - paragraph [ref=e244]: A hand-curated rack of designer lehengas, sized for real brides. Fittings, alterations and steam-pressing included. The only rental atelier of its kind between Gwalior and Bhind — and the piece that sets us apart from every other studio in the region.
+      - generic [ref=e245]:
+        - generic [ref=e246]: 40+ Pieces
+        - generic [ref=e247]: Size 6–18
+        - generic [ref=e248]: Designer Sourced
+        - generic [ref=e249]: Fit Included
+        - generic [ref=e250]: Steam-Pressed
+      - generic [ref=e251]:
+        - link "Browse The Rack →" [ref=e252] [cursor=pointer]:
+          - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20browse%20the%20lehenga%20rental%20collection.
+        - link "Book A Fitting" [ref=e253] [cursor=pointer]:
+          - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20book%20a%20lehenga%20fitting.
+  - generic [ref=e254]:
+    - generic [ref=e255]:
+      - generic [ref=e256]:
+        - generic [ref=e257]: Chapter Two · Bridal Packages
+        - heading "Three tiers, one bride." [level=2] [ref=e258]:
+          - text: Three tiers,
+          - text: one bride.
+      - paragraph [ref=e259]: All prices are starting points. Every package is re-briefed to your palette, outfit, and timeline.
+    - generic [ref=e260]:
+      - generic [ref=e261]:
+        - generic [ref=e262]: The Essentials
+        - heading "Silver" [level=3] [ref=e263]
+        - generic [ref=e264]:
+          - superscript [ref=e265]: ₹
+          - text: 15,000
+        - generic [ref=e266]: Starting · GST extra
+        - separator [ref=e267]
+        - list [ref=e268]:
+          - listitem [ref=e269]:
+            - img [ref=e272]
+            - generic [ref=e274]: HD bridal makeup — day of
+          - listitem [ref=e275]:
+            - img [ref=e278]
+            - generic [ref=e280]: Signature hair styling
+          - listitem [ref=e281]:
+            - img [ref=e284]
+            - generic [ref=e286]: Draping assistance
+          - listitem [ref=e287]:
+            - img [ref=e290]
+            - generic [ref=e292]: Pre-bridal consultation
+          - listitem [ref=e293]:
+            - img [ref=e296]
+            - generic [ref=e298]: Touch-up kit for 4 hours
+        - link "Enquire on WhatsApp" [ref=e299] [cursor=pointer]:
+          - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20am%20interested%20in%20the%20Silver%20bridal%20package%20(%E2%82%B915%2C000).%20Please%20share%20availability.
+      - generic [ref=e300]:
+        - generic [ref=e301]: ★ Most Sought After
+        - generic [ref=e302]: Most Sought After
+        - heading "Gold" [level=3] [ref=e303]
+        - generic [ref=e304]:
+          - superscript [ref=e305]: ₹
+          - text: 32,000
+        - generic [ref=e306]: Starting · GST extra
+        - separator [ref=e307]
+        - list [ref=e308]:
+          - listitem [ref=e309]:
+            - img [ref=e312]
+            - generic [ref=e314]: HDLV airbrush bridal look
+          - listitem [ref=e315]:
+            - img [ref=e318]
+            - generic [ref=e320]: Hair — up-do + textured braid
+          - listitem [ref=e321]:
+            - img [ref=e324]
+            - generic [ref=e326]: Pre-bridal 15-day glow protocol
+          - listitem [ref=e327]:
+            - img [ref=e330]
+            - generic [ref=e332]: Bridal trial session
+          - listitem [ref=e333]:
+            - img [ref=e336]
+            - generic [ref=e338]: Full-day touch-ups on site
+          - listitem [ref=e339]:
+            - img [ref=e342]
+            - generic [ref=e344]: Drape + dupatta pinning
+          - listitem [ref=e345]:
+            - img [ref=e348]
+            - generic [ref=e350]: Sangeet look — add-on pricing
+        - link "Book Gold — Enquire →" [ref=e351] [cursor=pointer]:
+          - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20am%20interested%20in%20the%20Gold%20bridal%20package%20(%E2%82%B932%2C000).%20Please%20share%20availability.
+      - generic [ref=e352]:
+        - generic [ref=e353]: Couture
+        - generic [ref=e354]: The Editorial
+        - heading "Deluxe" [level=3] [ref=e355]
+        - generic [ref=e356]:
+          - superscript [ref=e357]: ₹
+          - text: 58,000
+        - generic [ref=e358]: Starting · GST extra
+        - separator [ref=e359]
+        - list [ref=e360]:
+          - listitem [ref=e361]:
+            - img [ref=e364]
+            - generic [ref=e366]: Everything in Gold, plus —
+          - listitem [ref=e367]:
+            - img [ref=e370]
+            - generic [ref=e372]: 3-event styling (sangeet · haldi · reception)
+          - listitem [ref=e373]:
+            - img [ref=e376]
+            - generic [ref=e378]: 30-day bridal skin ritual
+          - listitem [ref=e379]:
+            - img [ref=e382]
+            - generic [ref=e384]: Lehenga rental — 1 piece included
+          - listitem [ref=e385]:
+            - img [ref=e388]
+            - generic [ref=e390]: Dedicated on-site artist + assistant
+          - listitem [ref=e391]:
+            - img [ref=e394]
+            - generic [ref=e396]: Pre-shoot editorial session
+          - listitem [ref=e397]:
+            - img [ref=e400]
+            - generic [ref=e402]: Family makeup — 2 members
+        - link "Enquire on WhatsApp" [ref=e403] [cursor=pointer]:
+          - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20am%20interested%20in%20the%20Deluxe%20bridal%20package%20(%E2%82%B958%2C000).%20Please%20share%20availability.
+  - generic [ref=e404]:
+    - generic [ref=e405]:
+      - generic [ref=e406]:
+        - generic [ref=e407]: Our Story · Est. 1994
+        - heading "Thirty years of artistry." [level=2] [ref=e408]:
+          - text: Thirty years
+          - text: of artistry.
+      - paragraph [ref=e409]: Ankit Sahni Makeover is Lahar's most trusted bridal beauty studio — founded in 1994 and led today by a team of nationally recognised artists across bridal, engagement, and editorial makeup.
+    - generic [ref=e410]:
+      - paragraph [ref=e411]:
+        - text: Established over 30 years ago by
+        - strong [ref=e412]: Kusum Sahni
+        - text: ","
+        - strong [ref=e413]: Ankit Sahni Makeover
+        - text: is the leading bridal makeup studio in Lahar, Madhya Pradesh. Our artists have transformed thousands of brides across Bhind, Gwalior, Morena, Datia, and beyond — delivering HD airbrush bridal looks, engagement glam, party makeup, and pre-bridal skin rituals that photograph beautifully and last through every moment of your celebration.
+      - paragraph [ref=e414]:
+        - text: Under the leadership of
+        - strong [ref=e415]: Ankit Sahni
+        - text: — a celebrated makeup artist with a portfolio spanning celebrity clients and award ceremonies — and
+        - strong [ref=e416]: Harshita
+        - text: ", our Head Artist, the studio has earned its place as the premier destination for brides who expect more. Every look is briefed, trialled, and executed with precision. Located in Lahar, MP. Bookings accepted across Madhya Pradesh and nearby states."
+    - generic [ref=e417]:
+      - generic [ref=e418]:
+        - img "Kusum Sahni" [ref=e421]
+        - heading "Kusum Sahni" [level=3] [ref=e422]
+        - generic [ref=e423]: Founder
+        - paragraph [ref=e424]: The artist who built it all. Kusum Sahni founded the studio in Lahar in 1994, building its reputation across three decades on patience, precision, and an unwavering commitment to every bride who sits in her chair.
+      - generic [ref=e425]:
+        - img "Ankit Sahni" [ref=e428]
+        - heading "Ankit Sahni" [level=3] [ref=e429]
+        - generic [ref=e430]: Co-Founder
+        - paragraph [ref=e431]: A nationally recognised makeup artist whose portfolio spans bridal ceremonies, celebrity clients, and editorial features. Ankit combines modern HD and airbrush techniques with a deep understanding of Indian bridal aesthetics.
+      - generic [ref=e432]:
+        - img "Harshita" [ref=e435]
+        - heading "Harshita" [level=3] [ref=e436]
+        - generic [ref=e437]: Head Makeup Artist
+        - paragraph [ref=e438]: "Harshita leads the day-of artist team with a specialisation in engagement and party looks. Her signature: flawless, camera-ready finishes that hold from the ceremony to the after-party."
+  - generic [ref=e440]:
+    - generic [ref=e441]:
+      - generic [ref=e442]:
+        - generic [ref=e443]: Recognition · Awards
+        - heading "Recognised nationally." [level=2] [ref=e444]:
+          - text: Recognised
+          - text: nationally.
+      - paragraph [ref=e445]: Over three decades, Ankit Sahni has been recognised by some of India's most respected beauty and fashion institutions.
+    - generic [ref=e446]:
+      - generic [ref=e447]:
+        - img "Award 1" [ref=e450]
+        - generic [ref=e451]:
+          - generic [ref=e452]: "[ Year ]"
+          - heading "[ Award Name ]" [level=4] [ref=e453]
+          - generic [ref=e454]: "[ Awarding Body ]"
+      - generic [ref=e455]:
+        - img "Award 2" [ref=e458]
+        - generic [ref=e459]:
+          - generic [ref=e460]: "[ Year ]"
+          - heading "[ Award Name ]" [level=4] [ref=e461]
+          - generic [ref=e462]: "[ Awarding Body ]"
+      - generic [ref=e463]:
+        - img "Award 3" [ref=e466]
+        - generic [ref=e467]:
+          - generic [ref=e468]: "[ Year ]"
+          - heading "[ Award Name ]" [level=4] [ref=e469]
+          - generic [ref=e470]: "[ Awarding Body ]"
+      - generic [ref=e471]:
+        - img "Award 4" [ref=e474]
+        - generic [ref=e475]:
+          - generic [ref=e476]: "[ Year ]"
+          - heading "[ Award Name ]" [level=4] [ref=e477]
+          - generic [ref=e478]: "[ Awarding Body ]"
+    - generic [ref=e479]:
+      - generic [ref=e480]:
+        - generic [ref=e481]: Portfolio · Celebrities & Notable Clients
+        - heading "Faces we've transformed." [level=2] [ref=e482]:
+          - text: Faces we've
+          - text: transformed.
+      - paragraph [ref=e483]: From award nights to editorial shoots — a glimpse of the notable faces Ankit has styled over the years.
+    - generic [ref=e484]:
+      - generic [ref=e485]:
+        - img "Miss Earth India" [ref=e488]
+        - generic [ref=e489]: Miss Earth India
+        - generic [ref=e490]: Pageant · Official Makeup Artist
+      - generic [ref=e491]:
+        - img "Miss Divine Beauty" [ref=e494]
+        - generic [ref=e495]: Miss Divine Beauty
+        - generic [ref=e496]: Pageant · Winner Styled by Ankit
+      - generic [ref=e497]:
+        - img "Celebrity Client" [ref=e500]
+        - generic [ref=e501]: Celebrity Client
+        - generic [ref=e502]: Award Night · Styled by Ankit
+      - generic [ref=e503]:
+        - img "Beauty Pageant" [ref=e506]
+        - generic [ref=e507]: Beauty Pageant
+        - generic [ref=e508]: Backstage · Official Artist
+      - generic [ref=e509]:
+        - img "Pageant Finalist" [ref=e512]
+        - generic [ref=e513]: Pageant Finalist
+        - generic [ref=e514]: Backstage · Styled by Ankit
+      - generic [ref=e515]:
+        - img "Pageant Finalist" [ref=e518]
+        - generic [ref=e519]: Pageant Finalist
+        - generic [ref=e520]: Backstage · Official Artist
+  - generic [ref=e521]:
+    - generic [ref=e522]:
+      - generic [ref=e523]:
+        - generic [ref=e524]: Chapter Three · The Portfolio
+        - heading "The Portfolio" [level=2] [ref=e525]
+      - paragraph [ref=e526]: Four hundred brides, three decades of reels. A live archive — before, after, and the moments in between.
+    - generic [ref=e527]:
+      - button "All Work" [ref=e528]
+      - button "Bridal" [ref=e529]
+      - button "Hair" [ref=e530]
+      - button "Skin" [ref=e531]
+      - button "Lehenga Rentals" [ref=e532]
+    - generic [ref=e533]:
+      - generic [ref=e534]:
+        - img "Riya · Sangeet" [ref=e537]
+        - generic [ref=e538]:
+          - generic [ref=e539]: Riya · Sangeet
+          - generic [ref=e540]: bridal
+      - generic [ref=e541]:
+        - img "Priyanka · Phere" [ref=e544]
+        - generic [ref=e545]:
+          - generic [ref=e546]: Priyanka · Phere
+          - generic [ref=e547]: bridal
+      - generic [ref=e548]:
+        - img "Textured Braid" [ref=e551]
+        - generic [ref=e552]:
+          - generic [ref=e553]: Textured Braid
+          - generic [ref=e554]: hair
+      - generic [ref=e555]:
+        - img "Glow Ritual" [ref=e558]
+        - generic [ref=e559]:
+          - generic [ref=e560]: Glow Ritual
+          - generic [ref=e561]: skin
+      - generic [ref=e562]:
+        - img "Maroon Couture" [ref=e565]
+        - generic [ref=e566]:
+          - generic [ref=e567]: Maroon Couture
+          - generic [ref=e568]: rentals
+      - generic [ref=e569]:
+        - img "Ayesha · Haldi" [ref=e572]
+        - generic [ref=e573]:
+          - generic [ref=e574]: Ayesha · Haldi
+          - generic [ref=e575]: bridal
+      - generic [ref=e576]:
+        - img "Editorial Up-do" [ref=e579]
+        - generic [ref=e580]:
+          - generic [ref=e581]: Editorial Up-do
+          - generic [ref=e582]: hair
+      - generic [ref=e583]:
+        - img "Ivory Sabyasachi" [ref=e586]
+        - generic [ref=e587]:
+          - generic [ref=e588]: Ivory Sabyasachi
+          - generic [ref=e589]: rentals
+      - generic [ref=e590]:
+        - img "Simran · Reception" [ref=e593]
+        - generic [ref=e594]:
+          - generic [ref=e595]: Simran · Reception
+          - generic [ref=e596]: bridal
+      - generic [ref=e597]:
+        - img "30-Day Glow" [ref=e600]
+        - generic [ref=e601]:
+          - generic [ref=e602]: 30-Day Glow
+          - generic [ref=e603]: skin
+      - generic [ref=e604]:
+        - img "Neha · Mehendi" [ref=e607]
+        - generic [ref=e608]:
+          - generic [ref=e609]: Neha · Mehendi
+          - generic [ref=e610]: bridal
+      - generic [ref=e611]:
+        - img "Blush Gold" [ref=e614]
+        - generic [ref=e615]:
+          - generic [ref=e616]: Blush Gold
+          - generic [ref=e617]: rentals
+  - generic [ref=e618]:
+    - generic [ref=e619]:
+      - generic [ref=e620]:
+        - generic [ref=e621]: Transformations · Interactive
+        - heading "Before & after." [level=2] [ref=e622]:
+          - text: Before &
+          - text: after.
+      - paragraph [ref=e623]: Drag the handle. No filters, no retouching — just the real chair, real light, real glow.
+    - generic [ref=e624]:
+      - generic [ref=e625]:
+        - generic [ref=e627]: Before
+        - generic [ref=e629]: After · Bridal
+        - generic [ref=e630]: ‹ ›
+        - generic [ref=e631]: Before
+        - generic [ref=e632]: After
+      - generic [ref=e633]:
+        - generic [ref=e635]: Before
+        - generic [ref=e637]: After · Skin Ritual
+        - generic [ref=e638]: ‹ ›
+        - generic [ref=e639]: Before
+        - generic [ref=e640]: After
+      - generic [ref=e641]:
+        - generic [ref=e643]: Before
+        - generic [ref=e645]: After · Hair Colour
+        - generic [ref=e646]: ‹ ›
+        - generic [ref=e647]: Before
+        - generic [ref=e648]: After
+  - generic [ref=e649]:
+    - generic [ref=e651]:
+      - generic [ref=e652]: Voices · 116 Reviews · ★ 4.6
+      - heading "What the brides said after." [level=2] [ref=e653]:
+        - text: What the brides
+        - text: said after.
+    - generic [ref=e654]:
+      - generic [ref=e655]:
+        - text: “
+        - generic [ref=e656]:
+          - img [ref=e658]
+          - img [ref=e661]
+          - img [ref=e664]
+          - img [ref=e667]
+          - img [ref=e670]
+        - generic [ref=e672]: "\"Booked Ankit sir for my sangeet and shaadi — everyone kept asking who did my look.\""
+        - generic [ref=e673]: Riya Tomar · Bridal · Lahar
+      - generic [ref=e674]:
+        - text: “
+        - generic [ref=e675]:
+          - img [ref=e677]
+          - img [ref=e680]
+          - img [ref=e683]
+          - img [ref=e686]
+          - img [ref=e689]
+        - generic [ref=e691]: "\"The lehenga rental collection is unreal. I wore a piece that felt like runway couture.\""
+        - generic [ref=e692]: Priyanka Singh · Reception · Bhind
+      - generic [ref=e693]:
+        - text: “
+        - generic [ref=e694]:
+          - img [ref=e696]
+          - img [ref=e699]
+          - img [ref=e702]
+          - img [ref=e705]
+          - img [ref=e708]
+        - generic [ref=e710]: "\"Worth the drive from Gwalior. My skin glowed for three days straight — my family is still talking about it.\""
+        - generic [ref=e711]: Ayesha K. · Engagement · Gwalior
+  - generic [ref=e713]:
+    - generic [ref=e714]:
+      - generic [ref=e715]: Chapter Four · Let's Talk
+      - heading "Let's create your look." [level=2] [ref=e716]:
+        - text: Let's create
+        - text: your look.
+      - paragraph [ref=e717]: WhatsApp is the fastest route — Ankit personally replies within the hour, 9 AM – 9 PM IST. For detailed briefs, use the form on the right.
+      - link "WhatsApp us now +91 90988 88134 · reply < 1 hr" [ref=e718]:
+        - /url: https://wa.me/919098888134?text=Hi%20Ankit%2C%20I%20would%20like%20to%20discuss%20a%20bridal%20booking.
+        - img [ref=e720]
+        - generic [ref=e722]:
+          - generic [ref=e723]: WhatsApp us now
+          - generic [ref=e724]: +91 90988 88134 · reply < 1 hr
+      - generic [ref=e725]:
+        - generic [ref=e726]:
+          - generic [ref=e727]: Studio
+          - generic [ref=e728]:
+            - text: Main Bazaar Road
+            - text: Lahar, Dist. Bhind
+            - text: Madhya Pradesh 477445
+        - generic [ref=e729]:
+          - generic [ref=e730]: Hours
+          - generic [ref=e731]:
+            - text: Mon – Sun
+            - text: 9:00 – 21:00
+            - text: Walk-ins welcome
+    - generic [ref=e733]:
+      - generic [ref=e734]: — Bridal Brief
+      - heading "Send us the details." [level=3] [ref=e735]
+      - paragraph [ref=e736]: The more you share, the better our brief comes back to you.
+      - generic [ref=e737]:
+        - generic [ref=e738]: Your Name
+        - textbox "Full name" [ref=e739]
+      - generic [ref=e740]:
+        - generic [ref=e741]:
+          - generic [ref=e742]: Phone
+          - textbox "+91 · · · · ·" [ref=e743]
+        - generic [ref=e744]:
+          - generic [ref=e745]: Wedding Date
+          - textbox "DD / MM / YY" [ref=e746]
+      - generic [ref=e747]:
+        - generic [ref=e748]: Service
+        - combobox [ref=e749] [cursor=pointer]:
+          - option "Bridal Makeup" [selected]
+          - option "Hair Styling"
+          - option "Pre-Bridal Skin"
+          - option "Lehenga Rental"
+          - option "Full Package (Silver)"
+          - option "Full Package (Gold)"
+          - option "Full Package (Deluxe)"
+      - generic [ref=e750]:
+        - generic [ref=e751]: Brief
+        - textbox "Tell us about your outfit, palette, venue and vibe." [ref=e752]
+      - button "Send my bridal brief →" [ref=e753] [cursor=pointer]
+      - paragraph [ref=e754]: No spam · WhatsApp reply · under 1 hr
+  - contentinfo [ref=e755]:
+    - generic [ref=e756]:
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - generic [ref=e759]:
+            - text: Ankit Sahni
+            - generic [ref=e760]: Makeover · Est. 1994
+          - paragraph [ref=e761]: Three decades of bridal beauty, editorial styling and designer lehenga rentals in Lahar, Madhya Pradesh.
+        - generic [ref=e762]:
+          - heading "— Services" [level=4] [ref=e763]
+          - link "Bridal Makeup" [ref=e764]:
+            - /url: "#craft"
+          - link "Hair Artistry" [ref=e765]:
+            - /url: "#craft"
+          - link "Skin & Glow" [ref=e766]:
+            - /url: "#craft"
+          - link "Nail Couture" [ref=e767]:
+            - /url: "#craft"
+          - link "Lehenga Rentals" [ref=e768]:
+            - /url: "#featured"
+        - generic [ref=e769]:
+          - heading "— Studio" [level=4] [ref=e770]
+          - link "Packages" [ref=e771]:
+            - /url: "#packages"
+          - link "Portfolio" [ref=e772]:
+            - /url: "#gallery"
+          - link "Testimonials" [ref=e773]:
+            - /url: "#testimonials"
+          - link "Contact" [ref=e774]:
+            - /url: "#contact"
+        - generic [ref=e775]:
+          - heading "— Reach Us" [level=4] [ref=e776]
+          - generic [ref=e777]:
+            - link "@sahnibeautysalon" [ref=e778]:
+              - /url: "#"
+              - img [ref=e780]
+              - text: "@sahnibeautysalon"
+            - link "+91 98765 43210" [ref=e784]:
+              - /url: "#"
+              - img [ref=e786]
+              - text: +91 98765 43210
+            - link "★ Google · 4.6 / 116 Reviews" [ref=e788]:
+              - /url: "#"
+              - generic [ref=e789]: ★
+              - text: Google · 4.6 / 116 Reviews
+      - generic [ref=e790]:
+        - img [ref=e792]
+        - text: © MCMXCIV — MMXXVI · Ankit Sahni Makeover · Lahar, Madhya Pradesh · All rights reserved
+  - link "WhatsApp" [ref=e795]:
+    - /url: https://wa.me/919098888134?text=Hi%2C%20I%20found%20you%20on%20ankitsahnimakeover.com%20and%20would%20like%20to%20enquire.
+    - img [ref=e796]

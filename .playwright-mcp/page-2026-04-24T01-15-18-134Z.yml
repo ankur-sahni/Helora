@@ -1,0 +1,128 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - complementary [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e9] [cursor=pointer]:
+                - img [ref=e11]
+                - generic [ref=e13]: Settings
+              - generic [ref=e14]:
+                - menuitem "Usage and plan" [ref=e16] [cursor=pointer]:
+                  - img [ref=e18]
+                  - generic [ref=e21]: Usage and plan
+                - menuitem "Personal" [ref=e23] [cursor=pointer]:
+                  - img [ref=e25]
+                  - generic [ref=e31]: Personal
+                - menuitem "Users" [ref=e33] [cursor=pointer]:
+                  - img [ref=e35]
+                  - generic [ref=e40]: Users
+                - menuitem "Project roles" [ref=e42] [cursor=pointer]:
+                  - img [ref=e44]
+                  - generic [ref=e48]:
+                    - generic [ref=e49]: Project roles
+                    - generic [ref=e51]: New
+                - menuitem "n8n API" [ref=e53] [cursor=pointer]:
+                  - img [ref=e55]
+                  - generic [ref=e58]: n8n API
+                - menuitem "External Secrets" [ref=e60] [cursor=pointer]:
+                  - img [ref=e62]
+                  - generic [ref=e75]: External Secrets
+                - menuitem "Environments" [ref=e77] [cursor=pointer]:
+                  - img [ref=e79]
+                  - generic [ref=e85]: Environments
+                - menuitem "SSO" [ref=e87] [cursor=pointer]:
+                  - img [ref=e89]
+                  - generic [ref=e95]: SSO
+                - menuitem "Security & policies" [ref=e97] [cursor=pointer]:
+                  - img [ref=e99]
+                  - generic [ref=e102]: Security & policies
+                - menuitem "LDAP" [ref=e104] [cursor=pointer]:
+                  - img [ref=e106]
+                  - generic [ref=e113]: LDAP
+                - menuitem "Log Streaming" [ref=e115] [cursor=pointer]:
+                  - img [ref=e117]
+                  - generic [ref=e120]: Log Streaming
+                - menuitem "Community nodes" [ref=e122] [cursor=pointer]:
+                  - img [ref=e124]
+                  - generic [ref=e129]: Community nodes
+                - menuitem "Instance-level MCP" [ref=e131] [cursor=pointer]:
+                  - img [ref=e133]
+                  - generic [ref=e136]:
+                    - generic [ref=e137]: Instance-level MCP
+                    - generic [ref=e138]: Preview
+                - menuitem "Chat" [ref=e140] [cursor=pointer]:
+                  - img [ref=e142]
+                  - generic [ref=e145]: Chat
+              - generic [ref=e149] [cursor=pointer]: Version 2.16.1
+          - main [ref=e150]:
+            - generic [ref=e154]:
+              - generic [ref=e156]: API
+              - generic [ref=e157]:
+                - generic [ref=e160]:
+                  - text: Control n8n programmatically using the
+                  - link "n8n API" [ref=e161] [cursor=pointer]:
+                    - /url: https://docs.n8n.io/api
+                - button "Create an API Key" [ref=e162] [cursor=pointer]:
+                  - generic [ref=e164]: Create an API Key
+        - dialog [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "Create API Key" [level=1] [ref=e171]
+              - button "Close this dialog" [ref=e172] [cursor=pointer]:
+                - img [ref=e174]
+            - generic [ref=e176]:
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e185]: Label
+                  - textbox "e.g Internal Project" [active] [ref=e188]
+                - generic [ref=e189]:
+                  - generic [ref=e190]:
+                    - generic [ref=e195]: Expiration
+                    - generic [ref=e200]:
+                      - combobox "Select" [ref=e201] [cursor=pointer]: 30 days
+                      - img [ref=e204] [cursor=pointer]
+                  - generic [ref=e206]: The API key will expire on Sat, May 23 2026
+                - generic [ref=e208]:
+                  - generic [ref=e213]: Scopes
+                  - generic [ref=e215]:
+                    - generic [ref=e217]:
+                      - generic [ref=e218]:
+                        - generic [ref=e219]: communityPackage:install
+                        - img [ref=e221] [cursor=pointer]
+                      - generic [ref=e223]:
+                        - generic [ref=e224]: communityPackage:list
+                        - img [ref=e226] [cursor=pointer]
+                      - generic [ref=e228]:
+                        - generic [ref=e229]: communityPackage:uninstall
+                        - img [ref=e231] [cursor=pointer]
+                      - generic [ref=e233]:
+                        - generic [ref=e234]: communityPackage:update
+                        - img [ref=e236] [cursor=pointer]
+                      - generic [ref=e238]:
+                        - generic [ref=e239]: credential:create
+                        - img [ref=e241] [cursor=pointer]
+                      - generic [ref=e243]:
+                        - generic [ref=e244]: credential:delete
+                        - img [ref=e246] [cursor=pointer]
+                      - generic [ref=e248]:
+                        - generic [ref=e249]: credential:list
+                        - img [ref=e251] [cursor=pointer]
+                      - generic [ref=e253]:
+                        - generic [ref=e254]: credential:move
+                        - img [ref=e256] [cursor=pointer]
+                      - generic [ref=e258]:
+                        - generic [ref=e259]: credential:update
+                        - img [ref=e261] [cursor=pointer]
+                      - generic [ref=e263]:
+                        - generic [ref=e264]: dataTable:create
+                        - img [ref=e266] [cursor=pointer]
+                      - generic [ref=e269]: + 48
+                    - generic [ref=e271]:
+                      - combobox [ref=e272] [cursor=pointer]
+                      - img [ref=e275] [cursor=pointer]
+              - button "Save" [disabled] [ref=e279]:
+                - generic [ref=e281]: Save
+    - complementary
+  - generic:                                                          

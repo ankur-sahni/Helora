@@ -4,6 +4,9 @@ Standards for building and managing n8n workflows in this agency.
 
 ## Naming Conventions
 - Workflow names: `[Project] — [Function]` e.g. `Sahni — Appointment Reminder`
+- Agent heartbeat workflows: `[agent-name]/heartbeat` e.g. `researcher/heartbeat`
+- Agent task workflows: `[agent-name]/on-task-assigned` e.g. `coo/on-task-assigned`
+- (Paperclip pattern: each agent = one heartbeat + one task-assigned workflow)
 - Node names: descriptive action e.g. `Get Lead from Sheet`, `Send WhatsApp Message`
 - No generic names like `HTTP Request` or `Function 1`
 
