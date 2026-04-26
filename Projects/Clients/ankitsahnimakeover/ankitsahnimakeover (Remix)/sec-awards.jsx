@@ -1,7 +1,7 @@
 // Awards + Celebrity Showcase
 function Awards(){
   const awards = [
-    { title: 'Masterclass with Bhumika Bahl', year: '2026', body: 'Arora Enterprises · Firozabad', src: 'images/Bhumika Behal.webp', objectPosition: 'center 35%' },
+    { title: 'Masterclass with Bhumika Behal', year: '2026', body: 'Arora Enterprises · Firozabad', src: 'images/Bhumika Behal.webp', objectPosition: 'center 35%' },
   ];
 
   const celebs = [
