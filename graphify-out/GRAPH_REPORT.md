@@ -1,690 +1,742 @@
-# Graph Report - .  (2026-04-24)
+# Graph Report - D:\Learning\Ai Automation\Ankur Sahni Learning Project  (2026-04-26)
 
 ## Corpus Check
-- Large corpus: 201 files · ~1,263,598 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder, or use --no-semantic to run AST-only.
+- 72 files · ~4,452,862 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 534 nodes · 580 edges · 101 communities detected
-- Extraction: 83% EXTRACTED · 17% INFERRED · 0% AMBIGUOUS · INFERRED: 101 edges (avg confidence: 0.82)
+- 433 nodes · 397 edges · 108 communities detected
+- Extraction: 84% EXTRACTED · 16% INFERRED · 0% AMBIGUOUS · INFERRED: 64 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_ACC Server Actions|ACC Server Actions]]
-- [[_COMMUNITY_Agent System|Agent System]]
-- [[_COMMUNITY_Sahni Build Pipeline|Sahni Build Pipeline]]
-- [[_COMMUNITY_Sahni Website Sections|Sahni Website Sections]]
-- [[_COMMUNITY_Dashboard Audit & Design|Dashboard Audit & Design]]
-- [[_COMMUNITY_Lead Generation Strategy|Lead Generation Strategy]]
-- [[_COMMUNITY_Sahni Growth Plan|Sahni Growth Plan]]
-- [[_COMMUNITY_Client Delivery Rules|Client Delivery Rules]]
-- [[_COMMUNITY_AI Model Rules|AI Model Rules]]
-- [[_COMMUNITY_ACC System Config|ACC System Config]]
-- [[_COMMUNITY_Sahni Project Status|Sahni Project Status]]
-- [[_COMMUNITY_Sahni Shared UI Parts|Sahni Shared UI Parts]]
-- [[_COMMUNITY_Agency OS & Metrics|Agency OS & Metrics]]
-- [[_COMMUNITY_Google Sheets Setup|Google Sheets Setup]]
-- [[_COMMUNITY_UI Primitives|UI Primitives]]
-- [[_COMMUNITY_ACC Core Components|ACC Core Components]]
-- [[_COMMUNITY_ACC Create Actions|ACC Create Actions]]
-- [[_COMMUNITY_Architecture Docs|Architecture Docs]]
-- [[_COMMUNITY_Entity Create Functions|Entity Create Functions]]
-- [[_COMMUNITY_Auth Flow|Auth Flow]]
-- [[_COMMUNITY_Theme System|Theme System]]
-- [[_COMMUNITY_Table Component|Table Component]]
-- [[_COMMUNITY_Safety & Escalation Rules|Safety & Escalation Rules]]
-- [[_COMMUNITY_Tasks Page|Tasks Page]]
-- [[_COMMUNITY_Badge Component|Badge Component]]
-- [[_COMMUNITY_Model Routing Config|Model Routing Config]]
-- [[_COMMUNITY_COO Status Component|COO Status Component]]
-- [[_COMMUNITY_Live Activity Feed|Live Activity Feed]]
-- [[_COMMUNITY_Today Actions|Today Actions]]
-- [[_COMMUNITY_Avatar Component|Avatar Component]]
-- [[_COMMUNITY_Card Component|Card Component]]
-- [[_COMMUNITY_Scroll Area Component|Scroll Area Component]]
-- [[_COMMUNITY_Sahni App Root|Sahni App Root]]
-- [[_COMMUNITY_Sahni Enhance Runtime|Sahni Enhance Runtime]]
-- [[_COMMUNITY_Main Layout Components|Main Layout Components]]
-- [[_COMMUNITY_Memory Protocol|Memory Protocol]]
-- [[_COMMUNITY_Memory Safety Rules|Memory Safety Rules]]
-- [[_COMMUNITY_Agency OS Sheets|Agency OS Sheets]]
-- [[_COMMUNITY_Dashboard Root Page|Dashboard Root Page]]
-- [[_COMMUNITY_Content Actions|Content Actions]]
-- [[_COMMUNITY_Pipeline Actions|Pipeline Actions]]
-- [[_COMMUNITY_Task Actions|Task Actions]]
-- [[_COMMUNITY_Agents Page|Agents Page]]
-- [[_COMMUNITY_Approvals Page|Approvals Page]]
-- [[_COMMUNITY_Clients Page|Clients Page]]
-- [[_COMMUNITY_Content Page|Content Page]]
-- [[_COMMUNITY_Login Layout|Login Layout]]
-- [[_COMMUNITY_Login Page|Login Page]]
-- [[_COMMUNITY_Notifications Page|Notifications Page]]
-- [[_COMMUNITY_Pipeline Page|Pipeline Page]]
-- [[_COMMUNITY_Projects Page|Projects Page]]
-- [[_COMMUNITY_System Page|System Page]]
-- [[_COMMUNITY_Agent Status Cards|Agent Status Cards]]
-- [[_COMMUNITY_Error Banner|Error Banner]]
-- [[_COMMUNITY_Lead Stage Advance|Lead Stage Advance]]
-- [[_COMMUNITY_Live Stats|Live Stats]]
-- [[_COMMUNITY_Main Wrapper|Main Wrapper]]
-- [[_COMMUNITY_Realtime Refresh|Realtime Refresh]]
-- [[_COMMUNITY_Sidebar|Sidebar]]
-- [[_COMMUNITY_Button Component|Button Component]]
-- [[_COMMUNITY_Separator Component|Separator Component]]
-- [[_COMMUNITY_Tabs Component|Tabs Component]]
-- [[_COMMUNITY_Sahni About Section|Sahni About Section]]
-- [[_COMMUNITY_Sahni Awards Section|Sahni Awards Section]]
-- [[_COMMUNITY_Content Actions Component|Content Actions Component]]
-- [[_COMMUNITY_Pipeline Action Component|Pipeline Action Component]]
-- [[_COMMUNITY_Owner Task List|Owner Task List]]
-- [[_COMMUNITY_Proposals & Advantages|Proposals & Advantages]]
-- [[_COMMUNITY_Agent Patterns & Feature Flow|Agent Patterns & Feature Flow]]
-- [[_COMMUNITY_Output Contract & Events|Output Contract & Events]]
-- [[_COMMUNITY_ESLint Config|ESLint Config]]
-- [[_COMMUNITY_Next.js Env Types|Next.js Env Types]]
-- [[_COMMUNITY_Next.js Config|Next.js Config]]
-- [[_COMMUNITY_PostCSS Config|PostCSS Config]]
-- [[_COMMUNITY_Prisma Config|Prisma Config]]
-- [[_COMMUNITY_Loading UI|Loading UI]]
-- [[_COMMUNITY_Project Detail Page|Project Detail Page]]
-- [[_COMMUNITY_Add Client Button|Add Client Button]]
-- [[_COMMUNITY_Add Lead Button|Add Lead Button]]
-- [[_COMMUNITY_Content Actions Button|Content Actions Button]]
-- [[_COMMUNITY_Modal Component|Modal Component]]
-- [[_COMMUNITY_New Post Button|New Post Button]]
-- [[_COMMUNITY_New Project Button|New Project Button]]
-- [[_COMMUNITY_Owner Task List Component|Owner Task List Component]]
-- [[_COMMUNITY_Agent Activity Chart|Agent Activity Chart]]
-- [[_COMMUNITY_MRR Chart|MRR Chart]]
-- [[_COMMUNITY_Agency Config|Agency Config]]
-- [[_COMMUNITY_Supabase Admin Client|Supabase Admin Client]]
-- [[_COMMUNITY_Supabase Browser Client|Supabase Browser Client]]
-- [[_COMMUNITY_ESLint Config Node|ESLint Config Node]]
-- [[_COMMUNITY_Next Config Node|Next Config Node]]
-- [[_COMMUNITY_Loading UI Node|Loading UI Node]]
-- [[_COMMUNITY_Login Layout Node|Login Layout Node]]
-- [[_COMMUNITY_Hero Marquee|Hero Marquee]]
-- [[_COMMUNITY_Local Env Config|Local Env Config]]
-- [[_COMMUNITY_Rules Directory|Rules Directory]]
-- [[_COMMUNITY_Agent Communication Principles|Agent Communication Principles]]
-- [[_COMMUNITY_Cognitive Modes|Cognitive Modes]]
-- [[_COMMUNITY_Memory Decay|Memory Decay]]
-- [[_COMMUNITY_ACC Agents Doc|ACC Agents Doc]]
-- [[_COMMUNITY_SaaS Upsell Triggers|SaaS Upsell Triggers]]
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
+- [[_COMMUNITY_Community 94|Community 94]]
+- [[_COMMUNITY_Community 95|Community 95]]
+- [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
+- [[_COMMUNITY_Community 101|Community 101]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
+- [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Supabase Admin Client` - 19 edges
-2. `Sahni Beauty Salon Website Strategy` - 12 edges
-3. `Sahni Bridal Studio Master Build Pipeline` - 11 edges
-4. `LiveActivityFeed Component` - 10 edges
-5. `RootLayout()` - 9 edges
-6. `Honest 12-Month MRR Roadmap` - 9 edges
-7. `Salon AI Growth Stack Offer Document` - 9 edges
-8. `Sahni WhatsApp Template Library (10 Templates)` - 9 edges
-9. `Sahni Beauty Salon 7-Phase Growth Domination Plan` - 9 edges
-10. `setupAgencyOS()` - 8 edges
+1. `Sahni Beauty Salon Website Strategy` - 12 edges
+2. `Sahni Bridal Studio Master Build Pipeline` - 11 edges
+3. `Honest 12-Month MRR Roadmap` - 9 edges
+4. `Salon AI Growth Stack Offer Document` - 9 edges
+5. `Sahni WhatsApp Template Library (10 Templates)` - 9 edges
+6. `Sahni Beauty Salon 7-Phase Growth Domination Plan` - 9 edges
+7. `setupAgencyOS()` - 8 edges
+8. `Lead Gen Progress Log` - 8 edges
+9. `Sahni SEO + AI Ranking Strategy` - 8 edges
+10. `Agent Auto-Triggers` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Second-Order Opportunities from Sahni Build` --references--> `Ankit Sahni Makeover (Client — Lahar MP salon)`  [EXTRACTED]
-  Proposals.md → Projects/Clients/sahni-bridal-studio/ankitsahnimakeover (Remix)/sec-hero.jsx
-- `Current Project Priorities` --references--> `Sahni Beauty Salon Website Strategy`  [INFERRED]
-  rules/project-rules.md → Projects/Clients/sahni-bridal-studio/research/website-strategy.md
-- `Contact()` --calls--> `WA_LINK()`  [INFERRED]
-  Projects\Clients\sahni-bridal-studio\ankitsahnimakeover (Remix)\sec-contact.jsx → Projects\Clients\sahni-bridal-studio\ankitsahnimakeover (Remix)\parts.jsx
+- `Sahni Beauty Salon Website Strategy` --references--> `Current Project Priorities`  [INFERRED]
+  Projects/Clients/sahni-bridal-studio/research/website-strategy.md → rules/project-rules.md
 - `North Star: $30k USD MRR, First Invoice Sahni ₹20k/month` --references--> `Ankit Sahni Makeover (Client — Lahar MP salon)`  [EXTRACTED]
   CLAUDE.md → Projects/Clients/sahni-bridal-studio/ankitsahnimakeover (Remix)/sec-hero.jsx
-- `SaaS Pricing Formula for Indian SMBs (Free/Pro/Business tiers)` --conceptually_related_to--> `Honest 12-Month MRR Roadmap`  [INFERRED]
-  Projects/Agency/agency-os/saas-formulas.md → mrr-plan.md
+- `Honest 12-Month MRR Roadmap` --conceptually_related_to--> `SaaS Pricing Formula for Indian SMBs (Free/Pro/Business tiers)`  [INFERRED]
+  mrr-plan.md → Projects/Agency/agency-os/saas-formulas.md
+- `Honest 12-Month MRR Roadmap` --conceptually_related_to--> `Unit Economics Targets (CAC <₹2000, ARPU ₹1999, Churn <5%, LTV:CAC 20:1)`  [INFERRED]
+  mrr-plan.md → Projects/Agency/agency-os/saas-formulas.md
+- `MRR Phase 1: Case Study Build (Month 1-2)` --references--> `Ankit Sahni Makeover (Client — Lahar MP salon)`  [EXTRACTED]
+  mrr-plan.md → Projects/Clients/sahni-bridal-studio/ankitsahnimakeover (Remix)/sec-hero.jsx
 
 ## Communities
 
-### Community 0 - "ACC Server Actions"
-Cohesion: 0.07
-Nodes (52): updateContentStatus Action, createClient Action, createLead Action, createPost Action, createProject Action, advanceLeadStage Action, toggleOwnerTask Action, Agents Page (+44 more)
-
-### Community 1 - "Agent System"
-Cohesion: 0.06
-Nodes (45): Advisory Council, Budget Tracker Agent, COO Agent, Dependency Analyst Agent, Implementer Agent, Memory Manager Agent, Planner Agent, Researcher Agent (+37 more)
-
-### Community 2 - "Sahni Build Pipeline"
+### Community 0 - "Community 0"
 Cohesion: 0.08
 Nodes (36): Brand Aesthetic: Sabyasachi-Meets-Local-Warmth, Gold/Rose/Cream, Agent Brief 01: Brand Identity (designer agent), Brand Identity Deliverables (7 Files in brand/ folder), SEO Research Deliverables (keyword-map, site-architecture, competitor-teardown, ai-plan, local-checklist), Agent Brief 02: SEO Keyword Research + IA (researcher agent), Scaffold Build Order (12 Steps, One Commit Per Step), Agent Brief 03: Next.js + Sanity Scaffold Plan (planner + implementer), 7 Content Pages: Home, Bridal, Services, Gallery, Reviews, Contact, About (+28 more)
 
-### Community 3 - "Sahni Website Sections"
-Cohesion: 0.08
-Nodes (29): Asterisk Decorative Component, Bridal Brief Contact Form, Contact(), Footer(), WhatsApp Link Helper (WA_LINK), WhatsApp Icon Component (WaIcon), Craft(), Featured() (+21 more)
-
-### Community 4 - "Dashboard Audit & Design"
+### Community 1 - "Community 1"
 Cohesion: 0.07
 Nodes (31): False Productivity Risk from Dashboard, Dashboard Evolution by MRR Phase ($0→$30k), Recommended Today View (20 outreach, LinkedIn, Sahni action), Audit Verdict: Dashboard is simulation, not instrument, Dashboard Audit Report (April 2026), Ankit Sahni Makeover (Client — Lahar MP salon), Authority Matrix: Decide Alone vs Escalate to Ankur, Co-founder CTO Role Definition for Claude (+23 more)
 
-### Community 5 - "Lead Generation Strategy"
+### Community 2 - "Community 2"
 Cohesion: 0.09
 Nodes (24): Blocker: WhatsApp Cold Outreach Spam Risk, Lead Gen System Project Context, ICP: B2B SaaS $1M-$20M ARR, ICP: Recruiting/Staffing Agencies 20-150 Employees, ICP Reset: Indian SMBs Tier 2/3 MP-UP Cities, ICP Tier 1: Salons/Spas in Bhopal/Indore/Gwalior, ICP Tier 2: Dental/Dermatology/Coaching Centers, ICP Tier 3: Salon Chains Delhi/Bangalore/Mumbai (+16 more)
 
-### Community 6 - "Sahni Growth Plan"
-Cohesion: 0.1
-Nodes (24): Sahni Beauty Salon 7-Phase Growth Domination Plan, Competitor Analysis: Praval Makeover (Mihona), Growth Phase 1: Win Local Search (GBP Optimization), Growth Phase 2: Premium Repositioning (Signature Packages), Growth Phase 3: Conversion Machine (WhatsApp Lead Path), Growth Phase 7: 100km Radius Expansion, Positioning: Lahar's Most Trusted Beauty Destination Since 1994, Ankit Sahni Makeover Website HTML (React/Babel SPA) (+16 more)
+### Community 3 - "Community 3"
+Cohesion: 0.11
+Nodes (22): Sahni Beauty Salon 7-Phase Growth Domination Plan, Competitor Analysis: Praval Makeover (Mihona), Growth Phase 1: Win Local Search (GBP Optimization), Growth Phase 2: Premium Repositioning (Signature Packages), Growth Phase 3: Conversion Machine (WhatsApp Lead Path), Growth Phase 7: 100km Radius Expansion, Positioning: Lahar's Most Trusted Beauty Destination Since 1994, Sahni Bridal Studio Project Context (CLAUDE.md) (+14 more)
 
-### Community 7 - "Client Delivery Rules"
+### Community 4 - "Community 4"
 Cohesion: 0.13
-Nodes (19): Baseline Metrics Capture Rule, Case Study Rules, Client Rules, Client Handoff Standards, Client Onboarding Checklist, Pricing and Scope Rules, Staging Environment Rule, Bridal Lead Capture Form (+11 more)
+Nodes (20): Advisory Council, Budget Tracker Agent, COO Agent, Dependency Analyst Agent, Implementer Agent, Memory Manager Agent, Planner Agent, Researcher Agent (+12 more)
 
-### Community 8 - "AI Model Rules"
+### Community 5 - "Community 5"
+Cohesion: 0.13
+Nodes (17): Security Agent, Dependency Management Rules, Edit Existing Files Over Creating New, Code Error Handling Standards, Coding Rules, Git Practices, No Delete Without Double Confirmation, Code Security Standards (+9 more)
+
+### Community 6 - "Community 6"
+Cohesion: 0.17
+Nodes (15): Baseline Metrics Capture Rule, Case Study Rules, Client Rules, Client Handoff Standards, Client Onboarding Checklist, Pricing and Scope Rules, Staging Environment Rule, Decision Making Rules (+7 more)
+
+### Community 7 - "Community 7"
 Cohesion: 0.16
 Nodes (15): AI API Usage Rules, AI Budget Rules, AI Rules, Gemini as Default Project API, AI Model Selection Table, Ollama Local First Strategy, AI Output Quality Standards, AI Prompt File Conventions (+7 more)
 
-### Community 9 - "ACC System Config"
+### Community 8 - "Community 8"
 Cohesion: 0.14
 Nodes (14): Autonomous COO (Claude Opus 4.7 scheduled every hour), Agency Control Center Project Context (Stack + Pages), Control Center Database Tables (agents_log, projects, tasks, notifications, leads, clients, content, errors, approvals, kpi_snapshots), n8n Workflow Files (COO heartbeat, content-generator, lead-discovery, whatsapp-outreach, kpi-snapshot), Control Center Pages (/, /agents, /projects, /pipeline, /content, /notifications, /system, /clients), Agency Control Center Build Progress (Steps 1-20), Helora Agency Control Center README, Control Center Stack (Next.js 14, TypeScript, Tailwind, Supabase, Prisma, Recharts) (+6 more)
 
-### Community 10 - "Sahni Project Status"
+### Community 9 - "Community 9"
+Cohesion: 0.18
+Nodes (4): WA_LINK(), WaFab(), Contact(), Footer()
+
+### Community 10 - "Community 10"
+Cohesion: 0.21
+Nodes (12): Bridal Lead Capture Form, Competitor Analysis: Praval Makeover, High-Value Website Pages, Local SEO Architecture, Website Main Objective, Mobile-First Design Requirement, Phased Website Rollout Plan, Sahni Positioning Strategy (+4 more)
+
+### Community 11 - "Community 11"
 Cohesion: 0.18
 Nodes (11): Progress Blockers (Price List, GBP, WABA Approval), Sahni Bridal Studio Progress Log, Success Criteria: 4 of 6 = Strong Case Study by June 15, WhatsApp Template: book_confirm_v1, WhatsApp Template: greet_new_v1, WhatsApp Template: reengage_v1 (90-Day Dormant), WhatsApp Template: referral_ask_v1, WhatsApp Template: review_ask_v1 (+3 more)
 
-### Community 11 - "Sahni Shared UI Parts"
-Cohesion: 0.22
-Nodes (2): WA_LINK(), WaFab()
-
-### Community 12 - "Agency OS & Metrics"
-Cohesion: 0.27
-Nodes (10): Agency OS Google Sheets Auto-Setup Script, AgentActivityChart Component, Agency Config (MRR Target, Services), MrrChart Component, Ankit Sahni Makeover App Root, Sahni Site Scroll/Reveal/Cursor Enhancer, Sahni Shared Parts (Nav, WaFab, Ph, Icons, Marquee), About Section (Team Grid) (+2 more)
-
-### Community 13 - "Google Sheets Setup"
+### Community 12 - "Community 12"
 Cohesion: 0.42
 Nodes (8): setupAgencyOS(), setupApprovalQueue(), setupClientRegistry(), setupContentCalendar(), setupErrorLog(), setupKPIDashboard(), setupLeadCRM(), setupTaskQueue()
 
-### Community 14 - "UI Primitives"
-Cohesion: 0.28
-Nodes (9): cn Utility (clsx + tailwind-merge), Avatar UI Component, Badge UI Component, Button UI Component, Card UI Component, ScrollArea UI Component, Separator UI Component, Table UI Component (+1 more)
-
-### Community 15 - "ACC Core Components"
-Cohesion: 0.29
-Nodes (7): ErrorBanner Component, MainWrapper Component, RealtimeRefresh Component, Sidebar Component, ThemeProvider Component, getLayoutData(), RootLayout()
-
-### Community 16 - "ACC Create Actions"
-Cohesion: 0.67
-Nodes (7): create Server Actions, AddClientButton Component, AddLeadButton Component, Modal Component, NewPostButton Component, NewProjectButton Component, Pattern: Server Action + Modal Form
-
-### Community 17 - "Architecture Docs"
+### Community 13 - "Community 13"
 Cohesion: 0.33
 Nodes (6): 8 Execution Layers (Control, Intelligence, Orchestration, Memory, Observability, Integration, Trigger, Feedback), Multi-Agent System Architecture Overview, Context Assembly Protocol (Context Manager packet structure), Memory Tiers (In-Context, Agent Working, Canonical), Debug Replay via Session Logs, Observability Log Storage Structure (.claude/memory/agents/observability/)
 
-### Community 18 - "Entity Create Functions"
+### Community 14 - "Community 14"
 Cohesion: 0.4
 Nodes (0): 
 
-### Community 19 - "Auth Flow"
+### Community 15 - "Community 15"
 Cohesion: 0.5
 Nodes (3): signIn(), signOut(), createSupabaseServerClient()
 
-### Community 20 - "Theme System"
+### Community 16 - "Community 16"
 Cohesion: 0.4
 Nodes (2): useTheme(), ThemeToggle()
 
-### Community 21 - "Table Component"
+### Community 17 - "Community 17"
 Cohesion: 0.4
 Nodes (0): 
 
-### Community 22 - "Safety & Escalation Rules"
+### Community 18 - "Community 18"
+Cohesion: 0.4
+Nodes (0): 
+
+### Community 19 - "Community 19"
 Cohesion: 0.4
 Nodes (5): Mandatory Auto-Trigger Rules Table, Agent Escalation Paths Table, Failure Containment Table, Observability Alert Thresholds Table, Health Signals (Green/Yellow/Red)
 
-### Community 23 - "Tasks Page"
+### Community 20 - "Community 20"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 24 - "Badge Component"
+### Community 21 - "Community 21"
 Cohesion: 0.5
 Nodes (2): Badge(), cn()
 
-### Community 25 - "Model Routing Config"
+### Community 22 - "Community 22"
+Cohesion: 0.5
+Nodes (0): 
+
+### Community 23 - "Community 23"
 Cohesion: 0.5
 Nodes (4): Control Center Model Routing (Gemini Flash, Ollama gemma4, Sonnet, Haiku), Model Routing Rules (Haiku/Sonnet/Opus), 20-Agent Multi-Tier System Definition, Agent Org Chart (COO→Dispatcher→Domain Agents)
 
-### Community 26 - "COO Status Component"
+### Community 24 - "Community 24"
+Cohesion: 1.0
+Nodes (2): getLayoutData(), RootLayout()
+
+### Community 25 - "Community 25"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 27 - "Live Activity Feed"
+### Community 26 - "Community 26"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 28 - "Today Actions"
+### Community 27 - "Community 27"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 29 - "Avatar Component"
+### Community 28 - "Community 28"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 30 - "Card Component"
+### Community 29 - "Community 29"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 31 - "Scroll Area Component"
+### Community 30 - "Community 30"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 32 - "Sahni App Root"
+### Community 31 - "Community 31"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 33 - "Sahni Enhance Runtime"
+### Community 32 - "Community 32"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 34 - "Main Layout Components"
-Cohesion: 0.67
-Nodes (3): MainWrapper Component, ThemeProvider Component, ThemeToggle Component
+### Community 33 - "Community 33"
+Cohesion: 1.0
+Nodes (2): Hero(), Stats()
 
-### Community 35 - "Memory Protocol"
+### Community 34 - "Community 34"
 Cohesion: 0.67
 Nodes (3): Session Memory Read Protocol, Canonical Memory Structure (.claude/memory/canonical/), Canonical Memory Files (architecture, decisions, patterns, anti-patterns)
 
-### Community 36 - "Memory Safety Rules"
+### Community 35 - "Community 35"
 Cohesion: 0.67
 Nodes (3): Agent Prohibited Actions (No skip Dispatcher, No direct canonical write, etc.), Memory Poisoning Prevention (Gatekeeper, Confidence, Source Tracking), Memory Write Rules and Validation Checks
 
-### Community 37 - "Agency OS Sheets"
+### Community 36 - "Community 36"
 Cohesion: 0.67
 Nodes (3): 7 Google Sheets (Lead CRM, Task Queue, Content Calendar, Approval Queue, Error Log, KPI Dashboard, Client Registry), Agency OS Daily Schedule (9AM brief, 2hr approvals, 6PM summary, Sunday report, 15min loop), Agency OS README (Autonomous Operating System)
 
-### Community 38 - "Dashboard Root Page"
+### Community 37 - "Community 37"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 39 - "Content Actions"
+### Community 38 - "Community 38"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 40 - "Pipeline Actions"
+### Community 39 - "Community 39"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 41 - "Task Actions"
+### Community 40 - "Community 40"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 42 - "Agents Page"
+### Community 41 - "Community 41"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 43 - "Approvals Page"
+### Community 42 - "Community 42"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 44 - "Clients Page"
+### Community 43 - "Community 43"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 45 - "Content Page"
+### Community 44 - "Community 44"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 46 - "Login Layout"
+### Community 45 - "Community 45"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 47 - "Login Page"
+### Community 46 - "Community 46"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 48 - "Notifications Page"
+### Community 47 - "Community 47"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 49 - "Pipeline Page"
+### Community 48 - "Community 48"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 50 - "Projects Page"
+### Community 49 - "Community 49"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 51 - "System Page"
+### Community 50 - "Community 50"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 52 - "Agent Status Cards"
+### Community 51 - "Community 51"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 53 - "Error Banner"
+### Community 52 - "Community 52"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 54 - "Lead Stage Advance"
+### Community 53 - "Community 53"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 55 - "Live Stats"
+### Community 54 - "Community 54"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 56 - "Main Wrapper"
+### Community 55 - "Community 55"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 57 - "Realtime Refresh"
+### Community 56 - "Community 56"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 58 - "Sidebar"
+### Community 57 - "Community 57"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 59 - "Button Component"
+### Community 58 - "Community 58"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 60 - "Separator Component"
+### Community 59 - "Community 59"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 61 - "Tabs Component"
+### Community 60 - "Community 60"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 62 - "Sahni About Section"
+### Community 61 - "Community 61"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 63 - "Sahni Awards Section"
+### Community 62 - "Community 62"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 64 - "Content Actions Component"
+### Community 63 - "Community 63"
 Cohesion: 1.0
-Nodes (2): content Server Actions, ContentActions Component
+Nodes (0): 
 
-### Community 65 - "Pipeline Action Component"
+### Community 64 - "Community 64"
 Cohesion: 1.0
-Nodes (2): pipeline Server Actions, LeadStageAdvance Component
+Nodes (0): 
 
-### Community 66 - "Owner Task List"
+### Community 65 - "Community 65"
 Cohesion: 1.0
-Nodes (2): tasks Server Actions, OwnerTaskList Component
+Nodes (0): 
 
-### Community 67 - "Proposals & Advantages"
+### Community 66 - "Community 66"
 Cohesion: 1.0
 Nodes (2): Local Ollama on VPS Privacy Moat, Unique Competitive Advantages (Ollama, Gemini+free n8n, Bilingual, etc.)
 
-### Community 68 - "Agent Patterns & Feature Flow"
-Cohesion: 1.0
-Nodes (2): Communication Patterns (Sequential, Parallel, Council, Lateral), Feature Development Execution Flow (11 Steps)
-
-### Community 69 - "Output Contract & Events"
+### Community 67 - "Community 67"
 Cohesion: 1.0
 Nodes (2): Agent Output Contract (Done/Confidence/NextStep/Escalation), Observability Structured Event Schema
 
-### Community 70 - "ESLint Config"
+### Community 68 - "Community 68"
+Cohesion: 1.0
+Nodes (2): Communication Patterns (Sequential, Parallel, Council, Lateral), Feature Development Execution Flow (11 Steps)
+
+### Community 69 - "Community 69"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 71 - "Next.js Env Types"
+### Community 70 - "Community 70"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 72 - "Next.js Config"
+### Community 71 - "Community 71"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 73 - "PostCSS Config"
+### Community 72 - "Community 72"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 74 - "Prisma Config"
+### Community 73 - "Community 73"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 75 - "Loading UI"
+### Community 74 - "Community 74"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 76 - "Project Detail Page"
+### Community 75 - "Community 75"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 77 - "Add Client Button"
+### Community 76 - "Community 76"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 78 - "Add Lead Button"
+### Community 77 - "Community 77"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 79 - "Content Actions Button"
+### Community 78 - "Community 78"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 80 - "Modal Component"
+### Community 79 - "Community 79"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 81 - "New Post Button"
+### Community 80 - "Community 80"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 82 - "New Project Button"
+### Community 81 - "Community 81"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 83 - "Owner Task List Component"
+### Community 82 - "Community 82"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 84 - "Agent Activity Chart"
+### Community 83 - "Community 83"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 85 - "MRR Chart"
+### Community 84 - "Community 84"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 86 - "Agency Config"
+### Community 85 - "Community 85"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 87 - "Supabase Admin Client"
+### Community 86 - "Community 86"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 88 - "Supabase Browser Client"
+### Community 87 - "Community 87"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 89 - "ESLint Config Node"
+### Community 88 - "Community 88"
 Cohesion: 1.0
-Nodes (1): ESLint Config
+Nodes (1): DB Table: errors
 
-### Community 90 - "Next Config Node"
+### Community 89 - "Community 89"
 Cohesion: 1.0
-Nodes (1): Next.js Config
+Nodes (1): DB Table: tasks
 
-### Community 91 - "Loading UI Node"
+### Community 90 - "Community 90"
 Cohesion: 1.0
-Nodes (1): Loading UI
+Nodes (1): DB Table: leads
 
-### Community 92 - "Login Layout Node"
+### Community 91 - "Community 91"
 Cohesion: 1.0
-Nodes (1): Login Layout
+Nodes (1): DB Table: content
 
-### Community 93 - "Hero Marquee"
+### Community 92 - "Community 92"
 Cohesion: 1.0
-Nodes (1): Marquee Component Reference
+Nodes (1): DB Table: projects
 
-### Community 94 - "Local Env Config"
+### Community 93 - "Community 93"
+Cohesion: 1.0
+Nodes (1): DB Table: clients
+
+### Community 94 - "Community 94"
+Cohesion: 1.0
+Nodes (1): DB Table: agents_log
+
+### Community 95 - "Community 95"
+Cohesion: 1.0
+Nodes (1): DB Table: approvals
+
+### Community 96 - "Community 96"
+Cohesion: 1.0
+Nodes (1): DB Table: notifications
+
+### Community 97 - "Community 97"
+Cohesion: 1.0
+Nodes (1): Pattern: Supabase Realtime Subscription
+
+### Community 98 - "Community 98"
+Cohesion: 1.0
+Nodes (1): Pattern: Server Action + Modal Form
+
+### Community 99 - "Community 99"
+Cohesion: 1.0
+Nodes (1): COO Agent (Opus 4.7) — Autonomous Orchestrator
+
+### Community 100 - "Community 100"
 Cohesion: 1.0
 Nodes (1): Local Environment URLs (API:4000, Frontend:3000, n8n:5678)
 
-### Community 95 - "Rules Directory"
+### Community 101 - "Community 101"
 Cohesion: 1.0
 Nodes (1): Rules Directory (agent-rules, coding-rules, etc.)
 
-### Community 96 - "Agent Communication Principles"
+### Community 102 - "Community 102"
 Cohesion: 1.0
 Nodes (1): Agent Communication Principles (Vertical, Structured, Explicit Handoffs)
 
-### Community 97 - "Cognitive Modes"
+### Community 103 - "Community 103"
 Cohesion: 1.0
 Nodes (1): Cognitive Modes (Planning, Execution, Reflection, Critique, Decision, Memory Recall)
 
-### Community 98 - "Memory Decay"
+### Community 104 - "Community 104"
 Cohesion: 1.0
 Nodes (1): Memory Decay Strategy (30-day agent, 180-day canonical, 90-day observability)
 
-### Community 99 - "ACC Agents Doc"
+### Community 105 - "Community 105"
 Cohesion: 1.0
 Nodes (1): Agency Control Center Next.js Agent Rules
 
-### Community 100 - "SaaS Upsell Triggers"
+### Community 106 - "Community 106"
 Cohesion: 1.0
 Nodes (1): SaaS Upsell Trigger Formula (Loss-Framed Message)
 
+### Community 107 - "Community 107"
+Cohesion: 1.0
+Nodes (1): WhatsApp Contact Number +91 90988 88134
+
 ## Knowledge Gaps
-- **168 isolated node(s):** `ESLint Config`, `Next.js Config`, `Prisma Config`, `Loading UI`, `signOut Action` (+163 more)
+- **137 isolated node(s):** `DB Table: errors`, `DB Table: tasks`, `DB Table: leads`, `DB Table: content`, `DB Table: projects` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Dashboard Root Page`** (2 nodes): `getData()`, `page.tsx`
+- **Thin community `Community 37`** (2 nodes): `middleware.ts`, `middleware()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Content Actions`** (2 nodes): `updateContentStatus()`, `content.ts`
+- **Thin community `Community 38`** (2 nodes): `page.tsx`, `getData()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Pipeline Actions`** (2 nodes): `advanceLeadStage()`, `pipeline.ts`
+- **Thin community `Community 39`** (2 nodes): `updateContentStatus()`, `content.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Task Actions`** (2 nodes): `tasks.ts`, `toggleOwnerTask()`
+- **Thin community `Community 40`** (2 nodes): `pipeline.ts`, `advanceLeadStage()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agents Page`** (2 nodes): `getAgentData()`, `page.tsx`
+- **Thin community `Community 41`** (2 nodes): `tasks.ts`, `toggleOwnerTask()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Approvals Page`** (2 nodes): `getApprovals()`, `page.tsx`
+- **Thin community `Community 42`** (2 nodes): `page.tsx`, `getAgentData()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Clients Page`** (2 nodes): `getClients()`, `page.tsx`
+- **Thin community `Community 43`** (2 nodes): `page.tsx`, `getApprovals()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Content Page`** (2 nodes): `getContent()`, `page.tsx`
+- **Thin community `Community 44`** (2 nodes): `page.tsx`, `getClients()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Login Layout`** (2 nodes): `LoginLayout()`, `layout.tsx`
+- **Thin community `Community 45`** (2 nodes): `page.tsx`, `getContent()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Login Page`** (2 nodes): `LoginPage()`, `page.tsx`
+- **Thin community `Community 46`** (2 nodes): `layout.tsx`, `LoginLayout()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Notifications Page`** (2 nodes): `getNotifications()`, `page.tsx`
+- **Thin community `Community 47`** (2 nodes): `page.tsx`, `LoginPage()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Pipeline Page`** (2 nodes): `getLeads()`, `page.tsx`
+- **Thin community `Community 48`** (2 nodes): `page.tsx`, `getNotifications()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Projects Page`** (2 nodes): `getProjects()`, `page.tsx`
+- **Thin community `Community 49`** (2 nodes): `page.tsx`, `getLeads()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `System Page`** (2 nodes): `getSystemData()`, `page.tsx`
+- **Thin community `Community 50`** (2 nodes): `page.tsx`, `getProjects()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agent Status Cards`** (2 nodes): `timeAgo()`, `agent-status-cards.tsx`
+- **Thin community `Community 51`** (2 nodes): `page.tsx`, `getSystemData()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Error Banner`** (2 nodes): `ErrorBanner()`, `error-banner.tsx`
+- **Thin community `Community 52`** (2 nodes): `timeAgo()`, `agent-status-cards.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Lead Stage Advance`** (2 nodes): `LeadStageAdvance()`, `lead-stage-advance.tsx`
+- **Thin community `Community 53`** (2 nodes): `error-banner.tsx`, `ErrorBanner()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Live Stats`** (2 nodes): `LiveStats()`, `live-stats.tsx`
+- **Thin community `Community 54`** (2 nodes): `lead-stage-advance.tsx`, `LeadStageAdvance()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Main Wrapper`** (2 nodes): `MainWrapper()`, `main-wrapper.tsx`
+- **Thin community `Community 55`** (2 nodes): `live-stats.tsx`, `LiveStats()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Realtime Refresh`** (2 nodes): `realtime-refresh.tsx`, `RealtimeRefresh()`
+- **Thin community `Community 56`** (2 nodes): `main-wrapper.tsx`, `MainWrapper()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Sidebar`** (2 nodes): `sidebar.tsx`, `Sidebar()`
+- **Thin community `Community 57`** (2 nodes): `realtime-refresh.tsx`, `RealtimeRefresh()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Button Component`** (2 nodes): `cn()`, `button.tsx`
+- **Thin community `Community 58`** (2 nodes): `sidebar.tsx`, `Sidebar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Separator Component`** (2 nodes): `separator.tsx`, `cn()`
+- **Thin community `Community 59`** (2 nodes): `cn()`, `button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Tabs Component`** (2 nodes): `tabs.tsx`, `cn()`
+- **Thin community `Community 60`** (2 nodes): `separator.tsx`, `cn()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Sahni About Section`** (2 nodes): `sec-about.jsx`, `About()`
+- **Thin community `Community 61`** (2 nodes): `tabs.tsx`, `cn()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Sahni Awards Section`** (2 nodes): `sec-awards.jsx`, `Awards()`
+- **Thin community `Community 62`** (2 nodes): `sec-about.jsx`, `About()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Content Actions Component`** (2 nodes): `content Server Actions`, `ContentActions Component`
+- **Thin community `Community 63`** (2 nodes): `sec-awards.jsx`, `Awards()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Pipeline Action Component`** (2 nodes): `pipeline Server Actions`, `LeadStageAdvance Component`
+- **Thin community `Community 64`** (2 nodes): `sec-makeups.jsx`, `MakeupTypes()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Owner Task List`** (2 nodes): `tasks Server Actions`, `OwnerTaskList Component`
+- **Thin community `Community 65`** (2 nodes): `sec-packages.jsx`, `Packages()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Proposals & Advantages`** (2 nodes): `Local Ollama on VPS Privacy Moat`, `Unique Competitive Advantages (Ollama, Gemini+free n8n, Bilingual, etc.)`
+- **Thin community `Community 66`** (2 nodes): `Local Ollama on VPS Privacy Moat`, `Unique Competitive Advantages (Ollama, Gemini+free n8n, Bilingual, etc.)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agent Patterns & Feature Flow`** (2 nodes): `Communication Patterns (Sequential, Parallel, Council, Lateral)`, `Feature Development Execution Flow (11 Steps)`
+- **Thin community `Community 67`** (2 nodes): `Agent Output Contract (Done/Confidence/NextStep/Escalation)`, `Observability Structured Event Schema`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Output Contract & Events`** (2 nodes): `Agent Output Contract (Done/Confidence/NextStep/Escalation)`, `Observability Structured Event Schema`
+- **Thin community `Community 68`** (2 nodes): `Communication Patterns (Sequential, Parallel, Council, Lateral)`, `Feature Development Execution Flow (11 Steps)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ESLint Config`** (1 nodes): `eslint.config.mjs`
+- **Thin community `Community 69`** (1 nodes): `eslint.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Next.js Env Types`** (1 nodes): `next-env.d.ts`
+- **Thin community `Community 70`** (1 nodes): `next-env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Next.js Config`** (1 nodes): `next.config.ts`
+- **Thin community `Community 71`** (1 nodes): `next.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PostCSS Config`** (1 nodes): `postcss.config.mjs`
+- **Thin community `Community 72`** (1 nodes): `postcss.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Prisma Config`** (1 nodes): `prisma.config.ts`
+- **Thin community `Community 73`** (1 nodes): `prisma.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Loading UI`** (1 nodes): `loading.tsx`
+- **Thin community `Community 74`** (1 nodes): `loading.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Project Detail Page`** (1 nodes): `page.tsx`
+- **Thin community `Community 75`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Add Client Button`** (1 nodes): `add-client-button.tsx`
+- **Thin community `Community 76`** (1 nodes): `add-client-button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Add Lead Button`** (1 nodes): `add-lead-button.tsx`
+- **Thin community `Community 77`** (1 nodes): `add-lead-button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Content Actions Button`** (1 nodes): `content-actions.tsx`
+- **Thin community `Community 78`** (1 nodes): `content-actions.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Modal Component`** (1 nodes): `modal.tsx`
+- **Thin community `Community 79`** (1 nodes): `modal.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `New Post Button`** (1 nodes): `new-post-button.tsx`
+- **Thin community `Community 80`** (1 nodes): `new-post-button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `New Project Button`** (1 nodes): `new-project-button.tsx`
+- **Thin community `Community 81`** (1 nodes): `new-project-button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Owner Task List Component`** (1 nodes): `owner-task-list.tsx`
+- **Thin community `Community 82`** (1 nodes): `owner-task-list.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agent Activity Chart`** (1 nodes): `agent-activity-chart.tsx`
+- **Thin community `Community 83`** (1 nodes): `agent-activity-chart.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `MRR Chart`** (1 nodes): `mrr-chart.tsx`
+- **Thin community `Community 84`** (1 nodes): `mrr-chart.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agency Config`** (1 nodes): `agency.ts`
+- **Thin community `Community 85`** (1 nodes): `agency.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Supabase Admin Client`** (1 nodes): `supabase-admin.ts`
+- **Thin community `Community 86`** (1 nodes): `supabase-admin.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Supabase Browser Client`** (1 nodes): `supabase.ts`
+- **Thin community `Community 87`** (1 nodes): `supabase.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ESLint Config Node`** (1 nodes): `ESLint Config`
+- **Thin community `Community 88`** (1 nodes): `DB Table: errors`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Next Config Node`** (1 nodes): `Next.js Config`
+- **Thin community `Community 89`** (1 nodes): `DB Table: tasks`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Loading UI Node`** (1 nodes): `Loading UI`
+- **Thin community `Community 90`** (1 nodes): `DB Table: leads`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Login Layout Node`** (1 nodes): `Login Layout`
+- **Thin community `Community 91`** (1 nodes): `DB Table: content`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Hero Marquee`** (1 nodes): `Marquee Component Reference`
+- **Thin community `Community 92`** (1 nodes): `DB Table: projects`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Local Env Config`** (1 nodes): `Local Environment URLs (API:4000, Frontend:3000, n8n:5678)`
+- **Thin community `Community 93`** (1 nodes): `DB Table: clients`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Rules Directory`** (1 nodes): `Rules Directory (agent-rules, coding-rules, etc.)`
+- **Thin community `Community 94`** (1 nodes): `DB Table: agents_log`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Agent Communication Principles`** (1 nodes): `Agent Communication Principles (Vertical, Structured, Explicit Handoffs)`
+- **Thin community `Community 95`** (1 nodes): `DB Table: approvals`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Cognitive Modes`** (1 nodes): `Cognitive Modes (Planning, Execution, Reflection, Critique, Decision, Memory Recall)`
+- **Thin community `Community 96`** (1 nodes): `DB Table: notifications`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Memory Decay`** (1 nodes): `Memory Decay Strategy (30-day agent, 180-day canonical, 90-day observability)`
+- **Thin community `Community 97`** (1 nodes): `Pattern: Supabase Realtime Subscription`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ACC Agents Doc`** (1 nodes): `Agency Control Center Next.js Agent Rules`
+- **Thin community `Community 98`** (1 nodes): `Pattern: Server Action + Modal Form`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SaaS Upsell Triggers`** (1 nodes): `SaaS Upsell Trigger Formula (Loss-Framed Message)`
+- **Thin community `Community 99`** (1 nodes): `COO Agent (Opus 4.7) — Autonomous Orchestrator`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 100`** (1 nodes): `Local Environment URLs (API:4000, Frontend:3000, n8n:5678)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 101`** (1 nodes): `Rules Directory (agent-rules, coding-rules, etc.)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 102`** (1 nodes): `Agent Communication Principles (Vertical, Structured, Explicit Handoffs)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 103`** (1 nodes): `Cognitive Modes (Planning, Execution, Reflection, Critique, Decision, Memory Recall)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 104`** (1 nodes): `Memory Decay Strategy (30-day agent, 180-day canonical, 90-day observability)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 105`** (1 nodes): `Agency Control Center Next.js Agent Rules`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 106`** (1 nodes): `SaaS Upsell Trigger Formula (Loss-Framed Message)`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 107`** (1 nodes): `WhatsApp Contact Number +91 90988 88134`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Rules Directory README` connect `Agent System` to `AI Model Rules`, `Client Delivery Rules`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `Supabase Admin Client` connect `ACC Server Actions` to `Agency OS & Metrics`, `ACC Core Components`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `Sahni Bridal Studio Business Brief` connect `Sahni Growth Plan` to `Lead Generation Strategy`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Are the 4 inferred relationships involving `Supabase Admin Client` (e.g. with `middleware()` and `Supabase Server Client`) actually correct?**
-  _`Supabase Admin Client` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `Rules Directory README` connect `Community 6` to `Community 4`, `Community 5`, `Community 7`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `Sahni Bridal Studio Business Brief` connect `Community 3` to `Community 2`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `LinkedIn 30-Day Build-in-Public Calendar` connect `Community 2` to `Community 3`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Sahni Beauty Salon Website Strategy` (e.g. with `Client Rules` and `Current Project Priorities`) actually correct?**
   _`Sahni Beauty Salon Website Strategy` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 3 inferred relationships involving `LiveActivityFeed Component` (e.g. with `Pattern: Supabase Realtime Subscription` and `CooStatus Component`) actually correct?**
-  _`LiveActivityFeed Component` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `ESLint Config`, `Next.js Config`, `Prisma Config` to the rest of the system?**
-  _168 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Are the 3 inferred relationships involving `Honest 12-Month MRR Roadmap` (e.g. with `Agency Growth Opportunity Map (Executive Summary)` and `SaaS Pricing Formula for Indian SMBs (Free/Pro/Business tiers)`) actually correct?**
+  _`Honest 12-Month MRR Roadmap` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `DB Table: errors`, `DB Table: tasks`, `DB Table: leads` to the rest of the system?**
+  _137 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 0` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._

@@ -77,32 +77,34 @@
   setTimeout(() => { document.querySelector('.hero')?.classList.add('loaded'); }, 1800);
 
   // Mobile hamburger menu
-  const addHamburgerMenu = () => {
+  const createHamburger = () => {
+    if (document.querySelector('.nav-menu-btn')) return; // Already exists
     const navRight = document.querySelector('.nav-right');
     const navCenter = document.querySelector('.nav-center');
-    if (!navRight || !navCenter || document.querySelector('.nav-menu-btn')) return;
+    if (!navRight || !navCenter) return;
 
-    const menuBtn = document.createElement('button');
-    menuBtn.className = 'nav-menu-btn';
-    menuBtn.setAttribute('aria-label', 'Toggle menu');
-    menuBtn.innerHTML = '<span></span><span></span><span></span>';
-    menuBtn.addEventListener('click', () => {
+    const btn = document.createElement('button');
+    btn.className = 'nav-menu-btn';
+    btn.setAttribute('aria-label', 'Toggle menu');
+    btn.setAttribute('type', 'button');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       navCenter.classList.toggle('open');
-      menuBtn.classList.toggle('active');
     });
 
     navCenter.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navCenter.classList.remove('open');
-        menuBtn.classList.remove('active');
-      });
+      link.addEventListener('click', () => navCenter.classList.remove('open'));
     });
 
-    navRight.insertBefore(menuBtn, navRight.firstChild);
+    navRight.insertBefore(btn, navRight.firstChild);
   };
 
-  // Try immediately, then wait if needed
-  addHamburgerMenu();
-  setTimeout(addHamburgerMenu, 100);
-  setTimeout(addHamburgerMenu, 500);
+  // Keep trying until hamburger is created
+  createHamburger();
+  setTimeout(createHamburger, 100);
+  setTimeout(createHamburger, 300);
+  setTimeout(createHamburger, 700);
+  setTimeout(createHamburger, 1500);
 })();

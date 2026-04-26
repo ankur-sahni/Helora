@@ -168,19 +168,28 @@
 
 
 /* ───── HAMBURGER MENU BUTTON ───── */
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 .nav-menu-btn{
-  display: none; width: 36px; height: 36px;
+  display: none; width: 40px; height: 40px;
   background: transparent; border: none;
   padding: 0; cursor: pointer;
-  flex-direction: column; justify-content: center; gap: 5px;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
 }
 .nav-menu-btn span{
-  display: block; width: 24px; height: 2px;
+  display: block; width: 20px; height: 2px;
   background: var(--ink-gold-2);
-  border-radius: 2px;
+  border-radius: 1px;
   transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s;
 }
-.nav-menu-btn:focus{ outline: 2px solid var(--ink-gold-2); outline-offset: 2px; }
+.nav-menu-btn:focus-visible{ outline: 2px solid var(--ink-gold-2); outline-offset: 2px; }
+.nav-menu-btn:active{ opacity: 0.7; }
 
 /* ───── MOBILE MENU PANEL ───── */
 .nav-center{
@@ -514,10 +523,19 @@ section + .featured::before{
 
   /* ── Nav ── */
   .nav-inner{
-    grid-template-columns: 1fr auto !important;
-    padding: 16px var(--gutter) !important;
+    grid-template-columns: auto 1fr auto !important;
+    padding: 12px var(--gutter) !important;
+    gap: 8px !important;
   }
-  .nav-menu-btn{ display: flex !important; }
+  .nav-menu-btn{
+    display: flex !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .nav-menu-btn span{
+    width: 20px !important;
+    height: 2px !important;
+  }
   .nav-center{ display: none !important; }
 
   /* ── sec-head: always stack at tablet ── */
@@ -576,11 +594,28 @@ section + .featured::before{
   :root{ --gutter: 20px; }
 
   /* ── Nav ── */
-  .nav-inner{ padding: 14px var(--gutter) !important; }
+  .nav-inner{
+    padding: 10px var(--gutter) !important;
+    grid-template-columns: auto 1fr auto !important;
+    gap: 8px !important;
+  }
   .nav-phone{ display: none !important; }
-  .nav-logo{ font-size: 26px !important; }
-  .nav-menu-btn{ display: flex !important; }
-  .btn.sm{ padding: 8px 14px !important; font-size: 9px !important; }
+  .nav-logo{ font-size: 20px !important; }
+  .nav-logo small{ font-size: 7px !important; }
+  .nav-menu-btn{
+    display: flex !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .nav-menu-btn span{
+    width: 18px !important;
+    height: 2px !important;
+  }
+  .btn.sm{
+    padding: 10px 16px !important;
+    font-size: 9px !important;
+    flex-shrink: 0;
+  }
 
   /* ── Headings ── */
   .craft .sec-head h2,
