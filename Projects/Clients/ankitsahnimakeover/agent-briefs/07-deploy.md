@@ -9,7 +9,7 @@
 
 ## Prompt (copy into devops agent run)
 
-You are the `devops` agent. Ship sahnibridal.in to production on Vercel free tier. Zero downtime target, zero leaked secrets.
+You are the `devops` agent. Ship ankitsahnimakeover.com to production on Vercel free tier. Zero downtime target, zero leaked secrets.
 
 **Pre-flight:**
 - Confirm `.env` contains: `SANITY_PROJECT_ID`, `SANITY_DATASET`, `SANITY_API_READ_TOKEN`, `NEXT_PUBLIC_GA_ID`, `FORM_SUBMIT_ENDPOINT`. Never commit these. Verify `.env.local` is gitignored.
@@ -20,7 +20,7 @@ You are the `devops` agent. Ship sahnibridal.in to production on Vercel free tie
 1. Create Vercel project, link GitHub repo
 2. Set env vars in Vercel project settings (Production + Preview separately)
 3. First deploy to preview URL; smoke test
-4. Add custom domain `sahnibridal.in` + `www.sahnibridal.in` (www → apex redirect)
+4. Add custom domain `ankitsahnimakeover.com` + `www.ankitsahnimakeover.com` (www → apex redirect)
 5. Configure DNS at registrar per Vercel instructions
 6. Wait for SSL issuance (Let's Encrypt, auto)
 7. Verify HTTPS + redirect chain: `http://` → `https://`, `www` → apex (one redirect hop, not two)
@@ -40,9 +40,9 @@ You are the `devops` agent. Ship sahnibridal.in to production on Vercel free tie
 - Post launch notice on Instagram stories (handoff to `content`)
 
 **Done when:**
-- `https://sahnibridal.in` loads on 3 networks (mobile data, home wifi, office wifi)
+- `https://ankitsahnimakeover.com` loads on 3 networks (mobile data, home wifi, office wifi)
 - SSL grade A+ on SSL Labs
-- `curl -I https://sahnibridal.in/robots.txt` returns 200
+- `curl -I https://ankitsahnimakeover.com/robots.txt` returns 200
 - Search Console verified and sitemap submitted
 - Runbook committed
 

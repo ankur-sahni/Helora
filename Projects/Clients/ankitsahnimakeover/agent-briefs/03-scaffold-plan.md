@@ -9,11 +9,11 @@
 
 ## Prompt — Part A: `planner`
 
-You are the `planner` agent. Produce a complete implementation plan for the Sahni Bridal Studio website scaffold. `implementer` will follow it exactly. Do not write code.
+You are the `planner` agent. Produce a complete implementation plan for the Ankit Sahni Makeover website scaffold. `implementer` will follow it exactly. Do not write code.
 
 **Context:**
 - Stack frozen: Next.js (latest stable, App Router) + Tailwind CSS + Sanity.io CMS (free tier) + Vercel (free tier)
-- Domain: sahnibridal.in
+- Domain: ankitsahnimakeover.com
 - Brand tokens: `brand/tailwind.config.snippet.ts`
 - IA: `seo/site-architecture.md`
 - Phase 1 only. Do not scaffold Phase 2 or Phase 3 routes.

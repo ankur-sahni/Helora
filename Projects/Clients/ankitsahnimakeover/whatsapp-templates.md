@@ -1,9 +1,10 @@
-# Sahni Bridal Studio — WhatsApp Template Library
+# Ankit Sahni Makeover — WhatsApp Template Library
 
-**Business:** Sahni Bridal Studio, Lahar MP
+**Business:** Ankit Sahni Makeover, Lahar MP
 **Phone / WhatsApp:** +91 9098909088
-**Instagram:** @sahnibridalstudio
-**Tone:** Warm, respectful, Hinglish (Hindi words in Roman script + English). Never overly formal. Never chatbot-stiff.
+**Instagram:** @ankitsahnimakeovers
+**Tone:** Simple Indian English. Direct, polite, short sentences. No Hinglish, no marketing jargon. (Templates below still use Hinglish and need rewriting to match this rule — separate task.)
+**Payment:** In-shop only. Never ask for advance or UPI. Templates below contain legacy UPI lines that have been neutralised — rewrite the surrounding flow when templates are migrated to plain English.
 **Character counts exclude placeholders in `[square brackets]`.**
 
 All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n WhatsApp receptionist workflow from Supabase records. Placeholder rates below are the best-guess starting prices — update once Ankur confirms with salon owner.
@@ -16,7 +17,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 **When to send:** First-ever inbound WhatsApp from a number not in Supabase.
 **Character count:** 312
 
-> Namaste [NAME]! 🙏 Sahni Bridal Studio, Lahar mein aapka swagat hai.
+> Namaste [NAME]! 🙏 Ankit Sahni Makeover, Lahar mein aapka swagat hai.
 >
 > Hum 30 saal se bridal makeup, party makeup, hair styling, threading, waxing, facial, aur nail art services de rahe hain.
 >
@@ -77,20 +78,17 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 > Service: [SERVICE]
 > Date: [DATE] (Thursday)
 > Time: [TIME]
-> Location: Sahni Bridal Studio, [ADDRESS_LINE], Lahar
+> Location: Ankit Sahni Makeover, [ADDRESS_LINE], Lahar
 >
 > Google Maps: [MAPS_LINK]
 >
-> Advance ₹[ADVANCE_AMOUNT] UPI par bhej dijiye: `sahnibridal@okicici`
->
-> Advance milte hi seat pakki ho jayegi. Koi bhi change ho to 4 ghante pehle bata dena.
+> Payment salon par karni hai. Koi bhi change ho to 4 ghante pehle bata dena.
 >
 > Dhanyavaad 🙏
 
 **Personalisation notes:**
 - Day of week auto-filled from `[DATE]` — helps customer double-check.
-- UPI ID placeholder — must be confirmed with owner. Do not hardcode until confirmed.
-- For walk-in customers (no advance): remove the advance line and replace with "Salon par payment kar dena."
+- Payment is in-shop only. No advance, no UPI, no online payment links in any template.
 
 ---
 
@@ -102,7 +100,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 
 > Namaste [NAME] ji 🙏
 >
-> Kal aapki appointment hai Sahni Bridal Studio mein:
+> Kal aapki appointment hai Ankit Sahni Makeover mein:
 >
 > 📅 [DATE]
 > ⏰ [TIME]
@@ -129,7 +127,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 > [NAME] ji, 2 ghante mein aapki appointment hai 💄
 >
 > ⏰ [TIME] aaj
-> 📍 Sahni Bridal Studio, Lahar
+> 📍 Ankit Sahni Makeover, Lahar
 > 🗺️ [MAPS_LINK]
 >
 > Chai aapke liye ready rahegi ☕
@@ -181,7 +179,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 > Aapka review aur pehchaan, dono hamari agli bride tak pahunchti hai.
 >
 > Phir milte hain! 💛
-> — Sahni Bridal Studio
+> — Ankit Sahni Makeover
 
 **Personalisation notes:**
 - `[GOOGLE_REVIEW_LINK]` is the short Google Maps review URL — generated once and reused.
@@ -198,7 +196,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 
 > Namaste 🙏
 >
-> Shaadi ka season aa gaya! Sahni Bridal Studio mein is baar bride package mein kuch naya hai:
+> Shaadi ka season aa gaya! Ankit Sahni Makeover mein is baar bride package mein kuch naya hai:
 >
 > ✨ HD Airbrush Makeup
 > ✨ 3-hour touch-up kit free
@@ -209,7 +207,7 @@ All `[PRICE]`, `[DATE]`, `[TIME]`, `[NAME]` are to be auto-filled by the n8n Wha
 >
 > Date block karni ho to "BRIDAL" reply kar dijiye. Hum call back kar ke details share karenge.
 >
-> — Sahni Bridal Studio, Lahar (since 1994)
+> — Ankit Sahni Makeover, Lahar (since 1994)
 
 **Personalisation notes:**
 - Only send to customers who opted in OR were already customers. Never cold-blast unknown numbers — WhatsApp will block the business number.

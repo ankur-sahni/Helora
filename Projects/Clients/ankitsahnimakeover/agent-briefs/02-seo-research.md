@@ -12,7 +12,7 @@
 You are the `researcher` agent. Do not write code or edit production files. Produce an SEO keyword map and site IA document that the `implementer` will use to build the site.
 
 **Context:**
-- Client: Sahni Bridal Studio, Lahar MP. 30-year legacy. Bridal makeup + rental is the primary revenue driver.
+- Client: Ankit Sahni Makeover, Lahar MP. 30-year legacy. Bridal makeup + rental is the primary revenue driver.
 - Service area: Lahar (primary), Bhind district, Mihona, Daboh, Gormi, Datia
 - Primary competitor: pravalmakeover.in — study their URL structure, page count, schema, headings
 - Dual ranking target: Google local + AI search (Perplexity, ChatGPT, Gemini)

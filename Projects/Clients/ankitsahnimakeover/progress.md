@@ -1,4 +1,4 @@
-# Sahni Bridal Studio — Progress Log
+# Ankit Sahni Makeover — Progress Log
 
 **Status:** Pilot — unpaid case study build
 **Start date:** 2026-04-14
@@ -21,7 +21,7 @@ Foundation work in progress. Salon has zero digital presence. All 10 WhatsApp te
 - WhatsApp template library v1 drafted (10 templates, Hinglish). File: `whatsapp-templates.md`.
 - Salon service list confirmed: Bridal Makeup, Engagement/Party Makeup, Hair Styling, Threading, Waxing, Facial, Nail Art, Hair Spa.
 - Salon phone confirmed: +91 9098909088.
-- Instagram handle confirmed: @sahnibridalstudio.
+- Instagram handle confirmed: @ankitsahnimakeovers.
 
 ---
 
@@ -89,3 +89,9 @@ Hit 4 of 6 = strong case study. Hit 5 of 6 = great case study. Hit all 6 = flags
 - Owner (Ankur's brother) is cooperative but busy. Response time on WhatsApp can be 4–12 hours. Plan around this.
 - Salon is in Lahar MP — Tier-3 town, 3 hours from Bhopal. In-person visits are possible monthly, not weekly.
 - This is the ONLY unpaid client. No more free pilots after Sahni.
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Master pipeline this tracks against
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client context and constraints
+- [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — SEO milestones tracked here

@@ -9,7 +9,7 @@
 
 ## Prompt (copy into content agent run)
 
-You are the `content` agent. Write publish-ready copy for all 7 Phase 1 pages of sahnibridal.in. Use the `salon-content` skill — read it before starting.
+You are the `content` agent. Write publish-ready copy for all 7 Phase 1 pages of ankitsahnimakeover.com. Use the `salon-content` skill — read it before starting.
 
 **Inputs you must read first:**
 - `brand/identity-brief.md` — voice adjectives
@@ -41,7 +41,7 @@ You are the `content` agent. Write publish-ready copy for all 7 Phase 1 pages of
 **Voice rules (from `salon-content` skill):**
 - Warm, premium, trustworthy. Never salesy.
 - Address the bride, not "clients"
-- "We" not "Sahni Bridal Studio" after first mention
+- "We" not "Ankit Sahni Makeover" after first mention
 - Prices always in ₹ with no USD conversion
 - "Since 1994" used deliberately, not on every page
 

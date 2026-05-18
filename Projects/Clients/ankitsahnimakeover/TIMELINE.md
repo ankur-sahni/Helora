@@ -1,4 +1,4 @@
-# Sahni Bridal Studio — Phase 1 Timeline (7 Weeks)
+# Ankit Sahni Makeover — Phase 1 Timeline (7 Weeks)
 
 > Working days: Mon-Sat. Sunday is buffer. All dates relative to Week 1 Monday kickoff.
 
@@ -10,7 +10,7 @@
 
 | Day | Owner | Task |
 |-----|-------|------|
-| Mon | Ankur | Purchase `sahnibridal.in` (G2) — do NOT wait until Week 6 |
+| Mon | Ankur | Confirm `ankitsahnimakeover.com` DNS pointed at Vercel (G2 — domain already registered) |
 | Mon | Ankur | Provide 3-5 design references (G1) |
 | Mon | Ankit | Start Google Business Profile postcard verification (G6) — 10-14 day lead time |
 | Mon | `coo` | Kick off pipeline, route briefs to agents |
@@ -127,7 +127,7 @@
 
 ## Week 7 — Launch
 
-**Goal:** Live on `https://sahnibridal.in`.
+**Goal:** Live on `https://ankitsahnimakeover.com`.
 
 | Day | Owner | Task |
 |-----|-------|------|
@@ -156,7 +156,7 @@
 ---
 
 ## Phase 1 launch definition
-- [ ] `https://sahnibridal.in` live, SSL A+
+- [ ] `https://ankitsahnimakeover.com` live, SSL A+
 - [ ] All 7 pages publish from Sanity
 - [ ] Lighthouse mobile: Perf ≥ 90, A11y ≥ 95, SEO = 100
 - [ ] Schema validates on all pages
@@ -164,3 +164,11 @@
 - [ ] GBP linked to site
 - [ ] Ankit completes one WhatsApp inquiry from the live site
 - [ ] Case study v1 drafted
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Phase breakdown, agent assignments, and gate definitions this timeline implements
+- [[Projects/Clients/ankitsahnimakeover/progress.md]] — Live status against these weekly milestones
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client context and constraints governing this timeline
+- [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — SEO work scheduled in Weeks 5–6
+- [[Projects/Clients/ankitsahnimakeover/DESIGN_SYSTEM.md]] — Design work scheduled in Week 1–2

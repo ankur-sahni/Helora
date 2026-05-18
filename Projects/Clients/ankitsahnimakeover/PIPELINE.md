@@ -1,6 +1,6 @@
-# Sahni Bridal Studio — Master Build Pipeline
+# Ankit Sahni Makeover — Master Build Pipeline
 
-> **Owner:** Helora Agency (Ankur Sahni, CTO) · **Client:** Sahni Bridal Studio, Lahar MP
+> **Owner:** Helora Agency (Ankur Sahni, CTO) · **Client:** Ankit Sahni Makeover, Lahar MP
 > **Status doc:** `progress.md` · **Context:** `CLAUDE.md` · **Strategy:** `research/website-strategy.md`
 > **This is the single source of truth for how the website gets built. Every agent reads this before acting.**
 
@@ -8,7 +8,7 @@
 
 ## 1. Project Overview
 
-Sahni Bridal Studio is a 30-year-old salon in Lahar (MP) with zero digital presence, strong offline trust (4.6 stars, 116 reviews, 25K Instagram), and one unique competitive moat: on-site lehenga + jewelry rental. The website is Helora's first flagship case study. Primary job: convert bridal search intent into WhatsApp conversations and booked consultations. Primary competitor: Praval Makeover (pravalmakeover.in). Primary discovery surfaces: Google local search, Google Maps, and AI search (Perplexity, ChatGPT, Gemini). Stack is frozen — Next.js + Tailwind + Sanity CMS + Vercel, with Supabase added only in Phase 3 for bookings. Ankur manages content; the owners never touch code. The site must feel premium-Indian-bridal (warm luxury, gold/rose/cream, Sabyasachi-meets-local-warmth) while running on free tier infra until the first invoice.
+Ankit Sahni Makeover is a 30-year-old salon in Lahar (MP) with zero digital presence, strong offline trust (4.6 stars, 116 reviews, 25K Instagram), and one unique competitive moat: on-site lehenga + jewelry rental. The website is Helora's first flagship case study. Primary job: convert bridal search intent into WhatsApp conversations and booked consultations. Primary competitor: Praval Makeover (pravalmakeover.in). Primary discovery surfaces: Google local search, Google Maps, and AI search (Perplexity, ChatGPT, Gemini). Stack is frozen — Next.js + Tailwind + Sanity CMS + Vercel, with Supabase added only in Phase 3 for bookings. Ankur manages content; the owners never touch code. The site must feel premium-Indian-bridal (warm luxury, gold/rose/cream, Sabyasachi-meets-local-warmth) while running on free tier infra until the first invoice.
 
 ---
 
@@ -16,7 +16,7 @@ Sahni Bridal Studio is a 30-year-old salon in Lahar (MP) with zero digital prese
 
 ### Phase 1 — Launch (Weeks 1-7)
 
-**Goal:** Publish a 7-page production site on `sahnibridal.in` that ranks for local bridal intent and drives WhatsApp leads. This is the case study deliverable.
+**Goal:** Publish a 7-page production site on `ankitsahnimakeover.com` that ranks for local bridal intent and drives WhatsApp leads. This is the case study deliverable.
 
 **Agents assigned:**
 | Task | Lead agent | Supporting |
@@ -52,13 +52,13 @@ Sahni Bridal Studio is a 30-year-old salon in Lahar (MP) with zero digital prese
 - GA4 + Search Console + Bing Webmaster verified
 - Lighthouse mobile scores: Performance ≥ 90, Accessibility ≥ 95, SEO = 100
 - Sticky WhatsApp + call buttons, bridal inquiry form (email + WhatsApp delivery)
-- Deployed on Vercel at `https://sahnibridal.in` with SSL
+- Deployed on Vercel at `https://ankitsahnimakeover.com` with SSL
 - Case study blurb + 6 screenshots in `case-study/`
 
 **Done criteria:**
 - [ ] All 7 pages publish from Sanity with zero hardcoded content
 - [ ] Lighthouse mobile scores hit targets on 3 real devices
-- [ ] `site:sahnibridal.in` indexed in Google within 72h of launch
+- [ ] `site:ankitsahnimakeover.com` indexed in Google within 72h of launch
 - [ ] LocalBusiness schema validates in Google Rich Results Test
 - [ ] Ankit can complete one WhatsApp inquiry from the live site on his own phone
 - [ ] Ankur can edit a gallery item in Sanity and see it live within 60s
@@ -155,7 +155,7 @@ Phase 2 blocks on Phase 1 launch. Phase 3 blocks on Phase 2 authority + G13 WABA
 |---|------|-----------|--------|------------|
 | R1 | Photos from Ankit delayed | High | Blocks Gallery + Home hero | Pre-book shoot Week 3; use @ankur_sahni archive as bridge; stock NOT allowed |
 | R2 | Pricing never finalized | High | Blocks Services page | Escalate weekly; fallback: publish "from ₹X" ranges with owner sign-off |
-| R3 | Domain not purchased | Medium | Blocks DNS + launch | Order `sahnibridal.in` in Week 1, not Week 6 |
+| R3 | Domain DNS misconfigured | Low | Blocks launch | `ankitsahnimakeover.com` already registered — verify DNS at Vercel before Week 6 |
 | R4 | GBP verification postcard delayed | Medium | Weakens local ranking | Start claim in Week 1 (10-14 day lead time) |
 | R5 | Sanity free tier limits | Low | Blocks team access | Acceptable Phase 1-2; reassess Month 4 |
 | R6 | Vercel free tier bandwidth | Low | Outage if viral | Monitor via `observability`; aggressive image caching |
@@ -174,3 +174,12 @@ Phase 2 blocks on Phase 1 launch. Phase 3 blocks on Phase 2 authority + G13 WABA
 - **Free tier only.** Sanity free, Vercel free, no paid plugins. If a feature requires paid, escalate to Ankur.
 - **English default, Hindi phrases allowed.** Use `salon-content` skill rules for when Hindi is appropriate.
 - **One source of truth for status.** `progress.md` is updated weekly by whoever completes a milestone.
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client context and constraints
+- [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — Phase 2 keywords and authority content
+- [[Projects/Clients/ankitsahnimakeover/progress.md]] — Live status against this pipeline
+- [[rules/project-rules.md]] — Pre-build gates and working agreements
+- [[rules/n8n-rules.md]] — n8n workflow standards for Phase 3 automation
+- [[.claude/agents/planner.md]] — Planner follows this pipeline structure

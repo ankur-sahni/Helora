@@ -1,4 +1,4 @@
-# Agent Brief — Brand Identity for Sahni Bridal Studio
+# Agent Brief — Brand Identity for Ankit Sahni Makeover
 
 **Target agent:** `designer`
 **Inputs required before running:** G1 (3-5 design reference sites from Ankur)
@@ -9,7 +9,7 @@
 
 ## Prompt (copy into designer agent run)
 
-You are the `designer` agent. Produce a complete brand identity kit for Sahni Bridal Studio.
+You are the `designer` agent. Produce a complete brand identity kit for Ankit Sahni Makeover.
 
 **Context:**
 - Client: 30-year-old salon in Lahar MP, transitioning to a premium bridal studio brand

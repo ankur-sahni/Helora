@@ -34,7 +34,7 @@ Most small local salons and parlours do not build a strong website system with b
 
 - Fast mobile-first design, because mobile usability strongly affects trust and engagement.
 - Clean navigation with very few top-level menu items so users can find bridal services, prices, reviews, and contact details in seconds.
-- Secure custom domain such as sahnibeautysalon.in or sahnibeautyparlour.com for credibility and long-term brand control.
+- Custom domain ankitsahnimakeover.com (already registered) for credibility and long-term brand control.
 - Strong branding with consistent colors, logo use, salon story, and premium visuals.
 
 ### High-Value Pages
@@ -250,3 +250,10 @@ Suggested positioning line:
 - [ ] Add tracking tools: GA4, Search Console, Meta Pixel
 - [ ] Launch and test mobile speed
 - [ ] Add new content every week
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — Keyword research and local SEO that implements this strategy
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Build pipeline executing the phased rollout defined here
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client context and constraints this strategy was written for
+- [[Projects/Clients/ankitsahnimakeover/research/growth-plan.md]] — Companion research: business growth model

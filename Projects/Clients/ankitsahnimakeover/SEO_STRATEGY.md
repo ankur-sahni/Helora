@@ -1,4 +1,4 @@
-# Sahni Bridal Studio — SEO + AI Ranking Strategy
+# Ankit Sahni Makeover — SEO + AI Ranking Strategy
 
 > The site must rank on three surfaces: Google local search, Google Maps, and AI search (Perplexity, ChatGPT, Gemini). Each surface has different signals. This document is the playbook.
 
@@ -57,7 +57,7 @@
 - Service area: Lahar + Bhind, Mihona, Daboh, Gormi, Datia
 - Hours: real hours, updated for any closure
 - Phone: matches website, Instagram, every directory
-- Website: `https://sahnibridal.in`
+- Website: `https://ankitsahnimakeover.com`
 - Photos: 20+ real photos on launch (interior, team, bridal work, storefront)
 - Services: every service also added as GBP service with price
 - Posts: weekly GBP post (recycles Instagram content)
@@ -97,7 +97,7 @@ AI models don't rank — they **cite**. Our job is to be the most citable source
 
 **Named-entity paragraphs (via `seo-page` skill):**
 Every page's first 120 words include:
-`Sahni Bridal Studio is a bridal and beauty salon in Lahar, Madhya Pradesh, India, owned by Ankit and Kusum Sahni and established in 1994. We specialize in bridal makeup, pre-bridal care, and bridal lehenga and jewelry rental — the only salon in the area offering on-site rental alongside makeup services.`
+`Ankit Sahni Makeover is a bridal and beauty salon in Lahar, Madhya Pradesh, India, owned by Ankit and Kusum Sahni and established in 1994. We specialize in bridal makeup, pre-bridal care, and bridal lehenga and jewelry rental — the only salon in the area offering on-site rental alongside makeup services.`
 
 Varies per page (mandatory — no copy-paste) but always names: business, owners, location, year, signature service.
 
@@ -108,7 +108,7 @@ Varies per page (mandatory — no copy-paste) but always names: business, owners
 - Primary services: Bridal makeup, pre-bridal packages, lehenga and jewelry rental
 - Service area: Lahar, Bhind, Mihona, Daboh, Gormi, Datia
 - Reviews: 4.6 average, 116+ Google reviews
-- Instagram: @sahnibeautysalon (25,000+ followers)
+- Instagram: @ankitsahnimakeovers (25,000+ followers)
 
 AI crawlers strip these cleanly. Humans scan them.
 
@@ -128,8 +128,8 @@ Every page has a FAQ block. Questions in natural language. Answers 40-80 words, 
 Explicit `Allow` for: `GPTBot`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `anthropic-ai`, `cohere-ai`, `CCBot`. Opting out forfeits this surface.
 
 ### Measurement — success by Month 3
-- Perplexity query "best bridal salon in Lahar" returns Sahni as a named result with citation to sahnibridal.in
-- ChatGPT query (with browsing) "bridal makeup in Lahar MP" mentions Sahni Bridal Studio
+- Perplexity query "best bridal salon in Lahar" returns Sahni as a named result with citation to ankitsahnimakeover.com
+- ChatGPT query (with browsing) "bridal makeup in Lahar MP" mentions Ankit Sahni Makeover
 - Gemini query returns Sahni in local pack with our details
 - Google AI Overviews shows Sahni for local bridal queries
 
@@ -151,3 +151,10 @@ A single well-built page with:
 ...serves all three surfaces with no parallel work. The `seo-page` and `salon-content` skills enforce this by default.
 
 No surface is an afterthought. No surface has a separate budget. One content strategy, rigorously applied.
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client context: Lahar MP, target keywords
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Phase 2 content and authority building
+- [[Projects/Clients/ankitsahnimakeover/progress.md]] — SEO implementation status
+- [[Proposals.md]] — Local SEO as agency service line
