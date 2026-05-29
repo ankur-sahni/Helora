@@ -52,7 +52,7 @@ function Stats(){
         </div>
         <div className="stat">
           <div className="v"><span data-count="4.8">0</span> <span className="star">✦</span></div>
-          <div className="l">163 Reviews</div>
+          <div className="l">169 Reviews</div>
         </div>
         <div className="stat">
           <div className="v"><span data-count="39000">0</span></div>

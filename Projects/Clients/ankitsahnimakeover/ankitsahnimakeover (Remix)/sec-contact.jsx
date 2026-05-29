@@ -145,7 +145,7 @@ function Footer(){
             <div className="footer-contact">
               <a href="https://www.instagram.com/ankitsahnimakeover" target="_blank" rel="noopener noreferrer"><span className="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>@ankitsahnimakeover</a>
               <a href={WA_LINK('Hi Ankit, I found you on ankitsahnimakeover.com and would like to enquire.')} target="_blank" rel="noopener noreferrer"><span className="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></span>+91 90988 88134</a>
-              <a href="#"><span className="ico">★</span>Google · 4.8 / 163 Reviews</a>
+              <a href="#"><span className="ico">★</span>Google · 4.8 / 169 Reviews</a>
             </div>
           </div>
         </div>

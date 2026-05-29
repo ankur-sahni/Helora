@@ -9,8 +9,7 @@ function Gallery(){
   ];
   const [f, setF] = React.useState('all');
   const items = [
-    { c:'bridal', l:'Riya · Sangeet',     src:'images/8d185173-7dbc-4f02-a0c4-77ab29a14c42.webp' },
-    { c:'bridal', l:'Priyanka · Phere',   src:'images/a88efb12-402b-4cac-a38c-4b3b6d9a627c.webp' },
+{ c:'bridal', l:'Priyanka · Phere',   src:'images/a88efb12-402b-4cac-a38c-4b3b6d9a627c.webp' },
     { c:'skin',   l:'Glow Ritual',        src:'images/3AA4BC7A-216C-4B80-B3F1-1EE6A60060D4.webp' },
     { c:'rentals',l:'Maroon Couture',     src:'images/5A4DE80C-1F99-4624-82E8-6D2148D77CFF.webp' },
     { c:'bridal', l:'Ayesha · Haldi',     src:'images/2D8739FF-C55F-4D95-B04A-E29B3AC8C8E0.webp' },
@@ -56,7 +55,7 @@ function Gallery(){
   );
 }
 
-function BASlider({ label }){
+function BASlider({ label, beforeSrc, afterSrc }){
   const [split, setSplit] = React.useState(50);
   const ref = React.useRef(null);
   const drag = React.useRef(false);
@@ -81,8 +80,13 @@ function BASlider({ label }){
   }, []);
   return (
     <div className="ba" ref={ref} style={{ '--split': split + '%' }}>
-      <div className="before ph"><span>Before</span></div>
-      <div className="after ph" style={{ clipPath: `inset(0 0 0 ${split}%)` }}><span className="ba-after-label">After · {label}</span></div>
+      <div className="before ph">
+        {beforeSrc && <img src={beforeSrc} alt="Before" className="ph-img" style={{ objectPosition:'center 15%' }}/>}
+      </div>
+      <div className="after ph" style={{ clipPath: `inset(0 0 0 ${split}%)` }}>
+        {afterSrc && <img src={afterSrc} alt="After" className="ph-img" style={{ objectPosition:'center top' }}/>}
+        <span className="ba-after-label">{label}</span>
+      </div>
       <div className="handle"
         onMouseDown={() => drag.current = true}
         onTouchStart={() => drag.current = true}
@@ -94,7 +98,27 @@ function BASlider({ label }){
 }
 
 function BeforeAfter(){
-  return null; // Hidden until real before/after photos are available
+  return (
+    <section id="before-after" className="ba-section container reveal">
+      <div className="sec-head">
+        <div>
+          <div className="eyebrow">The Transformation · Before &amp; After</div>
+          <h2 className="serif">
+            Same face,<br/>
+            <span className="it">different story.</span>
+          </h2>
+        </div>
+        <p className="mute">Drag the slider to see the full transformation.</p>
+      </div>
+      <div style={{ maxWidth: '480px', margin: '40px auto 0' }}>
+        <BASlider
+          label="Bridal Makeup"
+          beforeSrc="images/ba-before.webp"
+          afterSrc="images/ba-after.webp"
+        />
+      </div>
+    </section>
+  );
 }
 
 function Testimonials(){
@@ -107,7 +131,7 @@ function Testimonials(){
     <section id="testimonials" className="testimonials container">
       <div className="sec-head">
         <div>
-          <div className="eyebrow">Voices · 163 Reviews · ★ 4.8</div>
+          <div className="eyebrow">Voices · 169 Reviews · ★ 4.8</div>
           <h2 className="serif fs-88">
             What the brides<br/>
             <span className="it">said after.</span>

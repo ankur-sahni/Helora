@@ -46,7 +46,7 @@
 ## Stats (currently showing estimates — need confirmation)
 
 - [ ] Instagram followers — is 39,000 correct?
-- [ ] Google reviews — 163 reviews at 4.6 stars, correct?
+- [x] Google reviews — 169 reviews at 4.8 stars (confirmed from Google Business Profile, 2026-05-30)
 - [ ] Total brides styled — is + correct?
 - [ ] Lehenga count — is 100+ pieces correct?
 - [ ] Lehenga size range — is Size 6–18 correct?
