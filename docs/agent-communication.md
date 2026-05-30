@@ -72,3 +72,10 @@ Every agent output must contain:
 - **Never modify files outside their scope** — flag to COO instead
 - **Never suppress errors silently** — all failures surface to Observability
 - **Never proceed past a Security CRITICAL finding** — hard stop
+
+## Related
+
+- [[docs/architecture.md]] — System design: agent org chart reference
+- [[docs/memory-model.md]] — Context assembly in the memory layer
+- [[.claude/agents/coo.md]] — COO enforces vertical communication pattern
+- [[rules/agent-rules.md]] — Escalation triggers and confidence thresholds

@@ -30,3 +30,8 @@ Planning phase. Target audience and platform TBD.
 
 ## Notes
 Update this file when vertical and platform decisions are made.
+
+## Related
+
+- [[progress.md]] — ICP Reset: Indian SMBs Tier 2/3 MP-UP Cities
+- [[quick-sell-services.md]] — Offer: n8n Zapier Migration + Cost Optimization

@@ -85,3 +85,12 @@ Data corruption detected? ─────────► Rollback + incident res
 ```
 
 **Rollback command must be documented before deploy starts — not looked up after an incident.**
+
+## Related
+
+- [[CLAUDE.md]] — Hard constraints: free tier only until first invoice
+- [[rules/project-rules.md]] — Release gate requirements
+- [[.claude/agents/reviewer.md]] — Final review before release
+- [[.claude/agents/security.md]] — Security gate before release
+- [[.claude/agents/dependency-analyst.md]] — Phase 2 pre-release check: blast radius confirmation
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Pipeline phases with release gates

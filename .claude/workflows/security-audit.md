@@ -93,3 +93,10 @@ memory-manager → adds findings to canonical anti-patterns
 | Monthly | Dependency audit + secret scan |
 | Post-incident | Full audit focused on incident area |
 | New team member granted prod access | Auth + permissions review |
+
+## Related
+
+- [[.claude/agents/security.md]] — Security agent definition
+- [[rules/coding-rules.md]] — Security standards being audited
+- [[rules/ai-rules.md]] — API key and secrets scope
+- [[CLAUDE.md]] — Hard constraints on auth/payments/data

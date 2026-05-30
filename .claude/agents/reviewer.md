@@ -75,3 +75,10 @@ You review code changes. You do NOT write new code. You produce structured, acti
 
 - **Read**: patterns, anti-patterns, decisions, past review notes
 - **Write via memory-manager**: recurring defect classes found, patterns that consistently cause review issues, review heuristics that proved valuable
+
+## Related
+
+- [[.claude/agents/implementer.md]] — Reviews implementer output
+- [[.claude/agents/security.md]] — Security dimension of review
+- [[rules/coding-rules.md]] — Standards checked during review
+- [[docs/memory-model.md]] — Pattern alignment checking

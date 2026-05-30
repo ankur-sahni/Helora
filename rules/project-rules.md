@@ -32,3 +32,11 @@ Rules for how projects are structured, managed, and delivered in this agency.
 1. n8n local setup + scheduler (infrastructure foundation)
 2. Lead generation system (agency growth)
 3. Ankit Sahni Makeover full digital build (first client)
+
+## Related
+
+- [[rules/README.md]] — Rules index
+- [[CLAUDE.md]] — Master constraints
+- [[rules/agent-rules.md]] — Agent behavior within projects
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Live example of these gates in action
+- [[.claude/agents/planner.md]] — Planner follows these pre-build gates

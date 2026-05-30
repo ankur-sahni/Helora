@@ -1,0 +1,16 @@
+{
+  "userIgnoreFilters": [
+    "Projects/Clients/ankitsahnimakeover/ankitsahnimakeover-nextjs/public/images/",
+    "node_modules/",
+    "Projects/Agency/agency-control-center/node_modules/",
+    "Projects/Clients/ankitsahnimakeover/ankitsahnimakeover-nextjs/node_modules/",
+    "graphify-out",
+    ".next",
+    ".git",
+    ".vscode",
+    ".playwright-mcp",
+    "Helora",
+    "ankitsahnimakeover (Remix)"
+  ],
+  "alwaysUpdateLinks": true
+}

@@ -79,3 +79,11 @@
 
 - If content agent returns low-quality drafts 2 weeks in a row: switch base model, re-check prompt, re-check context packet.
 - If client keeps rejecting >5 posts/month: schedule a re-alignment call, revise tone guide.
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Client content requirements
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Phase 1 deliverable: content calendar for Month 1
+- [[rules/client-rules.md]] — Content delivery and handoff standards
+- [[rules/n8n-rules.md]] — n8n content publishing pipeline
+- [[rules/ai-rules.md]] — Groq model selection for content draft generation

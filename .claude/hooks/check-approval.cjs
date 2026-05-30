@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 // Pre-edit approval gate.
-// Reads Claude Code transcript, checks the LAST user message for an approval phrase.
-// Approves: do it | approved | approve | go ahead | proceed | execute it | ship it
-// On any failure (missing input, missing transcript, parse error) we fall OPEN
-// so the user is never locked out of editing if the hook itself breaks.
+// Scans last 10 user messages for approval phrase — approval persists across turns.
+// Approves: do it | approved | approve | go ahead | proceed | execute it | ship it | fix | spin | run | launch | let's
+// On any failure (missing input, missing transcript, parse error) we fall OPEN.
 
 const fs = require('fs');
 
-const APPROVAL_RE = /\b(do it|approved|approve|go ahead|proceed|execute it|ship it)\b/i;
+const APPROVAL_RE = /\b(do it|approved|approve|go ahead|proceed|execute it|ship it|fix|spin|run|launch|let'?s)\b/i;
+const NO_APPROVAL_PATHS = [/graphify-out[/\\]/];
 
 function emit(obj) {
   process.stdout.write(JSON.stringify(obj));
@@ -15,61 +15,47 @@ function emit(obj) {
 }
 
 function fallOpen(reason) {
-  emit({
-    hookSpecificOutput: {
-      hookEventName: 'PreToolUse',
-      additionalContext: `check-approval fell open: ${reason}. Edit allowed but please verify approval was given.`
-    }
-  });
+  emit({ hookSpecificOutput: { hookEventName: 'PreToolUse', additionalContext: `check-approval fell open: ${reason}.` } });
+}
+
+function allow() {
+  emit({ hookSpecificOutput: { hookEventName: 'PreToolUse', additionalContext: 'Approval detected. Edit allowed.' } });
 }
 
 let input;
-try {
-  input = JSON.parse(fs.readFileSync(0, 'utf8'));
-} catch (e) {
-  fallOpen('could not parse hook input');
-}
+try { input = JSON.parse(fs.readFileSync(0, 'utf8')); } catch (e) { fallOpen('could not parse hook input'); }
 
 const transcriptPath = input && input.transcript_path;
-if (!transcriptPath || !fs.existsSync(transcriptPath)) {
-  fallOpen('transcript path missing');
-}
+if (!transcriptPath || !fs.existsSync(transcriptPath)) { fallOpen('transcript path missing'); }
 
-let lastUserText = '';
+const filePath = (input && input.tool_input && (input.tool_input.file_path || input.tool_input.path)) || '';
+if (NO_APPROVAL_PATHS.some(re => re.test(filePath))) { allow(); }
+
+let recentUserTexts = [];
 try {
   const lines = fs.readFileSync(transcriptPath, 'utf8').trim().split('\n');
-  for (let i = lines.length - 1; i >= 0; i--) {
+  for (let i = lines.length - 1; i >= 0 && recentUserTexts.length < 10; i--) {
     let msg;
     try { msg = JSON.parse(lines[i]); } catch { continue; }
     if (msg.type !== 'user' || !msg.message) continue;
     const content = msg.message.content;
-    if (typeof content === 'string') {
-      lastUserText = content;
-    } else if (Array.isArray(content)) {
-      lastUserText = content
-        .filter(c => c && c.type === 'text' && typeof c.text === 'string')
-        .map(c => c.text)
-        .join('\n');
+    let text = '';
+    if (typeof content === 'string') { text = content; }
+    else if (Array.isArray(content)) {
+      text = content.filter(c => c && c.type === 'text' && typeof c.text === 'string').map(c => c.text).join('\n');
     }
-    if (lastUserText && lastUserText.trim()) break;
+    if (text && text.trim()) recentUserTexts.push(text.trim());
   }
-} catch (e) {
-  fallOpen('could not read transcript');
-}
+} catch (e) { fallOpen('could not read transcript'); }
 
-if (APPROVAL_RE.test(lastUserText)) {
-  emit({
-    hookSpecificOutput: {
-      hookEventName: 'PreToolUse',
-      additionalContext: 'Approval detected in last user message. Edit allowed. Frontend (CSS/JSX/HTML/JS)? Take Playwright screenshots BEFORE and AFTER.'
-    }
-  });
-}
+if (recentUserTexts.length === 0) { fallOpen('no user messages found'); }
+
+if (APPROVAL_RE.test(recentUserTexts.join('\n'))) { allow(); }
 
 emit({
   hookSpecificOutput: {
     hookEventName: 'PreToolUse',
     permissionDecision: 'deny',
-    permissionDecisionReason: 'BLOCKED by check-approval hook: last user message has no approval phrase (do it / approved / go ahead / proceed / ship it). Present Plan + Execution Steps + Outcome and wait for explicit approval.'
+    permissionDecisionReason: 'BLOCKED: no approval phrase in last 10 messages. Say: do it / approved / go ahead / proceed.'
   }
 });

@@ -40,3 +40,10 @@ Standards for building and managing n8n workflows in this agency.
 - Avoid polling triggers where webhooks are available
 - For scheduled workflows, stagger run times to avoid simultaneous execution
 - Keep execution history retention at 100 executions (default) unless debugging
+
+## Related
+
+- [[rules/README.md]] — Rules index
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — 7 n8n workflows planned for this client
+- [[rules/coding-rules.md]] — Credential security: never hardcode
+- [[rules/ai-rules.md]] — Model selection for automation tasks

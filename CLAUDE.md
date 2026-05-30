@@ -55,3 +55,16 @@ Auth/payments/security files → `security` agent. Plan affects >5 files → `de
 ---
 
 *For detailed behavioral rules, patterns, and decision frameworks, see files in `rules/` and `docs/`. Agent definitions and prompts live in `.claude/agents/`.*
+
+## Related
+
+- [[agent-communication.md]] — Agent Escalation Paths Table
+- [[CLAUDE.local.md]] — CTO role, escalation authority, personal overrides
+- [[docs/architecture.md]] — Full system design, 7-layer model, agent org chart
+- [[docs/memory-model.md]] — Memory tiers, canonical memory ownership
+- [[rules/README.md]] — Full rules index: agent, coding, communication, client, n8n, AI
+- [[rules/agent-rules.md]] — Auto-triggers, escalation paths, confidence thresholds
+- [[.claude/agents/coo.md]] — COO routing logic and orchestration
+- [[mrr-plan.md]] — 12-month MRR forecast and milestone targets
+- [[Proposals.md]] — Strategic market opportunities and agency positioning
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — First client: the revenue path to first invoice

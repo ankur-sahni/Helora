@@ -26,3 +26,17 @@ Rules governing how agents behave, communicate, and make decisions.
 
 ## Escalation Path
 Implementer → Planner → COO → Advisory Council → User
+
+## Related
+
+- [[ai-rules.md]] — AI Budget Rules
+- [[coding-rules.md]] — Coding Rules
+- [[CLAUDE.md]] — Hard constraints that override these rules
+- [[rules/README.md]] — Rules index
+- [[.claude/agents/coo.md]] — COO implements these routing rules
+- [[.claude/agents/planner.md]] — Planning confidence thresholds
+- [[.claude/agents/security.md]] — Security auto-trigger definition
+- [[.claude/agents/dependency-analyst.md]] — Auto-triggered when plan affects > 3 files
+- [[.claude/agents/budget-tracker.md]] — Auto-triggered when task budget > 80%
+- [[docs/agent-communication.md]] — Communication patterns between agents
+- [[.claude/memory/canonical/architecture.md]] — Architecture decisions these rules enforce

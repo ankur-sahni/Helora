@@ -138,3 +138,13 @@ Here the model changes. Solo capacity is maxed. Options: (a) hire a VA, (b) prod
 
 _M1: pending_
 _M2: pending_
+
+## Related
+
+- [[dashboard-audit.md]] — Audit Verdict: Dashboard is simulation, not instrument
+- [[saas-formulas.md]] — SaaS Pricing Formula for Indian SMBs (Free/Pro/Business tiers)
+- [[saas-formulas.md]] — SaaS Retention Formula (Switching Cost + Perceived Value / Price)
+- [[saas-formulas.md]] — Unit Economics Targets (CAC <₹2000, ARPU ₹1999, Churn <5%, LTV:CAC 20:1)
+- [[CLAUDE.md]] — North star: $30k MRR, hard constraints
+- [[Proposals.md]] — Strategic opportunities and market gaps
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — First client: ₹20k/month retainer

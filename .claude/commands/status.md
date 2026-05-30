@@ -8,3 +8,10 @@ Run these checks in parallel:
 5. Pending owner tasks — query Supabase tasks table where assignedAgent=owner and status=pending, count them
 
 Report as a clean table: service | status | detail. Flag anything red.
+
+## Related
+
+- [[Projects/Agency/agency-control-center/CLAUDE.md]] — Dashboard project context (port 3000)
+- [[mrr-plan.md]] — Revenue targets to compare against current client count
+- [[.claude/commands/start.md]] — Run /start first if services are down
+- [[.claude/commands/tasks.md]] — /tasks shows pending owner tasks (part of status picture)

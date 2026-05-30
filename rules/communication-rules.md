@@ -42,3 +42,10 @@ How Claude communicates with Ankur in this workspace.
 - Do not give time estimates
 - Do not give a menu of meta-options (discuss / plan / build) — just confirm and act
 - Do not mention internal tool reminders or system notices to the user
+
+## Related
+
+- [[rules/README.md]] — Rules index
+- [[rules/coding-rules.md]] — Code standards (paired with communication)
+- [[docs/memory-model.md]] — Memory layers referenced in token management
+- [[CLAUDE.md]] — Hard constraints on output format

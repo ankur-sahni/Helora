@@ -61,3 +61,12 @@ LOW (1–3): safe to proceed | MEDIUM (4–6): plan carefully | HIGH (7–10): e
 
 - **Read**: architecture map, known coupling hotspots
 - **Write via memory-manager**: newly discovered tight coupling, blast-radius surprises, module dependency patterns
+
+## Related
+
+- [[docs/architecture.md]] — Parallel execution: Researcher + Dependency Analyst always run together
+- [[.claude/agents/planner.md]] — Dependency map is direct input to Planner's implementation plan
+- [[.claude/agents/coo.md]] — Blast score ≥ 7 triggers council escalation via COO
+- [[rules/agent-rules.md]] — Auto-trigger: plan affecting > 3 files fires this agent
+- [[.claude/workflows/feature.md]] — Phase 2 parallel track alongside Researcher
+- [[.claude/memory/canonical/anti-patterns.md]] — "Skipping Dependency Analyst on Shared Utilities" is documented here

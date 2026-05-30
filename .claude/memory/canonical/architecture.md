@@ -67,3 +67,11 @@ Upgrade model only when task complexity demonstrably requires it.
 Researcher + Dependency Analyst always run in parallel during discovery.
 Council members always deliberate in parallel (Round 1 simultaneous, Round 2 after all Round 1 outputs).
 Tester prepares scaffolding while Implementer codes when plan is finalized.
+
+## Related
+
+- [[docs/architecture.md]] — Full 7-layer system design that these decisions implement
+- [[docs/memory-model.md]] — This file is Tier 3 canonical memory; memory-manager owns writes
+- [[.claude/agents/memory-manager.md]] — Only agent with write authority to this file
+- [[.claude/memory/canonical/decisions.md]] — Business and strategy decisions (sibling file)
+- [[CLAUDE.md]] — Master constraints that override architectural choices

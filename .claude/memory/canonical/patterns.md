@@ -59,3 +59,12 @@ All writes to canonical memory go through memory-manager. Agents write to their 
 **Confidence**: high
 
 Planner, Researcher, Reviewer, Security, and Council members include a confidence score (0–100%) with every output. Scores < 60% trigger escalation. Scores are honest — not inflated to avoid escalation.
+
+## Related
+
+- [[docs/memory-model.md]] — This file is Tier 3 canonical memory; memory-manager owns writes
+- [[.claude/agents/memory-manager.md]] — Only agent with write authority here
+- [[.claude/memory/canonical/anti-patterns.md]] — Counterpart: things that failed (sibling file)
+- [[rules/agent-rules.md]] — Patterns here inform the auto-trigger and escalation rules
+- [[rules/coding-rules.md]] — Coding patterns are enforced alongside these agent patterns
+- [[docs/agent-communication.md]] — Communication patterns that reference output contracts

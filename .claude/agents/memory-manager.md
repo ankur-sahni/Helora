@@ -87,3 +87,13 @@ Every entry must include:
 ### Reason for rejection (if applicable)
 [why it was rejected or redirected]
 ```
+
+## Related
+
+- [[docs/memory-model.md]] — Full memory tier model and write validation rules
+- [[.claude/memory/canonical/architecture.md]] — System design decisions (write target)
+- [[.claude/memory/canonical/decisions.md]] — Key choices + rationale (write target)
+- [[.claude/memory/canonical/patterns.md]] — Established patterns (write target)
+- [[.claude/memory/canonical/anti-patterns.md]] — Failure modes to avoid (write target)
+- [[rules/agent-rules.md]] — Only memory-manager writes to canonical memory (enforcement rule)
+- [[.claude/agents/coo.md]] — COO routes memory write requests through this agent

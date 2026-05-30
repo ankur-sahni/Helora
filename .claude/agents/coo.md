@@ -104,3 +104,12 @@ When consolidating multi-agent output:
 - **Read at start**: canonical decisions, anti-patterns, COO session notes
 - **Write via memory-manager**: major routing decisions, recurring task patterns, agent performance issues
 - **Never write directly to canonical memory** — always route through `memory-manager`
+
+## Related
+
+- [[CLAUDE.md]] — Master constraints COO enforces
+- [[docs/architecture.md]] — Control layer: COO sits at top
+- [[docs/agent-communication.md]] — Vertical communication protocol
+- [[.claude/agents/planner.md]] — Primary delegation target
+- [[.claude/agents/security.md]] — Security auto-triggers COO monitors
+- [[rules/agent-rules.md]] — Routing rules and escalation thresholds

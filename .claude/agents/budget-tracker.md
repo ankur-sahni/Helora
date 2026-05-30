@@ -66,3 +66,11 @@ After each agent call, record:
 
 - Track cost history in `.claude/memory/agents/budget-tracker/`
 - Route cost optimization insights through memory-manager for canonical storage
+
+## Related
+
+- [[docs/architecture.md]] — Model tiering strategy that defines cost expectations per agent
+- [[.claude/memory/canonical/architecture.md]] — Model selection decisions (Opus/Sonnet/Haiku by task)
+- [[.claude/agents/coo.md]] — COO receives all budget alerts and makes stop/continue decisions
+- [[rules/agent-rules.md]] — Budget > 80% auto-trigger rule definition
+- [[rules/ai-rules.md]] — Monthly API spend targets and provider cost hierarchy

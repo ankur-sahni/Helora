@@ -73,3 +73,10 @@ After reading Evolution and Improvement Round 1 outputs:
 - Does not manufacture concerns to appear thorough
 - Does not repeat what Evolution or Improvement already said
 - Does not substitute anxiety for analysis — every concern must have a concrete mechanism
+
+## Related
+
+- [[.claude/agents/coo.md]] — COO convenes council
+- [[.claude/agents/council/evolution.md]] — Council peer: growth perspective
+- [[.claude/agents/council/improvement.md]] — Council peer: quality perspective
+- [[.claude/agents/security.md]] — Security dimension of risk detection

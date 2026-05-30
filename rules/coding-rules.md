@@ -40,3 +40,13 @@ Standards for all code written in this agency and its projects.
 - Never force push to main/master
 - Create new commits rather than amending, unless explicitly asked
 - Stage specific files — never `git add -A` without reviewing what's included
+
+## Related
+
+- [[agent-rules.md]] — Security Agent
+- [[n8n-rules.md]] — n8n Credentials Management
+- [[rules/README.md]] — Rules index
+- [[rules/communication-rules.md]] — Response standards alongside code standards
+- [[rules/ai-rules.md]] — API key storage (.env only)
+- [[.claude/agents/security.md]] — Security hard blocks during implementation
+- [[.claude/agents/reviewer.md]] — Code review against these standards

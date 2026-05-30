@@ -202,3 +202,11 @@ Every Reel script, caption, DM template written for Sahni in Hindi/English becom
 ---
 
 *Last updated: 2026-04-15 | Next review: When first 3 clients are onboarded*
+
+## Related
+
+- [[saas-formulas.md]] — Unit Economics Targets (CAC <₹2000, ARPU ₹1999, Churn <5%, LTV:CAC 20:1)
+- [[mrr-plan.md]] — Month-by-month execution of these opportunities
+- [[CLAUDE.md]] — Agency constraints and north star
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — First case study: salon vertical
+- [[rules/client-rules.md]] — Client onboarding and delivery standards

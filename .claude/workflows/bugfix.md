@@ -80,3 +80,13 @@ Compressed sequence for critical production issues:
 6. deploy → watch for 10 min
 7. post-mortem within 48h
 ```
+
+## Related
+
+- [[CLAUDE.md]] — Hard constraints all workflows must follow
+- [[rules/coding-rules.md]] — Code standards during bugfix
+- [[rules/project-rules.md]] — Pre-build gates apply even to fixes
+- [[.claude/agents/implementer.md]] — Implementer executes fix
+- [[.claude/agents/reviewer.md]] — Reviewer validates fix
+- [[.claude/agents/dependency-analyst.md]] — Triggered when bug is in a shared utility
+- [[.claude/memory/canonical/anti-patterns.md]] — Root cause may already be documented here; findings get added back

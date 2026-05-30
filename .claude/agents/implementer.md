@@ -67,3 +67,11 @@ Recommendation: [should Reviewer pay special attention here?]
 
 - **Read**: patterns, anti-patterns, decisions, implementer working notes
 - **Write via memory-manager**: surprising implementation discoveries, pattern clarifications, lessons from failed approaches
+
+## Related
+
+- [[.claude/agents/planner.md]] — Receives plan from planner
+- [[.claude/agents/reviewer.md]] — Output goes to reviewer
+- [[.claude/agents/security.md]] — Security auto-triggers during implementation
+- [[rules/coding-rules.md]] — Code standards implementer follows
+- [[docs/memory-model.md]] — Reads patterns before implementing

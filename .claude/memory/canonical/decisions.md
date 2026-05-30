@@ -110,6 +110,8 @@ Agents read this to understand why things are the way they are.
 **Revisit if**: (a) costs drop materially (e.g. Gemini permanent free tier guaranteed, WhatsApp Business API pricing drops), (b) we want to launch a deliberately stripped "lite" tier ≤ ₹10k with half the deliverables — but never quietly discount the full stack.
 
 ### MRR Reality Check: $30k Is 18–24 Months, Not 12
+
+
 **Date**: 2026-04-18
 **Made by**: Ankur + CTO strategy review
 **Rationale**: Math: $30k MRR = ~₹24.9 lakh/month. At ₹20k/salon that's 125 active salon clients — impossible for a solo founder even with 2 VAs (capacity caps around 40 clients). Realistic composition for $30k MRR: ~60 salon clients (₹12L) + 20 global clients ($7k) + 400 ReviewLoop users ($4.8k) + 8 clinic clients (₹2.4L) = the math works only at month 22–24 with normal churn and sustained outbound. The 12-month honest ceiling is ~$6.5k–$8k MRR. Declaring this publicly in the MRR plan (mrr-plan.md) and in canonical memory prevents future panic when month 6 shows $2k and the old target said $15k.
@@ -117,3 +119,12 @@ Agents read this to understand why things are the way they are.
 - Keep the $30k/12-month target for motivation — backfires when actual numbers miss; causes burnout and bad decisions (discounting, over-promising, shiny-new-vertical chasing).
 - Private reality, public aspiration — creates dishonesty in LinkedIn build-in-public content, kills the credibility we're trying to build.
 **Revisit if**: (a) ReviewLoop hits product-market fit earlier than M6 and revenue leverages beyond the model, (b) a strategic hire lands earlier than M7, (c) LinkedIn inbound starts producing $500+ MRR/month in month-adds by M4 (currently modelled as 1 client/month by M6).
+
+## Related
+
+- [[docs/memory-model.md]] — This file is Tier 3 canonical memory; memory-manager owns writes
+- [[.claude/agents/memory-manager.md]] — Only agent with write authority here; validates every entry
+- [[.claude/memory/canonical/architecture.md]] — System design decisions (sibling file)
+- [[mrr-plan.md]] — Revenue model that several decisions here were made to defend
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — First client; several decisions reference this engagement
+- [[CLAUDE.md]] — Hard constraints that supersede decisions recorded here

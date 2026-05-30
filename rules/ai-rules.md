@@ -67,3 +67,10 @@ Load is distributed across providers to reduce cost and avoid rate limits.
 - Store reusable prompts in `Projects/<project>/prompts/` as `.md` files
 - Name clearly: `appointment-reminder-prompt.md`, `lead-qualification-prompt.md`
 - Document the model, temperature, and max_tokens used with each prompt
+
+## Related
+
+- [[rules/README.md]] — Rules index
+- [[rules/coding-rules.md]] — API key security rules aligned
+- [[CLAUDE.md]] — Model routing: Haiku/Sonnet/Opus by task type
+- [[.claude/agents/coo.md]] — COO applies model routing decisions

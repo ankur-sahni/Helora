@@ -76,3 +76,8 @@ Lahar, Gwalior, Bhind, Raun, Mihona, Mau, Seondha, Konch, Jalaun, Datia, Daboh, 
 - Sahni is Ankur's surname. Owner = Ankit Sahni (Ankur's brother)
 - 30-year legacy = strong trust signal for content
 - This is Helora Agency's first case study — document everything
+
+## Related
+
+- [[30-day-calendar.md]] — LinkedIn 30-Day Build-in-Public Calendar
+- [[salon-growth-stack.md]] — Salon AI Growth Stack Offer Document

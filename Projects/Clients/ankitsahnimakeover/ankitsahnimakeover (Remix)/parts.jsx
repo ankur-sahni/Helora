@@ -36,54 +36,20 @@ function WaIcon({ size = 28 }){
     </svg>
   );
 }
-function Ph({ label, shape='rect', category, src: directSrc, objectPosition='center' }){
+function Ph({ label, shape='rect', src: directSrc, objectPosition='center', imgStyle }){
   const cls = shape === 'oval' ? 'oval' : shape === 'arch' ? 'arch' : 'rect';
-  const sig = label.split('').reduce((a,c) => a + c.charCodeAt(0), 0);
 
-  // Direct Unsplash CDN photo IDs — no redirect, no auth
-  const pools = {
-    bride: [
-      '1519741497674-611481863552',
-      '1583939003579-730e3918a45a',
-      '1522337360788-8b13dee7a37e',
-      '1508214751196-bcfd4ca60f91',
-      '1511285560929-80b5a1efdb4b',
-      '1515934751635-ebcfd5b21e8f',
-    ],
-    makeup: [
-      '1519741497674-611481863552',
-      '1494790108377-be9c29b29330',
-      '1521577352947-9bb58764b69a',
-      '1534528741775-53994a69daeb',
-      '1522337360788-8b13dee7a37e',
-      '1583939003579-730e3918a45a',
-    ],
-    woman: [
-      '1494790108377-be9c29b29330',
-      '1534528741775-53994a69daeb',
-      '1438761681033-6461ffad8d80',
-      '1524504388940-b1c1722653e1',
-      '1488426862026-3ee34a7d66df',
-      '1531746020798-e6953c6e8e04',
-    ],
-    man: [
-      '1507003211169-0a1dd7228f2d',
-      '1472099645785-5658abf4ff4e',
-      '1500648767791-00dcc994a43e',
-      '1506794778202-cad84cf45f1d',
-    ],
-  };
-
-  const pool = pools[category];
-  const src = directSrc
-    ? directSrc
-    : pool
-      ? `https://images.unsplash.com/photo-${pool[sig % pool.length]}?w=600&h=800&fit=crop&q=80`
-      : `https://picsum.photos/seed/${label.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase()}/600/800`;
+  if (!directSrc) {
+    return (
+      <div className={cls} style={{ background:'#1a1a1a', display:'flex', alignItems:'center', justifyContent:'center' }}>
+        <span style={{ color:'#666', fontSize:'0.75rem', fontFamily:'var(--font-mono)', letterSpacing:'0.1em' }}>PHOTO COMING SOON</span>
+      </div>
+    );
+  }
 
   return (
     <div className={cls}>
-      <img src={src} alt={label} className="ph-img" style={{ objectPosition }}/>
+      <img src={directSrc} alt={label} className="ph-img" loading="lazy" style={{ objectPosition, ...imgStyle }}/>
     </div>
   );
 }

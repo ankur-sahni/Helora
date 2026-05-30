@@ -129,3 +129,15 @@ Stop the workflow immediately if:
 - Implementer deviation risk = high and no plan update
 - Budget tracker hits hard cap
 - Same test fails 3+ times (trigger researcher before retry)
+
+## Related
+
+- [[CLAUDE.md]] — Hard constraints all workflows must follow
+- [[rules/project-rules.md]] — Pre-build gates for features
+- [[.claude/agents/planner.md]] — Planner executes Phase 4
+- [[.claude/agents/implementer.md]] — Implementer executes Phase 6
+- [[.claude/agents/reviewer.md]] — Reviewer gates Phase 7
+- [[.claude/agents/security.md]] — Security auto-trigger in Phase 6 (auth/payments changes)
+- [[.claude/agents/dependency-analyst.md]] — Phase 2 parallel track alongside Researcher
+- [[.claude/agents/budget-tracker.md]] — Runs alongside all phases; hard-stops at cap
+- [[docs/architecture.md]] — End-to-End Execution Flow this workflow implements

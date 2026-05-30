@@ -70,3 +70,11 @@ Before writing any plan:
 
 - **Read**: patterns, anti-patterns, decisions, past planner notes
 - **Write via memory-manager**: new architectural insights discovered during planning, patterns identified that aren't yet documented
+
+## Related
+
+- [[.claude/agents/coo.md]] — COO delegates to planner
+- [[.claude/agents/implementer.md]] — Planner output feeds implementer
+- [[docs/memory-model.md]] — Reads canonical patterns before planning
+- [[rules/project-rules.md]] — Pre-build gates planner must check
+- [[rules/agent-rules.md]] — Confidence scoring thresholds

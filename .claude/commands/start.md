@@ -1,8 +1,20 @@
-Start the local development environment: Next.js dashboard, n8n, and Ankit Sahni Makeover website.
+Start the local development environment for active projects.
 
-1. Check if Next.js (port 3000) is running. If not, start it using PowerShell Start-Process with WorkingDirectory `d:\Learning\Ai Automation\Ankur Sahni Learning Project\Projects\Agency\agency-control-center`.
-2. Check if n8n (port 5678) is running. If not, start it using PowerShell Start-Process pointing to the n8n binary.
-3. Check if Ankit Sahni Makeover (port 8090) is running. If not, start Python HTTP server from `Projects/Clients/ankitsahnimakeover/ankitsahnimakeover (Remix)/` using PowerShell Start-Process with `-FilePath "python.exe"` and `-ArgumentList "-m", "http.server", "8090"`.
-4. Wait for all three to respond, then confirm all are up with their URLs.
+<!-- COMMENTED OUT (not needed right now):
+- Next.js agency dashboard (port 3000): Start-Process with WorkingDirectory `d:\Learning\Ai Automation\Ankur Sahni Learning Project\Projects\Agency\agency-control-center`.
+- n8n (port 5678): Start-Process pointing to the n8n binary.
+-->
+
+<!-- COMMENTED OUT (not needed right now):
+- Check if Ankit Sahni Makeover static reference (port 8090) is running. If not, start Python HTTP server from `Projects/Clients/ankitsahnimakeover/ankitsahnimakeover (Remix)/` using PowerShell Start-Process with `-FilePath "python.exe"` and `-ArgumentList "-m", "http.server", "8090"`.
+-->
+1. Check if Ankit Sahni Makeover Next.js dev server (port 3001) is running. If not, start it using PowerShell Start-Process with WorkingDirectory `d:\Learning\Ai Automation\Ankur Sahni Learning Project\Projects\Clients\ankitsahnimakeover\ankitsahnimakeover-nextjs` and ArgumentList `"npm", "run", "dev", "--", "-p", "3001"`.
+2. Wait for it to respond, then confirm it's up with its URL.
 
 Use the startup commands from memory (feedback_start_servers.md).
+
+## Related
+
+- [[Projects/Clients/ankitsahnimakeover/ankitsahnimakeover-nextjs/CLAUDE.md]] — Next.js project context for port 3001
+- [[.claude/commands/status.md]] — Run /status after /start to verify all services are up
+- [[CLAUDE.md]] — Windows server startup rule: PowerShell Start-Process only

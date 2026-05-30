@@ -77,34 +77,41 @@
   setTimeout(() => { document.querySelector('.hero')?.classList.add('loaded'); }, 1800);
 
   // Mobile hamburger menu
-  const createHamburger = () => {
-    if (document.querySelector('.nav-menu-btn')) return; // Already exists
-    const navRight = document.querySelector('.nav-right');
-    const navCenter = document.querySelector('.nav-center');
-    if (!navRight || !navCenter) return;
+  // Toggle body.menu-open so React reconciliation can never fight us
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.nav-menu-btn')) {
+      e.preventDefault();
+      document.body.classList.toggle('menu-open');
+    }
+    if (e.target.closest('.nav-center a')) {
+      document.body.classList.remove('menu-open');
+    }
+  });
 
+  // Inject hamburger button, re-inject if React removes it
+  const injectHamburger = (navRight) => {
+    if (navRight.querySelector('.nav-menu-btn')) return;
     const btn = document.createElement('button');
     btn.className = 'nav-menu-btn';
     btn.setAttribute('aria-label', 'Toggle menu');
     btn.setAttribute('type', 'button');
     btn.innerHTML = '<span></span><span></span><span></span>';
-
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      navCenter.classList.toggle('open');
-    });
-
-    navCenter.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navCenter.classList.remove('open'));
-    });
-
-    navRight.insertBefore(btn, navRight.firstChild);
+    navRight.appendChild(btn);
   };
 
-  // Keep trying until hamburger is created
-  createHamburger();
-  setTimeout(createHamburger, 100);
-  setTimeout(createHamburger, 300);
-  setTimeout(createHamburger, 700);
-  setTimeout(createHamburger, 1500);
+  const watchNav = (navRight) => {
+    injectHamburger(navRight);
+    new MutationObserver(() => injectHamburger(navRight)).observe(navRight, { childList: true });
+  };
+
+  const nr = document.querySelector('.nav-right');
+  if (nr) {
+    watchNav(nr);
+  } else {
+    const bodyObs = new MutationObserver(() => {
+      const found = document.querySelector('.nav-right');
+      if (found) { bodyObs.disconnect(); watchNav(found); }
+    });
+    bodyObs.observe(document.body, { childList: true, subtree: true });
+  }
 })();

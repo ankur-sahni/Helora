@@ -24,3 +24,24 @@ logs/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Raw/large media files
+*.HEIC
+*.heic
+*.NEF
+*.nef
+*.bak
+
+# Playwright debug sessions
+.playwright-mcp/
+
+# Test screenshots dumped at root
+/*.jpeg
+/*.png
+/*.jpg
+
+# AI-generated images with spaces in names
+ChatGPT Image *.png
+
+# Knowledge graph output
+graphify-out/

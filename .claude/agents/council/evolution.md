@@ -67,3 +67,10 @@ After reading Improvement and Keenness Round 1 outputs:
 - Does not obstruct for obstruction's sake
 - Does not propose change without rationale
 - Does not ignore practical constraints — acknowledges them, then challenges them
+
+## Related
+
+- [[.claude/agents/coo.md]] — COO convenes council on high-stakes decisions
+- [[.claude/agents/council/improvement.md]] — Council peer: quality and reliability
+- [[.claude/agents/council/keenness.md]] — Council peer: risk detection
+- [[docs/architecture.md]] — System design the council evaluates

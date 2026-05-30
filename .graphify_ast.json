@@ -1,0 +1,1465 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot_audit_mjs",
+      "label": "screenshot-audit.mjs",
+      "file_type": "code",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "screenshot_audit_shoot",
+      "label": "shoot()",
+      "file_type": "code",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L17"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_app_jsx",
+      "label": "app.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\app.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_tweakspanel",
+      "label": "TweaksPanel()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\app.jsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "app_app",
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\app.jsx",
+      "source_location": "L46"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_enhance_js",
+      "label": "enhance.js",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "enhance_onscroll",
+      "label": "onScroll()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "enhance_scan",
+      "label": "scan()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L68"
+    },
+    {
+      "id": "enhance_injecthamburger",
+      "label": "injectHamburger()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L92"
+    },
+    {
+      "id": "enhance_watchnav",
+      "label": "watchNav()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L102"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "label": "parts.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "parts_wa_link",
+      "label": "WA_LINK()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "parts_spark",
+      "label": "Spark()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "parts_minispark",
+      "label": "MiniSpark()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "parts_asterisk",
+      "label": "Asterisk()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L22"
+    },
+    {
+      "id": "parts_waicon",
+      "label": "WaIcon()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "parts_ph",
+      "label": "Ph()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L39"
+    },
+    {
+      "id": "parts_nav",
+      "label": "Nav()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L57"
+    },
+    {
+      "id": "parts_wafab",
+      "label": "WaFab()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L101"
+    },
+    {
+      "id": "parts_marquee",
+      "label": "Marquee()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L109"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_about_jsx",
+      "label": "sec-about.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-about.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_about_about",
+      "label": "About()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-about.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_awards_jsx",
+      "label": "sec-awards.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-awards.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_awards_awards",
+      "label": "Awards()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-awards.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_contact_jsx",
+      "label": "sec-contact.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_contact_contact",
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "sec_contact_footer",
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L114"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_craft_jsx",
+      "label": "sec-craft.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-craft.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_craft_craft",
+      "label": "Craft()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-craft.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "sec_craft_featured",
+      "label": "Featured()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-craft.jsx",
+      "source_location": "L37"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_gallery_jsx",
+      "label": "sec-gallery.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_gallery_gallery",
+      "label": "Gallery()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "sec_gallery_baslider",
+      "label": "BASlider()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L58"
+    },
+    {
+      "id": "sec_gallery_beforeafter",
+      "label": "BeforeAfter()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L100"
+    },
+    {
+      "id": "sec_gallery_testimonials",
+      "label": "Testimonials()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L124"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_hero_jsx",
+      "label": "sec-hero.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-hero.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_hero_hero",
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-hero.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "sec_hero_stats",
+      "label": "Stats()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-hero.jsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_makeups_jsx",
+      "label": "sec-makeups.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-makeups.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_makeups_makeuptypes",
+      "label": "MakeupTypes()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-makeups.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_packages_jsx",
+      "label": "sec-packages.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-packages.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sec_packages_packages",
+      "label": "Packages()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-packages.jsx",
+      "source_location": "L2"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_compare_mjs",
+      "label": "compare.mjs",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\compare.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_eslint_config_mjs",
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\eslint.config.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_env_d_ts",
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next-env.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_sitemap_config_js",
+      "label": "next-sitemap.config.js",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next-sitemap.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_config_ts",
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_postcss_config_mjs",
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\postcss.config.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config_ts",
+      "label": "sanity.config.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "page_wa",
+      "label": "wa()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "page_spark",
+      "label": "Spark()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "page_onmove",
+      "label": "onMove()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L486"
+    },
+    {
+      "id": "page_up",
+      "label": "up()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L493"
+    },
+    {
+      "id": "page_move",
+      "label": "move()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L494"
+    },
+    {
+      "id": "page_set",
+      "label": "set()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L656"
+    },
+    {
+      "id": "page_handlesubmit",
+      "label": "handleSubmit()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L659"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_studio_tool_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\studio\\[[...tool]]\\page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "page_studiopage",
+      "label": "StudioPage()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\studio\\[[...tool]]\\page.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_enhance_tsx",
+      "label": "Enhance.tsx",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Enhance.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "enhance_enhance",
+      "label": "Enhance()",
+      "file_type": "code",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Enhance.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_footer_tsx",
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Footer.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "footer_footer",
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Footer.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_nav_tsx",
+      "label": "Nav.tsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "nav_onresize",
+      "label": "onResize()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L39"
+    },
+    {
+      "id": "nav_onesc",
+      "label": "onEsc()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "nav_go",
+      "label": "go()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L52"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_wafab_tsx",
+      "label": "WaFab.tsx",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\WaFab.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "wafab_wafab",
+      "label": "WaFab()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\WaFab.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_client_ts",
+      "label": "client.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\client.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_image_ts",
+      "label": "image.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "image_urlfor",
+      "label": "urlFor()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_gallery_ts",
+      "label": "gallery.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\gallery.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_package_ts",
+      "label": "package.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\package.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_sitesettings_ts",
+      "label": "siteSettings.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\siteSettings.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_teammember_ts",
+      "label": "teamMember.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\teamMember.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_testimonial_ts",
+      "label": "testimonial.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\testimonial.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_types_window_d_ts",
+      "label": "window.d.ts",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\types\\window.d.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_n8n_workflows_build_workflow_js",
+      "label": "build-workflow.js",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\n8n-workflows\\build-workflow.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "build_workflow_sheetsnode",
+      "label": "sheetsNode()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\n8n-workflows\\build-workflow.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "build_workflow_httpnode",
+      "label": "httpNode()",
+      "file_type": "code",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\n8n-workflows\\build-workflow.js",
+      "source_location": "L20"
+    }
+  ],
+  "edges": [
+    {
+      "source": "screenshot_audit_mjs",
+      "target": "playwright",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "screenshot_audit_mjs",
+      "target": "promises",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "screenshot_audit_mjs",
+      "target": "fs",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "screenshot_audit_mjs",
+      "target": "screenshot_audit_shoot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "screenshot-audit.mjs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_app_jsx",
+      "target": "app_tweakspanel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\app.jsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_app_jsx",
+      "target": "app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\app.jsx",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_enhance_js",
+      "target": "enhance_onscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_enhance_js",
+      "target": "enhance_scan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_enhance_js",
+      "target": "enhance_injecthamburger",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_enhance_js",
+      "target": "enhance_watchnav",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "enhance_watchnav",
+      "target": "enhance_injecthamburger",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\enhance.js",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_wa_link",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_spark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_minispark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_asterisk",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_waicon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_ph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_nav",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_wafab",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_parts_jsx",
+      "target": "parts_marquee",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "parts_wafab",
+      "target": "parts_wa_link",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_about_jsx",
+      "target": "sec_about_about",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-about.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_awards_jsx",
+      "target": "sec_awards_awards",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-awards.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_contact_jsx",
+      "target": "sec_contact_contact",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_contact_jsx",
+      "target": "sec_contact_footer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_craft_jsx",
+      "target": "sec_craft_craft",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-craft.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_craft_jsx",
+      "target": "sec_craft_featured",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-craft.jsx",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_gallery_jsx",
+      "target": "sec_gallery_gallery",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_gallery_jsx",
+      "target": "sec_gallery_baslider",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_gallery_jsx",
+      "target": "sec_gallery_beforeafter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_gallery_jsx",
+      "target": "sec_gallery_testimonials",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-gallery.jsx",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_hero_jsx",
+      "target": "sec_hero_hero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-hero.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_hero_jsx",
+      "target": "sec_hero_stats",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-hero.jsx",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_makeups_jsx",
+      "target": "sec_makeups_makeuptypes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-makeups.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_remix_sec_packages_jsx",
+      "target": "sec_packages_packages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-packages.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_compare_mjs",
+      "target": "playwright",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\compare.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_eslint_config_mjs",
+      "target": "config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\eslint.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_eslint_config_mjs",
+      "target": "core_web_vitals",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\eslint.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_eslint_config_mjs",
+      "target": "typescript",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\eslint.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_env_d_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_dev_types_routes_d_ts",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next-env.d.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_config_ts",
+      "target": "path",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_next_config_ts",
+      "target": "next",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\next.config.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity.config.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config_ts",
+      "target": "structure",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity.config.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config_ts",
+      "target": "vision",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity.config.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity.config.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "next",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "local",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "next",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "google",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "nav",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "footer",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "wafab",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "enhance",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_layout_tsx",
+      "target": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_globals_css",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\layout.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_wa",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_spark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_onmove",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L486",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_up",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L493",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_move",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L494",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_set",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L656",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_page_tsx",
+      "target": "page_handlesubmit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L659",
+      "weight": 1.0
+    },
+    {
+      "source": "page_move",
+      "target": "page_onmove",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L494",
+      "weight": 1.0
+    },
+    {
+      "source": "page_handlesubmit",
+      "target": "page_wa",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\page.tsx",
+      "source_location": "L662",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_studio_tool_page_tsx",
+      "target": "studio",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\studio\\[[...tool]]\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_studio_tool_page_tsx",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_config",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\studio\\[[...tool]]\\page.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_app_studio_tool_page_tsx",
+      "target": "page_studiopage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\app\\studio\\[[...tool]]\\page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_enhance_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Enhance.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_enhance_tsx",
+      "target": "enhance_enhance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Enhance.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_footer_tsx",
+      "target": "footer_footer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_nav_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_nav_tsx",
+      "target": "nav_onresize",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_nav_tsx",
+      "target": "nav_onesc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_nav_tsx",
+      "target": "nav_go",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\Nav.tsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_components_wafab_tsx",
+      "target": "wafab_wafab",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\components\\WaFab.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_client_ts",
+      "target": "next_sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\client.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_image_ts",
+      "target": "image_url",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_image_ts",
+      "target": "image_url",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_image_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_client",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_image_ts",
+      "target": "image_urlfor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\image.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_gallery_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\gallery.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_gallery",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_package",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_testimonial",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_teammember",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_index_ts",
+      "target": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_sitesettings",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\index.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_package_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\package.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_sitesettings_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\siteSettings.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_teammember_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\teamMember.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_ankitsahnimakeover_nextjs_sanity_schemas_testimonial_ts",
+      "target": "sanity",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover-nextjs\\sanity\\schemas\\testimonial.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_n8n_workflows_build_workflow_js",
+      "target": "build_workflow_sheetsnode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\n8n-workflows\\build-workflow.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "d_learning_ai_automation_ankur_sahni_learning_project_projects_clients_ankitsahnimakeover_n8n_workflows_build_workflow_js",
+      "target": "build_workflow_httpnode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\n8n-workflows\\build-workflow.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "parts_nav",
+      "target": "nav_go",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\parts.jsx",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "sec_contact_contact",
+      "target": "parts_wa_link",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "sec_contact_footer",
+      "target": "parts_wa_link",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\Learning\\Ai Automation\\Ankur Sahni Learning Project\\Projects\\Clients\\ankitsahnimakeover\\ankitsahnimakeover (Remix)\\sec-contact.jsx",
+      "source_location": "L147",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

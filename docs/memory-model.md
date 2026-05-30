@@ -102,3 +102,11 @@ Prevention:
 3. Source tracking — every entry records which agent submitted it
 4. Contradiction detection — Memory Manager resolves conflicts explicitly
 5. Retrospective review — periodic audit flags stale or wrong entries
+
+## Related
+
+- [[docs/architecture.md]] — Memory as one of the 7 execution layers
+- [[docs/agent-communication.md]] — How agents pass context via memory
+- [[.claude/agents/coo.md]] — COO reads canonical memory before routing
+- [[rules/communication-rules.md]] — 3 memory layers: CLAUDE.md + progress.md + canonical/
+- [[CLAUDE.md]] — Canonical memory location references

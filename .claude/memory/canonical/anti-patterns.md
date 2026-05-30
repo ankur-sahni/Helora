@@ -54,3 +54,12 @@ Only memory-manager writes here.
 **What failed**: Using the highest-capability model for every task inflates cost by 10–50x with no quality improvement for simple tasks.
 **Why it fails**: Tester, Dispatcher, Docs Writer, Context Manager don't need deep reasoning — they need speed and reliability.
 **What to do instead**: Follow the model tiering in architecture.md. Reserve Opus for COO and Retrospective. Use Haiku for high-frequency, low-judgment tasks.
+
+## Related
+
+- [[docs/memory-model.md]] — This file is Tier 3 canonical memory; memory-manager owns writes
+- [[.claude/agents/memory-manager.md]] — Only agent with write authority here
+- [[.claude/memory/canonical/patterns.md]] — Counterpart: established patterns to follow (sibling file)
+- [[.claude/workflows/bugfix.md]] — Bug fixes that reveal systemic failures get added here
+- [[.claude/agents/dependency-analyst.md]] — "Skipping Dependency Analyst" is an active anti-pattern here
+- [[rules/agent-rules.md]] — Several auto-triggers exist specifically to prevent these failures

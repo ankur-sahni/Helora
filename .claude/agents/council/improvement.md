@@ -74,3 +74,10 @@ After reading Evolution and Keenness Round 1 outputs:
 - Does not block for the sake of caution — every block must have a specific, fixable reason
 - Does not require perfection — distinguishes between fatal flaws and acceptable risks
 - Does not ignore forward-looking concerns — acknowledges Evolution's points, evaluates their validity
+
+## Related
+
+- [[.claude/agents/coo.md]] — COO convenes council
+- [[.claude/agents/council/evolution.md]] — Council peer: growth perspective
+- [[.claude/agents/council/keenness.md]] — Council peer: risk detection
+- [[rules/coding-rules.md]] — Standards this council member enforces

@@ -87,3 +87,10 @@ Implementation cannot continue until CRITICAL findings are resolved and re-audit
 
 - **Read**: canonical security patterns, past vulnerabilities found, auth configuration
 - **Write via memory-manager**: new vulnerability classes found, security patterns established, auth model specifics
+
+## Related
+
+- [[.claude/agents/implementer.md]] — Hard blocks implementer on CRITICAL findings
+- [[.claude/agents/coo.md]] — COO triggers security agent automatically
+- [[rules/coding-rules.md]] — Aligned security standards
+- [[rules/ai-rules.md]] — API key and secrets management

@@ -1,0 +1,248 @@
+npm warn config production Use `--omit=dev` instead.
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@sanity/cli": {
+      "name": "@sanity/cli",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@vercel/frameworks"
+      ],
+      "effects": [
+        "sanity"
+      ],
+      "range": "<=0.0.0-20260511075627 || 3.8.4-next.27 - 3.16.0 || >=6.0.0-alpha.3",
+      "nodes": [
+        "node_modules/@sanity/cli"
+      ],
+      "fixAvailable": {
+        "name": "sanity",
+        "version": "5.14.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@vercel/frameworks": {
+      "name": "@vercel/frameworks",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "js-yaml"
+      ],
+      "effects": [
+        "@sanity/cli"
+      ],
+      "range": ">=0.2.1-canary.0",
+      "nodes": [
+        "node_modules/@vercel/frameworks"
+      ],
+      "fixAvailable": {
+        "name": "sanity",
+        "version": "5.14.1",
+        "isSemVerMajor": true
+      }
+    },
+    "brace-expansion": {
+      "name": "brace-expansion",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1119088,
+          "name": "brace-expansion",
+          "dependency": "brace-expansion",
+          "title": "brace-expansion: Large numeric range defeats documented `max` DoS protection",
+          "url": "https://github.com/advisories/GHSA-jxxr-4gwj-5jf2",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=5.0.0 <5.0.6"
+        }
+      ],
+      "effects": [],
+      "range": "5.0.2 - 5.0.5",
+      "nodes": [
+        "node_modules/@oclif/core/node_modules/brace-expansion"
+      ],
+      "fixAvailable": true
+    },
+    "js-yaml": {
+      "name": "js-yaml",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112714,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml has prototype pollution in merge (<<)",
+          "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": "<3.14.2"
+        }
+      ],
+      "effects": [
+        "@vercel/frameworks"
+      ],
+      "range": "<3.14.2",
+      "nodes": [
+        "node_modules/@vercel/frameworks/node_modules/js-yaml"
+      ],
+      "fixAvailable": {
+        "name": "sanity",
+        "version": "5.14.1",
+        "isSemVerMajor": true
+      }
+    },
+    "next": {
+      "name": "next",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "postcss"
+      ],
+      "effects": [],
+      "range": "9.3.4-canary.0 - 16.3.0-canary.5",
+      "nodes": [
+        "node_modules/next"
+      ],
+      "fixAvailable": {
+        "name": "next",
+        "version": "9.3.3",
+        "isSemVerMajor": true
+      }
+    },
+    "next-sanity": {
+      "name": "next-sanity",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "sanity"
+      ],
+      "effects": [],
+      "range": "0.6.7 || 0.9.0-new-preview-mode.1 - 2.1.0 || >=12.1.2",
+      "nodes": [
+        "node_modules/next-sanity"
+      ],
+      "fixAvailable": {
+        "name": "next-sanity",
+        "version": "12.1.1",
+        "isSemVerMajor": true
+      }
+    },
+    "postcss": {
+      "name": "postcss",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1117015,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+          "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<8.5.10"
+        }
+      ],
+      "effects": [
+        "next"
+      ],
+      "range": "<8.5.10",
+      "nodes": [
+        "node_modules/next/node_modules/postcss"
+      ],
+      "fixAvailable": {
+        "name": "next",
+        "version": "9.3.3",
+        "isSemVerMajor": true
+      }
+    },
+    "sanity": {
+      "name": "sanity",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "@sanity/cli"
+      ],
+      "effects": [
+        "next-sanity"
+      ],
+      "range": "3.8.4-next.27 - 3.16.0 || 3.94.1-next.0.6739e10a32 - 3.94.1 || 5.11.1-alpha.12 - 5.12.0-next.23 || 5.12.1-alpha.15 - 5.13.0-next.38 || 5.13.1-alpha.17 - 5.14.0-next.51 || >=5.14.2-alpha.14",
+      "nodes": [
+        "node_modules/sanity"
+      ],
+      "fixAvailable": {
+        "name": "sanity",
+        "version": "5.14.1",
+        "isSemVerMajor": true
+      }
+    },
+    "ws": {
+      "name": "ws",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1119108,
+          "name": "ws",
+          "dependency": "ws",
+          "title": "ws: Uninitialized memory disclosure",
+          "url": "https://github.com/advisories/GHSA-58qx-3vcg-4xpx",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-908"
+          ],
+          "cvss": {
+            "score": 4.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=8.0.0 <8.20.1"
+        }
+      ],
+      "effects": [],
+      "range": "8.0.0 - 8.20.0",
+      "nodes": [
+        "node_modules/ws"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 9,
+      "high": 0,
+      "critical": 0,
+      "total": 9
+    },
+    "dependencies": {
+      "prod": 980,
+      "dev": 249,
+      "optional": 135,
+      "peer": 10,
+      "peerOptional": 0,
+      "total": 1338
+    }
+  }
+}

@@ -191,6 +191,11 @@
 .nav-menu-btn:focus-visible{ outline: 2px solid var(--ink-gold-2); outline-offset: 2px; }
 .nav-menu-btn:active{ opacity: 0.7; }
 
+/* Show hamburger on mobile */
+@media (max-width: 1100px){
+  .nav-menu-btn{ display: flex !important; }
+}
+
 /* ───── MOBILE MENU PANEL ───── */
 .nav-center{
   position: relative;
@@ -205,8 +210,9 @@
     transition: transform .3s cubic-bezier(.2,.8,.2,1);
     border-bottom: 1px solid var(--line);
   }
-  .nav-center.open{
+  body.menu-open .nav-center{
     transform: translateY(0);
+    display: flex !important;
   }
   .nav-center a{
     display: block; padding: 12px var(--gutter) !important;
@@ -859,7 +865,15 @@ html, body { overflow-x: hidden; }
     radial-gradient(ellipse at 50% 30%, rgba(245,240,232,0.22), transparent 60%),
     linear-gradient(155deg, #5a3f2a 0%, #241810 70%);
 }
-.ba-after-label { color: rgba(245,240,232,0.5); }
+.ba-after-label {
+  position: absolute;
+  top: 14px; right: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.7);
+  pointer-events: none;
+}
 
 /* ── Contact section ── */
 .contact-info { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }

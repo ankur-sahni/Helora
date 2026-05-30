@@ -1,7 +1,7 @@
 // Craft + Featured Lehenga sections
 function Craft(){
   const items = [
-    { n:'I',   t:'Bridal', it:'Makeup',   c:'HDLV airbrush, bespoke contouring. Engineered for 12-hour wear under mandap lights.',    img:'images/bride-nath-closeup.webp' },
+    { n:'I',   t:'Bridal', it:'Makeup',   c:'HDLV airbrush, bespoke contouring. Engineered for 12-hour wear under mandap lights.',    img:'images/bride-studio-portrait.webp', op:'center 30%', os:{ transform:'scale(1.25) translateY(-8%)' } },
     { n:'II',  t:'Hair',   it:'Artistry', c:'Editorial up-dos, textured braids, extensions. Styled for photographs that age well.',      img:'images/bride-red-dramatic.webp' },
     { n:'III', t:'Skin &', it:'Glow',     c:'Pre-bridal 30-day glow rituals, facial threading, brow architecture.',                      img:'images/bride-hero-main.webp' },
     { n:'IV',  t:'Nail',   it:'Couture',  c:'Bridal gel, chrome, embellished artistry — matched to your palette.',                       img:'images/5051DD0C-FC68-4DAD-8A72-41DDC8F90B20.webp' },
@@ -23,7 +23,7 @@ function Craft(){
       <div className="craft-grid reveal-stagger">
         {items.map((s, i) => (
           <a key={i} href="#contact" className="craft-card" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); }}>
-            <div className="img"><Ph label={s.t + ' ' + s.it} shape={i % 2 === 0 ? 'oval' : 'arch'} category="makeup" src={s.img}/></div>
+            <div className="img"><Ph label={s.t + ' ' + s.it} shape={i % 2 === 0 ? 'oval' : 'arch'} category="makeup" src={s.img} objectPosition={s.op} imgStyle={s.os}/></div>
             <span className="n">№ {s.n}</span>
             <h3>{s.t} <span className="it">{s.it}</span></h3>
             <p>{s.c}</p>

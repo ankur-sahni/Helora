@@ -1,0 +1,863 @@
+{
+  "name": "Ankit Sahni Makeover — Instagram Chatbot v2",
+  "nodes": [
+    {
+      "id": "wh-get-ig",
+      "name": "Instagram Verification (GET)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        240,
+        80
+      ],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "instagram-chatbot",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "respond-verify-ig",
+      "name": "Return Challenge",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        480,
+        80
+      ],
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.query ? $json.query['hub.challenge'] : $json['hub.challenge'] }}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "wh-post-ig",
+      "name": "Instagram Webhook (POST)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        240,
+        340
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "instagram-chatbot",
+        "responseMode": "onReceived",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "extract-msg-ig",
+      "name": "Extract Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        340
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const entry = $input.item.json?.entry?.[0]?.messaging?.[0] || {};\nconst msg = entry.message || {};\n// Skip echo (bot's own outgoing messages)\nif (msg.is_echo === true) return [];\n// Skip non-text (stickers, voice, images, reactions)\nconst text = msg.text;\nif (!text || typeof text !== 'string' || text.trim() === '') return [];\nreturn { json: {\n  sender_id: entry.sender?.id || '',\n  message_text: text.trim(),\n  message_id: msg.mid || ''\n}};"
+      }
+    },
+    {
+      "id": "mark-seen-ig",
+      "name": "Mark Seen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v21.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.INSTAGRAM_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ recipient: { id: $json.sender_id }, sender_action: 'mark_seen' }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "react-heart-ig",
+      "name": "React Heart",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v21.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.INSTAGRAM_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ recipient: { id: $json.sender_id }, sender_action: 'react', payload: { emoji: '❤️', message_id: $json.message_id } }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "load-conv-ig",
+      "name": "Load Conv State",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1200,
+        340
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_CONVOS }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Conversations",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "read-packages-ig",
+      "name": "Read Packages",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1440,
+        340
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_PACKAGES }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "read-price-ig",
+      "name": "Read Price List",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1680,
+        340
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_PRICELIST }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "read-faqs-ig",
+      "name": "Read FAQs",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1920,
+        340
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_FAQS }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "read-about-ig",
+      "name": "Read About",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        2160,
+        340
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ABOUT }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "build-prompt-ig",
+      "name": "Build Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        340
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// ── Gather data ──────────────────────────────────────────────\nconst msg       = $('Extract Message').first().json;\nconst convRows  = $('Load Conv State').all().map(r => r.json);\nconst packages  = $('Read Packages').all().map(r => r.json);\nconst priceRows = $('Read Price List').all().map(r => r.json);\nconst faqs      = $('Read FAQs').all().map(r => r.json);\nconst aboutRows = $('Read About').all().map(r => r.json);\n\n// ── About map ────────────────────────────────────────────────\nconst about = {};\naboutRows.forEach(r => { if (r.Key) about[r.Key] = r.Value; });\nconst WA      = about['WhatsApp']       || '+91 90988 88134';\nconst HOURS   = about['Hours']          || '9 AM – 9 PM, Mon–Sun';\nconst LOC     = about['Location']       || 'Main Bazaar Road, Lahar';\nconst STUDIO  = about['Business Name']  || 'Ankit Sahni Makeover';\n\n// ── Business hours check (IST = UTC+5:30) ───────────────────\nconst istHour = new Date(Date.now() + 19800000).getUTCHours();\nconst isOpen  = istHour >= 9 && istHour < 21;\nconst hoursNote = isOpen ? '' :\n  'IMPORTANT: Studio is currently CLOSED. Warmly tell customer our hours are ' + HOURS +\n  ' and the team will reply first thing when we open. Still help with their query.';\n\n// ── Conversation state ───────────────────────────────────────\nconst existing = convRows.find(r => {\n  if (r.sender_id !== msg.sender_id) return false;\n  const hoursOld = (Date.now() - new Date(r.last_updated||0)) / 3600000;\n  return hoursOld < 24;\n});\nconst stage       = existing?.stage        || 'greeting';\nconst occasion    = existing?.occasion     || '';\nconst svcType     = existing?.service_type || '';\nconst gender      = existing?.gender       || 'unknown';\nconst language    = existing?.language     || 'auto';\nconst chatHistory = (() => { try { return JSON.parse(existing?.chat_history || '[]'); } catch(e) { return []; } })();\n\n// ── Build price list lookup helper ───────────────────────────\nlet currentCategory = '';\nconst priceMap = {}; // { \"Bridal Makeup\": [{service,price},...] }\npriceRows.forEach(row => {\n  const cat = (row['Other Services'] || '').trim();\n  const svc = (row['service '] || row['service'] || '').trim();\n  const prc = (row['price'] || '').toString().trim();\n  if (cat) currentCategory = cat;\n  if (svc && prc && currentCategory) {\n    if (!priceMap[currentCategory]) priceMap[currentCategory] = [];\n    priceMap[currentCategory].push({ service: svc, price: prc });\n  }\n});\nconst fmtCategory = (cat) => (priceMap[cat]||[]).map(r => r.service+': ₹'+r.price).join(' | ');\n\n// ── Stage-aware context injection ────────────────────────────\nlet contextData = '';\nlet quickReplies = [];\n\nif (!stage || stage === 'greeting') {\n  contextData = 'Studio: '+STUDIO+'. Location: '+LOC+'. WhatsApp: '+WA+'. Hours: '+HOURS+'.';\n  quickReplies = ['💍 Bridal Makeup','🎉 Party / Event','📸 Pre-Wedding Shoot','💅 Other Service'];\n\n} else if (stage === 'qualify_bridal') {\n  const names = packages.map(p => p['Package Name']).filter(Boolean).join(' | ');\n  contextData = 'Available bridal packages (prices revealed after confirming need): '+names;\n  quickReplies = ['👰 Wedding Day','📸 Pre-Wedding Shoot','💍 Both Days'];\n\n} else if (stage === 'qualify_engagement') {\n  contextData = 'Engagement Makeup options: '+fmtCategory('Engagement Makeup');\n  quickReplies = ['Natural Look','Full Glam','HD Makeup','Signature Look'];\n\n} else if (stage === 'qualify_party') {\n  contextData = 'Reception: '+fmtCategory('Reception Makeup')+'. Party: '+fmtCategory('Party Makeup');\n  quickReplies = ['💒 Wedding Reception','🎂 Birthday','🏢 Corporate Event','💃 Sangeet'];\n\n} else if (stage === 'qualify_other') {\n  const cats = Object.keys(priceMap).filter(c => !['Bridal Makeup','Engagement Makeup','Reception Makeup','Party Makeup'].includes(c));\n  contextData = cats.map(c => c+': '+fmtCategory(c)).join('\\n');\n\n} else if (stage === 'present') {\n  // Find matched package or service\n  const matched = packages.find(p => (p['Package Name']||'').toLowerCase().includes((svcType||'').toLowerCase()));\n  if (matched) {\n    const incls = (matched['Inclusions (semicolon-separated)']||'').split(';').slice(0,3).map(s=>s.trim()).join(', ');\n    contextData = 'MATCHED: '+matched['Package Name']+' — '+matched['Price']+' ('+matched['Badge']+').\\nKey inclusions: '+incls;\n  } else {\n    // Try price list\n    const allSvcs = Object.values(priceMap).flat();\n    const matchedSvc = allSvcs.find(s => s.service.toLowerCase().includes((svcType||'').toLowerCase()));\n    if (matchedSvc) contextData = 'MATCHED SERVICE: '+matchedSvc.service+' — ₹'+matchedSvc.price;\n    else contextData = 'Service: '+svcType+'. For exact pricing WhatsApp: '+WA;\n  }\n\n} else if (stage === 'faq') {\n  const faqText = faqs.map(f => 'Q: '+f.Question+'\\nA: '+f.Answer).join('\\n\\n');\n  contextData = 'Studio: '+STUDIO+'. Location: '+LOC+'. Hours: '+HOURS+'.\\n\\nFAQs:\\n'+faqText;\n\n} else if (stage === 'cta' || stage === 'lead') {\n  contextData = 'Studio: '+STUDIO+'. WhatsApp: '+WA+'. Location: '+LOC;\n  quickReplies = ['✅ Yes, book me in!','📞 Call me back','❓ I have more questions'];\n}\n\n// ── Tone by gender ───────────────────────────────────────────\nconst tone = gender === 'female'\n  ? 'Warm, friendly, sister-like tone. Use \"aap\" respectfully.'\n  : gender === 'male'\n  ? 'Respectful professional tone. If bridal/makeup, assume asking FOR the bride.'\n  : 'Neutral professional tone.';\n\n// ── Recent chat for context ───────────────────────────────────\nconst recentChat = chatHistory.slice(-4).map(m => m.role+': '+m.text).join('\\n');\n\n// ── System prompt ────────────────────────────────────────────\nconst systemPrompt = [\n  'You are a smart, warm assistant for '+STUDIO+' — Lahars premier bridal makeup studio.',\n  hoursNote ? '\\n'+hoursNote : '',\n  '\\nCURRENT STAGE: '+stage,\n  'OCCASION KNOWN: '+(occasion||'none'),\n  'SERVICE KNOWN: '+(svcType||'none'),\n  'GENDER: '+gender+' | TONE: '+tone,\n  '\\nCONTEXT:\\n'+contextData,\n  recentChat ? '\\nRECENT CHAT:\\n'+recentChat : '',\n  '\\nRULES:',\n  '1. Reply in SAME language as customer — Hindi or English only. Never mix.',\n  '2. Ask ONLY ONE question per reply.',\n  '3. NEVER list all packages or all prices. Reveal price ONLY when exact need is confirmed.',\n  '4. Keep reply to 2–3 sentences max.',\n  '5. '+tone,\n  '6. End with ONE soft CTA or question.',\n  '7. For unlisted/unknown prices → say: \"Please WhatsApp us at '+WA+' for pricing details.\"',\n  '8. If customer says talk to human/manager/owner/aadmi/insaan → set intent to human_handoff.',\n  '9. If customer seems frustrated (repeated questions, angry tone) → set sentiment to frustrated.',\n  quickReplies.length ? '\\nSUGGESTED QUICK REPLIES FOR THIS STEP: '+JSON.stringify(quickReplies) : '',\n  '\\nRespond ONLY with valid JSON, no markdown, no backticks:',\n  '{\"intent\":\"bridal|party|engagement|reception|hair|skin|nails|faq|appointment_booking|lead|human_handoff|general_chat\",',\n  '\"next_stage\":\"greeting|qualify_bridal|qualify_engagement|qualify_party|qualify_other|present|faq|cta|lead\",',\n  '\"occasion\":\"\",\"service_type\":\"\",\"gender\":\"female|male|unknown\",\"language\":\"hindi|english\",',\n  '\"lead_name\":null,\"lead_service\":null,\"lead_datetime\":null,\"lead_score\":0,',\n  '\"reply\":\"\",\"quick_replies\":[],\"sentiment\":\"positive|neutral|frustrated\"}'\n].join('\\n');\n\nconst geminiBody = JSON.stringify({\n  system_instruction: { parts: [{ text: systemPrompt }] },\n  contents: [{ role: 'user', parts: [{ text: msg.message_text }] }],\n  generationConfig: { temperature: 0.4, maxOutputTokens: 250 }\n});\n\nreturn [{ json: {\n  sender_id:          msg.sender_id,\n  message_text:       msg.message_text,\n  message_id:         msg.message_id,\n  stage,\n  conv_sender_exists: !!existing,\n  gemini_request_body: geminiBody,\n  quick_replies_hint:  quickReplies\n}}];"
+      }
+    },
+    {
+      "id": "typing-on-ig",
+      "name": "Typing On",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2640,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v21.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.INSTAGRAM_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ recipient: { id: $json.sender_id }, sender_action: 'typing_on' }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "call-gemini-ig",
+      "name": "Call Gemini",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2880,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={{ $env.GEMINI_API_KEY }}",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.gemini_request_body }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "parse-gemini-ig",
+      "name": "Parse Gemini Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        340
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const raw = $input.item.json.candidates?.[0]?.content?.parts?.[0]?.text || '';\nconst cleaned = raw.replace(/```json/g,'').replace(/```/g,'').trim();\nlet parsed;\ntry { parsed = JSON.parse(cleaned); }\ncatch(e) {\n  parsed = {\n    intent:'general_chat', next_stage:'greeting',\n    reply:'Thank you for messaging Ankit Sahni Makeover! For quick help, WhatsApp us at +91 90988 88134. 😊',\n    quick_replies:[], lead_name:null, lead_service:null, lead_datetime:null,\n    lead_score:0, gender:'unknown', language:'english', sentiment:'neutral',\n    occasion:'', service_type:''\n  };\n}\nconst bd = $('Build Prompt').first().json;\n// Append current exchange to chat history\nlet history = [];\ntry { history = JSON.parse($('Load Conv State').all().find(r=>r.json.sender_id===bd.sender_id)?.json?.chat_history || '[]'); } catch(e){}\nhistory.push({ role:'user', text: bd.message_text });\nhistory.push({ role:'bot',  text: parsed.reply });\nif (history.length > 8) history = history.slice(-8);\nreturn { json: {\n  ...parsed,\n  sender_id:    bd.sender_id,\n  message_text: bd.message_text,\n  message_id:   bd.message_id,\n  chat_history: JSON.stringify(history)\n}};"
+      }
+    },
+    {
+      "id": "typing-off-ig",
+      "name": "Typing Off",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3360,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v21.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.INSTAGRAM_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ recipient: { id: $json.sender_id }, sender_action: 'typing_off' }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "update-conv-ig",
+      "name": "Update Conv State",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        3600,
+        340
+      ],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_CONVOS }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Conversations",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "sender_id": "={{ $json.sender_id }}",
+            "stage": "={{ $json.next_stage || 'greeting' }}",
+            "occasion": "={{ $json.occasion || '' }}",
+            "service_type": "={{ $json.service_type || '' }}",
+            "gender": "={{ $json.gender || 'unknown' }}",
+            "language": "={{ $json.language || 'auto' }}",
+            "lead_name": "={{ $json.lead_name || '' }}",
+            "lead_date": "={{ $json.lead_datetime || '' }}",
+            "last_updated": "={{ new Date().toISOString() }}",
+            "chat_history": "={{ $json.chat_history || '[]' }}"
+          },
+          "matchingColumns": [
+            "sender_id"
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "is-lead-ig",
+      "name": "Is Lead or Booking?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.1,
+      "position": [
+        3840,
+        340
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "cond-booking",
+              "leftValue": "={{ $json.intent }}",
+              "rightValue": "appointment_booking",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "cond-lead",
+              "leftValue": "={{ $json.intent }}",
+              "rightValue": "lead",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "cond-handoff",
+              "leftValue": "={{ $json.intent }}",
+              "rightValue": "human_handoff",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        }
+      }
+    },
+    {
+      "id": "save-lead-ig",
+      "name": "Save Lead",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        4080,
+        200
+      ],
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_LEADS }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ new Date().toISOString() }}",
+            "Platform": "Instagram",
+            "Sender ID": "={{ $json.sender_id }}",
+            "Intent": "={{ $json.intent }}",
+            "Name": "={{ $json.lead_name || '' }}",
+            "Service": "={{ $json.lead_service || $json.service_type || '' }}",
+            "Preferred Date": "={{ $json.lead_datetime || '' }}",
+            "Gender": "={{ $json.gender || '' }}",
+            "Lead Score": "={{ $json.lead_score || 0 }}",
+            "Sentiment": "={{ $json.sentiment || '' }}",
+            "Customer Message": "={{ $json.message_text }}"
+          }
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "notify-owner-ig",
+      "name": "Notify Owner",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4320,
+        200
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $env.WHATSAPP_PHONE_NUMBER_ID }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.WHATSAPP_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({\n  messaging_product: 'whatsapp',\n  to: $env.OWNER_WHATSAPP_NUMBER,\n  type: 'text',\n  text: { body:\n    '🔥 New Instagram Lead!\\n' +\n    'Name: ' + ($json.lead_name || 'Not given') + '\\n' +\n    'Service: ' + ($json.lead_service || $json.service_type || 'Not given') + '\\n' +\n    'Date: ' + ($json.lead_datetime || 'Not given') + '\\n' +\n    'Score: ' + ($json.lead_score || 0) + '/5 ⭐\\n' +\n    'Message: ' + $json.message_text + '\\n' +\n    'Intent: ' + $json.intent\n  }\n}) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "merge-ig",
+      "name": "Merge Before Reply",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        4560,
+        340
+      ],
+      "parameters": {
+        "mode": "passThrough",
+        "output": "input1"
+      }
+    },
+    {
+      "id": "send-reply-ig",
+      "name": "Send Instagram Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4800,
+        340
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v21.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.INSTAGRAM_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ (() => {\n  const qr = $json.quick_replies || [];\n  if (qr.length > 0) {\n    return JSON.stringify({\n      recipient: { id: $json.sender_id },\n      message: {\n        text: $json.reply,\n        quick_replies: qr.slice(0,13).map(t => ({\n          content_type: 'text',\n          title: t.slice(0,20),\n          payload: t.toUpperCase().replace(/[^A-Z0-9]/g,'_')\n        }))\n      }\n    });\n  }\n  return JSON.stringify({\n    recipient: { id: $json.sender_id },\n    message: { text: $json.reply }\n  });\n})() }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Instagram Verification (GET)": {
+      "main": [
+        [
+          {
+            "node": "Return Challenge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Instagram Webhook (POST)": {
+      "main": [
+        [
+          {
+            "node": "Extract Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Message": {
+      "main": [
+        [
+          {
+            "node": "Mark Seen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Seen": {
+      "main": [
+        [
+          {
+            "node": "React Heart",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "React Heart": {
+      "main": [
+        [
+          {
+            "node": "Load Conv State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Conv State": {
+      "main": [
+        [
+          {
+            "node": "Read Packages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Packages": {
+      "main": [
+        [
+          {
+            "node": "Read Price List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Price List": {
+      "main": [
+        [
+          {
+            "node": "Read FAQs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read FAQs": {
+      "main": [
+        [
+          {
+            "node": "Read About",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read About": {
+      "main": [
+        [
+          {
+            "node": "Build Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Prompt": {
+      "main": [
+        [
+          {
+            "node": "Typing On",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typing On": {
+      "main": [
+        [
+          {
+            "node": "Call Gemini",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Gemini": {
+      "main": [
+        [
+          {
+            "node": "Parse Gemini Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Gemini Response": {
+      "main": [
+        [
+          {
+            "node": "Typing Off",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typing Off": {
+      "main": [
+        [
+          {
+            "node": "Update Conv State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Conv State": {
+      "main": [
+        [
+          {
+            "node": "Is Lead or Booking?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Lead or Booking?": {
+      "main": [
+        [
+          {
+            "node": "Save Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge Before Reply",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Save Lead": {
+      "main": [
+        [
+          {
+            "node": "Notify Owner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Owner": {
+      "main": [
+        [
+          {
+            "node": "Merge Before Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Before Reply": {
+      "main": [
+        [
+          {
+            "node": "Send Instagram Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    "chatbot",
+    "instagram",
+    "ankit-sahni-makeover",
+    "v2"
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2026-05-02T15:24:46.474Z",
+  "id": "ankit-sahni-instagram-chatbot-v2"
+}

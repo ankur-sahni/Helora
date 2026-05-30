@@ -97,3 +97,7 @@ Outbound has been misfiring. Outreach agent originally written for global B2B Sa
 - No CRM. Currently tracking in Supabase + a Google Sheet. Will stay this way until M6 — building a CRM pre-revenue is premature.
 - No follow-up automation. Follow-ups are manually queued. Will stay manual until Helora number has 200+ sent with clean reputation.
 - No A/B testing yet on script variants. Need 100+ sends per variant before stats mean anything.
+
+## Related
+
+- [[30-day-calendar.md]] — LinkedIn 30-Day Build-in-Public Calendar

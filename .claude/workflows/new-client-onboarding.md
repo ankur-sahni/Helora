@@ -83,3 +83,10 @@
 - If Day 2 WhatsApp API approval fails: trigger researcher agent, do NOT promise a new timeline until root cause is known.
 - If client misses the Day 1 intake call: one reschedule allowed. Second no-show = refund setup fee, walk away.
 - If Day 5 Google review test fails: pause launch, fix before live.
+
+## Related
+
+- [[rules/client-rules.md]] — Client onboarding standards
+- [[Proposals.md]] — Client acquisition pipeline
+- [[mrr-plan.md]] — Revenue targets per client
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — Reference implementation of onboarding

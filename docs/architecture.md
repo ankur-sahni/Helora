@@ -152,3 +152,14 @@ The system is designed across three simultaneous dimensions:
 | Triggers | Webhooks, GitHub Actions, Temporal |
 | Context compression | Claude Haiku (summarization) |
 | Cost tracking | Custom (budget-tracker agent) + provider dashboards |
+
+## Related
+
+- [[progress.md]] — Active Architecture Decisions (Gemini default, Groq content, Supabase SOR, No Redis)
+- [[CLAUDE.md]] — Governance layer above this architecture
+- [[docs/agent-communication.md]] — Communication patterns between the 7 layers
+- [[docs/memory-model.md]] — Memory as one of the 7 architecture layers
+- [[.claude/agents/coo.md]] — COO implements the Control layer
+- [[rules/agent-rules.md]] — Agent behavior rules within this architecture
+- [[.claude/memory/canonical/architecture.md]] — Living decisions that implement this design
+- [[.claude/memory/canonical/anti-patterns.md]] — Failures that shaped these architectural choices

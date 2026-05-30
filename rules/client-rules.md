@@ -37,3 +37,10 @@ How client projects are started, managed, and delivered in this agency.
 - Every engagement has a written scope — change requests are new line items
 - No unlimited-scope retainers
 - Raise prices on new clients as case studies accumulate
+
+## Related
+
+- [[rules/README.md]] — Rules index
+- [[Proposals.md]] — Client acquisition strategy
+- [[Projects/Clients/ankitsahnimakeover/CLAUDE.md]] — First client: applies these standards
+- [[mrr-plan.md]] — Revenue targets tied to client delivery

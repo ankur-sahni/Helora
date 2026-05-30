@@ -55,3 +55,13 @@
 5. Content publishing pipeline
 6. Monthly KPI digest
 7. Bridal season broadcast
+
+## Related
+
+- [[CLAUDE.md]] — Master agency constraints
+- [[rules/client-rules.md]] — Client delivery standards
+- [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Build pipeline: phases, gates, risks
+- [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — Keyword research and local SEO
+- [[Projects/Clients/ankitsahnimakeover/progress.md]] — Live build status
+- [[mrr-plan.md]] — This client = first invoice: ₹20k/month
+- [[Proposals.md]] — Salon vertical as replicable playbook

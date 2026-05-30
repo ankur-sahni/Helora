@@ -1,0 +1,432 @@
+{
+  "name": "Ankit Sahni Makeover — WhatsApp Chatbot",
+  "nodes": [
+    {
+      "id": "wh-get-wa",
+      "name": "WhatsApp Verification (GET)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 80],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "whatsapp-chatbot",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "verify-token-wa",
+      "name": "Check Verify Token",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.1,
+      "position": [480, 80],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "cond-verify",
+              "leftValue": "={{ $json.query ? $json.query['hub.verify_token'] : $json['hub.verify_token'] }}",
+              "rightValue": "={{ $env.WHATSAPP_VERIFY_TOKEN }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "respond-verify-wa",
+      "name": "Return Challenge",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [720, 40],
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.query ? $json.query['hub.challenge'] : $json['hub.challenge'] }}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "respond-forbidden-wa",
+      "name": "Return Forbidden",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [720, 140],
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "Forbidden",
+        "options": {
+          "responseCode": 403
+        }
+      }
+    },
+    {
+      "id": "wh-post-wa",
+      "name": "WhatsApp Webhook (POST)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 340],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "whatsapp-chatbot",
+        "responseMode": "onReceived",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    },
+    {
+      "id": "extract-msg-wa",
+      "name": "Extract Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [480, 340],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const changes = $input.item.json?.entry?.[0]?.changes?.[0]?.value;\nconst messages = changes?.messages;\nif (!messages || messages.length === 0) return [];\nconst msg = messages[0];\nif (msg.type !== 'text') return [];\nreturn { json: { sender_id: msg.from, message_text: msg.text.body } };"
+      }
+    },
+    {
+      "id": "read-packages-wa",
+      "name": "Read Packages",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [720, 340],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ID }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Packages",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "agg-packages-wa",
+      "name": "Aggregate Packages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [960, 340],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const packages = $input.all().map(i => i.json);\nconst msgData = $('Extract Message').first().json;\nreturn [{ json: { sender_id: msgData.sender_id, message_text: msgData.message_text, packages_data: packages } }];"
+      }
+    },
+    {
+      "id": "read-faqs-wa",
+      "name": "Read FAQs",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [1200, 340],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ID }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "FAQs",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "agg-faqs-wa",
+      "name": "Aggregate FAQs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1440, 340],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const faqs = $input.all().map(i => i.json);\nconst prev = $('Aggregate Packages').first().json;\nreturn [{ json: { sender_id: prev.sender_id, message_text: prev.message_text, packages_data: prev.packages_data, faqs_data: faqs } }];"
+      }
+    },
+    {
+      "id": "read-about-wa",
+      "name": "Read About",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [1680, 340],
+      "parameters": {
+        "operation": "getAll",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ID }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "About",
+          "mode": "name"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "build-prompt-wa",
+      "name": "Build Gemini Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1920, 340],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const aboutRows = $input.all().map(i => i.json);\nconst prev = $('Aggregate FAQs').first().json;\n\nlet aboutText = '';\naboutRows.forEach(row => {\n  const k = row['Key'] || '';\n  const v = row['Value'] || '';\n  if (k && v) aboutText += k + ': ' + v + '\\n';\n});\n\nlet packagesText = '';\nprev.packages_data.forEach(row => {\n  const name = row['Package Name'] || '';\n  const price = row['Price'] || '';\n  const gst = row['GST Note'] || '';\n  const badge = row['Badge'] || '';\n  const inc = (row['Inclusions (semicolon-separated)'] || '').split(';');\n  if (name) {\n    packagesText += '\\n' + name + ' (' + badge + ') - ' + price + ' (' + gst + '):\\n';\n    inc.forEach(item => { const t = item.trim(); if (t) packagesText += '  - ' + t + '\\n'; });\n  }\n});\n\nlet faqsText = '';\nprev.faqs_data.forEach(row => {\n  const q = row['Question'] || '';\n  const a = row['Answer'] || '';\n  if (q && a) faqsText += 'Q: ' + q + '\\nA: ' + a + '\\n\\n';\n});\n\nconst systemPrompt = 'You are a smart, friendly assistant for Ankit Sahni Makeover — Lahar\\'s premier bridal makeup and styling studio.\\n\\nABOUT:\\n' + aboutText + '\\nPACKAGES:\\n' + packagesText + '\\nFAQs:\\n' + faqsText + '\\nRULES:\\n1. Detect if customer writes in Hindi or English. Always reply in the SAME language.\\n2. Classify intent as one of: faq | package_inquiry | appointment_booking | lead | general_chat\\n3. If appointment_booking: ask for name, service, and preferred date/time in your reply.\\n4. Keep replies warm, professional, 3-4 sentences max.\\n5. For unlisted prices say (in detected language): We will share pricing details on WhatsApp at +91 90988 88134.\\n6. End with a soft CTA like: Shall I book a consultation? or Kya main aapke liye appointment book karun?\\n\\nRespond ONLY with valid JSON — no markdown, no backticks:\\n{\"intent\":\"...\",\"reply\":\"...\",\"lead_name\":null,\"lead_service\":null,\"lead_datetime\":null}';\n\nconst geminiBody = JSON.stringify({\n  system_instruction: { parts: [{ text: systemPrompt }] },\n  contents: [{ role: 'user', parts: [{ text: prev.message_text }] }],\n  generationConfig: { temperature: 0.7, maxOutputTokens: 512 }\n});\n\nreturn [{ json: { sender_id: prev.sender_id, message_text: prev.message_text, gemini_request_body: geminiBody } }];"
+      }
+    },
+    {
+      "id": "call-gemini-wa",
+      "name": "Call Gemini",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2160, 340],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={{ $env.GEMINI_API_KEY }}",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.gemini_request_body }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "parse-gemini-wa",
+      "name": "Parse Gemini Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2400, 340],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const raw = $input.item.json.candidates?.[0]?.content?.parts?.[0]?.text || '';\nconst cleaned = raw.replace(/```json/g, '').replace(/```/g, '').trim();\nlet parsed;\ntry {\n  parsed = JSON.parse(cleaned);\n} catch(e) {\n  parsed = { intent: 'general_chat', reply: 'Thank you for messaging Ankit Sahni Makeover! For quick help, WhatsApp us at +91 90988 88134.', lead_name: null, lead_service: null, lead_datetime: null };\n}\nconst bd = $('Build Gemini Prompt').first().json;\nreturn { json: { ...parsed, sender_id: bd.sender_id, message_text: bd.message_text } };"
+      }
+    },
+    {
+      "id": "is-lead-wa",
+      "name": "Is Booking or Lead?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.1,
+      "position": [2640, 340],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "cond-booking-wa",
+              "leftValue": "={{ $json.intent }}",
+              "rightValue": "appointment_booking",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "cond-lead-wa",
+              "leftValue": "={{ $json.intent }}",
+              "rightValue": "lead",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        }
+      }
+    },
+    {
+      "id": "save-lead-wa",
+      "name": "Save to Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [2880, 200],
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ID }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Leads & Bookings",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ new Date().toISOString() }}",
+            "Platform": "WhatsApp",
+            "Sender ID": "={{ $json.sender_id }}",
+            "Intent": "={{ $json.intent }}",
+            "Name": "={{ $json.lead_name || '' }}",
+            "Service": "={{ $json.lead_service || '' }}",
+            "Preferred Date-Time": "={{ $json.lead_datetime || '' }}",
+            "Customer Message": "={{ $json.message_text }}"
+          }
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-cred",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "send-reply-wa",
+      "name": "Send WhatsApp Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3120, 340],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $env.WHATSAPP_PHONE_NUMBER_ID }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.WHATSAPP_ACCESS_TOKEN }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ messaging_product: 'whatsapp', to: $json.sender_id, type: 'text', text: { body: $json.reply } }) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "WhatsApp Verification (GET)": {
+      "main": [
+        [{ "node": "Check Verify Token", "type": "main", "index": 0 }]
+      ]
+    },
+    "Check Verify Token": {
+      "main": [
+        [{ "node": "Return Challenge", "type": "main", "index": 0 }],
+        [{ "node": "Return Forbidden", "type": "main", "index": 0 }]
+      ]
+    },
+    "WhatsApp Webhook (POST)": {
+      "main": [
+        [{ "node": "Extract Message", "type": "main", "index": 0 }]
+      ]
+    },
+    "Extract Message": {
+      "main": [
+        [{ "node": "Read Packages", "type": "main", "index": 0 }]
+      ]
+    },
+    "Read Packages": {
+      "main": [
+        [{ "node": "Aggregate Packages", "type": "main", "index": 0 }]
+      ]
+    },
+    "Aggregate Packages": {
+      "main": [
+        [{ "node": "Read FAQs", "type": "main", "index": 0 }]
+      ]
+    },
+    "Read FAQs": {
+      "main": [
+        [{ "node": "Aggregate FAQs", "type": "main", "index": 0 }]
+      ]
+    },
+    "Aggregate FAQs": {
+      "main": [
+        [{ "node": "Read About", "type": "main", "index": 0 }]
+      ]
+    },
+    "Read About": {
+      "main": [
+        [{ "node": "Build Gemini Prompt", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Gemini Prompt": {
+      "main": [
+        [{ "node": "Call Gemini", "type": "main", "index": 0 }]
+      ]
+    },
+    "Call Gemini": {
+      "main": [
+        [{ "node": "Parse Gemini Response", "type": "main", "index": 0 }]
+      ]
+    },
+    "Parse Gemini Response": {
+      "main": [
+        [{ "node": "Is Booking or Lead?", "type": "main", "index": 0 }]
+      ]
+    },
+    "Is Booking or Lead?": {
+      "main": [
+        [{ "node": "Save to Google Sheet", "type": "main", "index": 0 }],
+        [{ "node": "Send WhatsApp Reply", "type": "main", "index": 0 }]
+      ]
+    },
+    "Save to Google Sheet": {
+      "main": [
+        [{ "node": "Send WhatsApp Reply", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": ["chatbot", "whatsapp", "ankit-sahni-makeover"],
+  "triggerCount": 0,
+  "updatedAt": "2026-04-28T00:00:00.000Z",
+  "id": "ankit-sahni-whatsapp-chatbot-v1"
+}

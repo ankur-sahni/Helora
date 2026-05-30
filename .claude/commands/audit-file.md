@@ -76,3 +76,9 @@ Do not add commentary outside these three sections.
 | `{{FILE_CONTENT}}` | Full current text of the file |
 | `{{OBSERVED_GAPS}}` | Rules you've had to repeat, drift symptoms, contradictions — highest-signal input |
 | `{{RELATED_FILES_INVENTORY}}` | Names + one-line purpose of sibling files so auditor can spot overlap |
+
+## Related
+
+- [[rules/README.md]] — Rules index; most audit targets live here or in .claude/agents/
+- [[CLAUDE.md]] — Hard constraints that always take precedence over audited file content
+- [[.claude/agents/coo.md]] — COO is often the caller; audits inform re-prompting decisions
