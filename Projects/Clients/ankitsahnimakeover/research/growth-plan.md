@@ -14,7 +14,7 @@ Become the default beauty brand across a 100km radius by combining Sahni's local
 - 4.6 rating with 116 reviews — strong social proof in small-town market
 - Broad service mix: hair, skin, nails, hair removal, makeup
 - Daily opening hours, easy access
-- 25K Instagram followers (@ankitsahnimakeovers)
+- 52K Instagram followers (@ankitsahnimakeovers)
 
 ### Current Weaknesses
 

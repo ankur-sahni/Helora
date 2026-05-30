@@ -108,7 +108,7 @@ Varies per page (mandatory — no copy-paste) but always names: business, owners
 - Primary services: Bridal makeup, pre-bridal packages, lehenga and jewelry rental
 - Service area: Lahar, Bhind, Mihona, Daboh, Gormi, Datia
 - Reviews: 4.8 average, 169 Google reviews (Justdial: 4.6 / 116 — different platform)
-- Instagram: @ankitsahnimakeovers (25,000+ followers)
+- Instagram: @ankitsahnimakeovers (52,000+ followers)
 
 AI crawlers strip these cleanly. Humans scan them.
 

@@ -8,7 +8,7 @@
 - **Brand name (customer-facing):** Ankit Sahni Makeover
 - **Legacy / legal name:** Sahni Beauty Salon (historically also "Sahni Beauty Parlour") — use only as legacy context, never as the public brand
 - **Domain:** ankitsahnimakeover.com
-- **Instagram (business):** @ankitsahnimakeovers (25,000+ followers)
+- **Instagram (business):** @ankitsahnimakeovers (52,000+ followers)
 - **Photographer credit:** @ankur_sahni (Ankur's handle, for photo credits only — not the business account)
 - **GitHub repo:** github.com/ankur-sahni/ankitsahnimakeover
 
