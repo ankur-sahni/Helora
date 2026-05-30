@@ -8,7 +8,7 @@
 - **Brand name (customer-facing):** Ankit Sahni Makeover
 - **Legacy / legal name:** Sahni Beauty Salon (historically also "Sahni Beauty Parlour") — use only as legacy context, never as the public brand
 - **Domain:** ankitsahnimakeover.com
-- **Instagram (business):** @ankitsahnimakeovers `[CONFIRM]`
+- **Instagram (business):** @ankitsahnimakeovers (25,000+ followers)
 - **Photographer credit:** @ankur_sahni (Ankur's handle, for photo credits only — not the business account)
 - **GitHub repo:** github.com/ankur-sahni/ankitsahnimakeover
 
@@ -19,7 +19,8 @@
 - **Hours:** 10:30–20:00 daily `[CONFIRM]`
 
 ## Reputation
-- **Google Business:** 4.8 ★, 169 reviews (Ankur manages the profile)
+- **Google Business (canonical for the site):** 4.8 ★, 169 reviews (Ankur manages the profile)
+- **Justdial (different platform — do NOT confuse with Google):** 4.6 ★, 116 reviews. Any doc citing "4.6" or "116" means **Justdial**, not Google. Goal: migrate these toward Google.
 - **Established:** 1994 (30+ years)
 - **Owners:** Ankit Sahni & Kusum Sahni
 

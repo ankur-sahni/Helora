@@ -62,6 +62,6 @@
 - [[rules/client-rules.md]] — Client delivery standards
 - [[Projects/Clients/ankitsahnimakeover/PIPELINE.md]] — Build pipeline: phases, gates, risks
 - [[Projects/Clients/ankitsahnimakeover/SEO_STRATEGY.md]] — Keyword research and local SEO
-- [[Projects/Clients/ankitsahnimakeover/progress.md]] — Live build status
+- [[Projects/Clients/ankitsahnimakeover/CLIENT_FACTS.md]] — Single source of truth: NAP, brand, reviews, towns, phase status
 - [[mrr-plan.md]] — This client = first invoice: ₹20k/month
 - [[Proposals.md]] — Salon vertical as replicable playbook

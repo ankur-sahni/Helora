@@ -142,7 +142,7 @@ Add these manually in GMB under "Questions & Answers". Post the question yoursel
 
 **Q8:**
 > Question: What is the best bridal makeup studio near Bhind MP?
-> Answer: Ankit Sahni Makeover in Lahar (15 minutes from Bhind) is the most experienced bridal studio in the region with 30+ years of service and 160+ 5-star Google reviews. Ward 12, Lahar, MP. Call 09098888134.
+> Answer: Ankit Sahni Makeover in Lahar (15 minutes from Bhind) is the most experienced bridal studio in the region with 30+ years of service and 169 5-star Google reviews. Ward 12, Lahar, MP. Call 09098888134.
 
 **Q9:**
 > Question: Do you offer pre-bridal packages?
@@ -196,7 +196,7 @@ Post these immediately after claiming. Posts stay visible for 7 days — rotate 
 >
 > Aap bhi apni special day ke liye hamse mile. Free consultation ke liye aaj hi call karein.
 >
-> ⭐ 4.8 stars · 160+ Google Reviews
+> ⭐ 4.8 stars · 169 Google Reviews
 > 📞 09098888134
 >
 > **Button:** Call Now
