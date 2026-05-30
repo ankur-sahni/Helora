@@ -1,7 +1,7 @@
 # Ankit Sahni Makeover — WhatsApp Template Library
 
 **Business:** Ankit Sahni Makeover, Lahar MP
-**Phone / WhatsApp:** +91 9098909088
+**Phone / WhatsApp:** +91 9098888134
 **Instagram:** @ankitsahnimakeovers
 **Tone:** Simple Indian English. Direct, polite, short sentences. No Hinglish, no marketing jargon. (Templates below still use Hinglish and need rewriting to match this rule — separate task.)
 **Payment:** In-shop only. Never ask for advance or UPI. Templates below contain legacy UPI lines that have been neutralised — rewrite the surrounding flow when templates are migrated to plain English.

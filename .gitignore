@@ -45,3 +45,6 @@ ChatGPT Image *.png
 
 # Knowledge graph output
 graphify-out/
+
+# Quarantined junk — on disk for convenience; every file also preserved in git history at 6c413eb
+_junk/
