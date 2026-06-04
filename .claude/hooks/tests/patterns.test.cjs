@@ -8,7 +8,8 @@ test('secret paths match', () => {
   }
 });
 test('non-secret paths do not match', () => {
-  for (const p of ['src/Hero.tsx', 'README.md', 'environment.ts']) {
+  for (const p of ['src/Hero.tsx', 'README.md', 'environment.ts',
+    'src/components/SecretMenu.tsx', 'lib/credentialStore.ts', 'utils/getCredentials.ts']) {
     assert.ok(!P.SECRET_PATH_RE.test(p), `should NOT match ${p}`);
   }
 });

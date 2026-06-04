@@ -1,7 +1,8 @@
 // Shared classification patterns for Claude Code hooks. One source of truth.
 
 // Secret/key files — must never be written by the agent. Hard-deny.
-const SECRET_PATH_RE = /(^|[\\/])\.env($|[.\\/])|\.env\.|(secret|credential)s?[^\\/]*$|\.pem$|\.key$|id_rsa/i;
+// Anchored to the filename stem so code like SecretMenu.tsx / credentialStore.ts is NOT caught.
+const SECRET_PATH_RE = /(^|[\\/])\.env($|[.\\/])|\.env\.|(^|[\\/])(secrets?|credentials?)\.[^\\/]*$|\.pem$|\.key$|(^|[\\/])id_rsa/i;
 
 // High-risk config/control files — require explicit confirm (ask).
 const HIGH_RISK_PATH_RE = /(^|[\\/])\.claude[\\/]settings[^\\/]*\.json$|(^|[\\/])CLAUDE(\.local)?\.md$|\.config\.[cm]?[jt]s$|(^|[\\/])(n8n|workflows?)[\\/][^\\/]*\.json$/i;
