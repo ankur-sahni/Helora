@@ -3,6 +3,9 @@
 .env.local
 .env.*.local
 
+# Claude Code hook logs (edit log + transcript backups)
+.claude/logs/
+
 # Private local config
 CLAUDE.local.md
 
