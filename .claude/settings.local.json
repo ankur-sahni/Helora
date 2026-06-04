@@ -56,5 +56,15 @@
       "Bash(git commit -m 'feat\\(studio\\): inline row delete with confirm — gallery pilot *)",
       "Bash(git commit -m 'feat\\(studio\\): roll out inline row delete to all 10 collections *)"
     ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt",
+        "hooks": [
+          { "type": "command", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PROJECT_DIR}/.claude/hooks/notify.ps1"] }
+        ]
+      }
+    ]
   }
 }
