@@ -36,8 +36,11 @@ try {
 } catch {}
 
 // 3. Secret scan (defense in depth) — block to push back to Claude.
+// Skip docs/tests, where example tokens are legitimate (ignore-globs, like real scanners).
 try {
-  if (SECRET_CONTENT_RE.test(fs.readFileSync(fp, 'utf8'))) {
+  const ext = path.extname(fp).toLowerCase();
+  const skip = ['.md', '.mdx', '.txt'].includes(ext) || /(^|[\\/])(tests?|__tests__)[\\/]|\.test\./i.test(fp);
+  if (!skip && SECRET_CONTENT_RE.test(fs.readFileSync(fp, 'utf8'))) {
     process.stdout.write(JSON.stringify({
       decision: 'block',
       reason: `A secret-shaped string was written to ${fp}. Remove it and move the value to .env (gitignored).`,

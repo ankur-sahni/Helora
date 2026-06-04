@@ -686,8 +686,8 @@ Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
 
 - [ ] **Step 1: Run the entire hook test suite**
 
-Run: `node --test .claude/hooks/tests/`
-Expected: all suites PASS, 0 failures.
+Run: `node --test .claude/hooks/tests/*.test.cjs`
+Expected: all suites PASS, 0 failures. (Node 24 treats a bare directory arg as a module — use the glob.)
 
 - [ ] **Step 2: Smoke-test each PreToolUse decision end to end**
 

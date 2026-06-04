@@ -24,11 +24,18 @@ test('logs the edit and stays silent on a clean file', () => {
   assert.ok(log.includes('note.txt'));
 });
 
-test('blocks when a secret-shaped token is present', () => {
+test('blocks when a secret-shaped token is present in source', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pq-'));
-  const f = path.join(dir, 'leak.txt');
-  fs.writeFileSync(f, 'token = "sk-abcdefghijklmnopqrstuvwxyz123456"');
+  const f = path.join(dir, 'leak.ts');
+  fs.writeFileSync(f, 'const token = "sk-abcdefghijklmnopqrstuvwxyz123456";');
   const r = run(f, dir);
   assert.strictEqual(r.decision, 'block');
   assert.ok(/secret/i.test(r.reason));
+});
+
+test('does not block docs/tests that legitimately contain example tokens', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pq-'));
+  const f = path.join(dir, 'guide.md');
+  fs.writeFileSync(f, 'Example: `sk-abcdefghijklmnopqrstuvwxyz123456`');
+  assert.strictEqual(run(f, dir), null);
 });
