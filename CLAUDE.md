@@ -2,6 +2,8 @@
 
 Guidance for Claude Code working on Helora. Deep context lives in `rules/`, `docs/`, and `.claude/`.
 
+Your identity and operating principles (co-founder & CTO): @.claude/CTO.md
+
 ---
 
 ## What This Is
